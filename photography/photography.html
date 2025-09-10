@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Club</title>
+    <link rel="icon" type="image/x-icon" href="symbol_title.png">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .background-image{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(photo_background.jpg);
+            background-size: cover;
+            background-repeat:no-repeat;
+            font-size: 30px;
+            line-height: normal;
+            height: auto;
+            min-height: 635px;
+        }
+        .header{
+            nav{
+                display:flex;
+                padding:2% 6%;
+                justify-content:space-between;
+                align-items:center;
+            }
+            nav img{
+                width: 250px;
+            }
+            .nav-links{
+                flex: l;
+                text-align:right;
+            }
+            .nav-links ul li{
+                list-style: none;
+                display:inline-block;
+                padding:15px 25px;
+                position:relative;
+            }
+            .nav-links ul li a{
+                color:#fff;
+                text-decoration:none;
+                font-size:16px;
+            }
+            .nav-links ul li::after{
+                content: '';
+                width:0%;
+                height:2px;
+                background:#f44336;
+                display:block;
+                margin:auto;
+                transition:0.5s;
+
+            }
+            .nav-links ul li:hover::after{
+                width:100%;
+            }
+
+        }
+        .banner-title{
+            position: absolute; 
+            width:100%; 
+            text-align: center;
+            color:white;
+            bottom: 80px;
+            font-family: "Montserrat", sans-serif;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        #about {
+            background-color:#EEE7E9 ;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            font-size: 18px;
+            border: 2px solid #e1dcdc;
+        }
+        #about h2 {
+            color: #273746 ;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        #about h3 {
+            color: #273746 ;
+            margin-bottom: 20px;
+            font-size: 35px;
+            text-align: center;
+        }
+        
+        #gallery {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(184, 182, 182, 0.1);
+        }
+        #gallery h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 250px; 
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .float-left {
+            float: left;
+            margin-right: 20px;
+            width:30%; 
+        }
+        
+        .float-right {
+            float: right;
+            margin-left: 20px;
+        }
+        
+        .content {
+            overflow: hidden; 
+        }
+
+    </style>
+</head>
+<body styles="background-color:">
+    <div class="background-image">
+        <section class="header">
+            <nav>
+                <img src="image2.png">
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="\index_new.html">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="\Login\index.html">REGISTER</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <h2 class="banner-title">Photography</h2>
+    </div>
+<br><br><br><br><br>
+    <div class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="content">
+                <img src="mid_image.jpg" class="float-right" alt="Image">
+                <div id="text">
+                    <p>The Photographic Club tries to stimulate interest in creative photography. It organizes short term courses on photography, conducts photo exhibitions and promotes amateur photography as a hobby among the students.</p>
+                </div>
+            </div>
+        </section>
+        <br><br>
+        <section id="about">
+            <h3>Report of Spot Photography Event at Amrita Vishwa Vidyapeetham</h3>
+            <p>On 8th October 2022, Amrita Vishwa Vidyapeetham organized a spot photography event as part of the Gokulashtami celebrations. The event was organized by the Amrita Photography Club and had a theme of “Shapes and Shadows”. The event saw a total of 483 participants in attendance. </p>
+            <br>
+            <p>The event was held on the campus of Amrita Vishwa Vidyapeetham, and the participants were encouraged to capture interesting shapes and shadows using their cameras. The participants were asked to upload their photographs to a OneDrive link provided by the organizers. </p>
+            <br>
+            <p>The event was a success, and the participants showcased their photography skills in capturing interesting shapes and shadows around the campus. The judges were impressed with the creativity and the unique perspectives of the participants. After careful deliberation, the winners were announced, with the first prize going to Ms. Aparna Rajesh, the second prize to Mr. Rahul Menon, and the third prize to Ms. Neha Singh. The first prize winner was awarded Rs. 2500, the second prize winner received Rs. 1500, and the third prize winner received Rs. 1000. </p>
+            <br>
+            <p>In conclusion, the spot photography event held at Amrita Vishwa Vidyapeetham as part of the Gokulashtami celebrations was a resounding success, with 483 participants showcasing their creativity and skills in capturing interesting shapes and shadows. The event was well-organized, and the Amrita Photography Club deserves credit for organizing such a successful event. We look forward to more such events in the future. </p>
+        </section>
+        <br><br><br>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="photo1.jpg" alt="Gallery Image 1">
+                <img src="photo2.jpg" alt="Gallery Image 2">
+                <img src="photo3.jpg" alt="Gallery Image 3">
+                <img src="photo4.jpg" alt="Gallery Image 3">
+            </div>
+        </section>
+    </div> 
+</body>
+</html>

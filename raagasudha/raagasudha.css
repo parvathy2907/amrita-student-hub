@@ -1,0 +1,506 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "TWK Lausanne", "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    color: #fff;
+    font-size: 7rem;
+    font-weight: 400;
+    letter-spacing: -0.2rem;
+    line-height: 1;
+}
+
+a,
+p {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+nav {
+    position: fixed;
+    width: 100vw;
+    padding: 2.5em;
+    padding-bottom: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+nav.active {
+    background-color: #0f0f0f;
+    transition: background-color 0.5s ease;
+}
+
+.logo a {
+    font-weight: 600;
+}
+
+.logo img {
+    height: 35px;
+    width: 140px;
+}
+
+.menu-toggle {
+    position: relative;
+    width: 3rem;
+    height: 1.5rem;
+    cursor: pointer;
+}
+
+.menu-toggle p {
+    font-weight: 500;
+    position : absolute;
+    transform-origin: top left;
+    will-change: transform, opacity;
+}
+
+.menu-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100svh;
+    background-color: #0f0f0f;
+    z-index: 1;
+}
+
+.menu-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: left bottom;
+    will-change: transform, opacity;
+}
+
+.menu-items,
+.menu-footer {
+    width: 100%;
+    padding: 2.5em;
+    display: flex;
+    gap: 2.5em;
+}
+
+.col-lg {
+    flex: 3;
+}
+
+.col-sm {
+    flex: 2;
+}
+
+.menu-items .col-lg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-preview-img {
+    position: relative;
+    width: 45%;
+    height: 70%;
+    overflow: hidden;
+    opacity: 90%;
+}
+
+.menu-preview-img img {
+    position: absolute;
+    will-change: transform, opacity;
+}
+
+.menu-items .col-sm {
+    padding: 2.5em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
+.menu-links,
+.menu-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.link, 
+.social {
+    padding-bottom: 6px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.link a, 
+.social a {
+    display: inline-block;
+    will-change: transform;
+    transition: color 0.5s;
+}
+
+.link a {
+    font-size: 1.5rem;
+    letter-spacing: -0.02rem;
+}
+
+.social a {
+    color: #8f8f8f;
+}
+
+.social a:hover {
+    color: #fff;
+}
+
+.menu-footer {
+    position: absolute;
+    bottom: 0
+}
+
+.menu-footer .col-sm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link a::after,
+.social a::after,
+.menu-footer a::after {
+    position: absolute;
+    content: "";
+    top: 102.5%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.6, 0, 0.4, 1);
+}
+
+.link a:hover::after,
+.social a:hover::after,
+.menu-footer a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+    transform-origin: right top;
+}
+
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100svh;
+    padding: 2.5em;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100svh;
+    z-index: -1;
+}
+
+.hero h1 {
+    width: 80%;
+}
+
+
+.desc1, .desc2 {
+    text-align: justify;
+    width: 450px;
+    height: 400px;
+    overflow: scroll;
+    margin-top: 10px;
+}
+
+.desc1 {
+    margin-left: 45px;
+}
+
+.desc2 {
+    position: relative;
+    left: 18%;
+    margin-right: 45px;
+}
+
+.gallery {
+    background-color: #0f0f0f;
+    padding: 2.5em;
+    position: relative;
+    width: 100%;
+    height: 1510px;
+    overflow: hidden;
+    display: flex;
+}
+
+.image {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    transition: transform 0.4s ease-out;
+    will-change: transform;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 1.6px;
+}
+
+.border {
+    background-color: #0f0f0f;
+    position: relative;
+    width: 100%;
+    height: 1440px;
+    overflow: hidden;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 1px;
+}
+
+.gallery-container {
+    position: relative;
+    margin-top: 120px;
+    left: 10.3%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 220px;
+}
+
+.menu-toggle p#menu-close {
+    opacity: 0;
+    transform: translateX(-5px) translateY(10px) rotate(5deg);
+}
+
+.link a,
+.social a {
+    transform: translateY(120%);
+    opacity: 0.25;
+}
+
+.menu-content {
+    transform: translateX(-100px) translateY(-100px) scale(1.5) rotate(-15deg);
+    opacity: 0.25;
+}
+
+.menu-overlay {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+}
+
+@media (max-width: 800px) {
+    .hero h1 {
+        width: 100%;
+        font-size: 4rem;
+        letter-spacing: 0;
+    }
+
+    .menu-items .col-lg {
+        display: none;
+    }
+
+    .link a::after,
+    .social a::after,
+    .menu-footer a::after {
+        display: none;
+    }
+
+    .desc1 {
+        display: none;
+    }
+
+    .gallery-container {
+        left: 35%;
+    }
+
+    .video img {
+        display: none;
+    }
+}
+
+@media (max-width: 1300px) {
+    .desc2 {
+        display: none;
+    }
+
+    .insta-desc p, 
+    .insta-desc img {
+        display: none;
+    }
+}
+
+
+.window {
+  transform-origin: top left;
+  transition: transform 0.7s ease-out;
+  position: auto;
+  width: 400px;
+  height: 200px;
+}
+
+.window-body {
+    padding-right: 30px;
+    padding-top: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.window-body button {
+    font-size: larger;
+    background-color: rgb(210, 30, 105);
+    margin-top: 6%;
+    margin-left: 5%;
+    width: 200px;
+    height: 50px;
+    color: #fff;
+}
+
+.video-wrapper {
+    background-color: #0f0f0f;
+    width: 100%;
+    height: 100%;
+}
+
+.video {
+    margin: 30px;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.socials {
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.insta {
+    height: 100%;
+    width: 60%;
+    background-color: #fff;
+    border-radius: 5%;
+    align-content: center;
+}
+
+.instagram-post {
+  width: 350px;
+  border-radius: 10px;
+  background: #fff;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.post-image img {
+  width: 100%;
+  display: block;
+}
+
+.post-caption {
+  padding: 10px 10px 10px 10px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.hashtag {
+  color: #00376b;
+}
+
+.insta-desc {
+    text-align: justify;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.insta-desc p {
+    text-align: justify;
+    font-size: 25px;
+}
+
+.insta-desc img {
+    height: min-content;
+    width: 100px;
+}
+
+.img-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px; 
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.img-row img {
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+    opacity: 65%;
+}
+
+.site-footer {
+    background-color: #0f0f0f;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.site-footer .footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.site-footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}

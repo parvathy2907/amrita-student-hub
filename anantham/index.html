@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anantham Club</title>
+    <link rel="icon" type="image/x-icon" href="symbol_title.png">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .background-image{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(ana_background.png);
+            background-size: cover;
+            background-repeat:no-repeat;
+            font-size: 30px;
+            line-height: normal;
+            height: auto;
+            min-height: 635px;
+        }
+        .header{
+            nav{
+                display:flex;
+                padding:2% 6%;
+                justify-content:space-between;
+                align-items:center;
+            }
+            nav img{
+                width: 250px;
+            }
+            .nav-links{
+                flex: l;
+                text-align:right;
+            }
+            .nav-links ul li{
+                list-style: none;
+                display:inline-block;
+                padding:15px 25px;
+                position:relative;
+            }
+            .nav-links ul li a{
+                color:#fff;
+                text-decoration:none;
+                font-size:16px;
+            }
+            .nav-links ul li::after{
+                content: '';
+                width:0%;
+                height:2px;
+                background:#f44336;
+                display:block;
+                margin:auto;
+                transition:0.5s;
+
+            }
+            .nav-links ul li:hover::after{
+                width:100%;
+            }
+
+        }
+        .banner-title{
+            position: absolute; 
+            width:100%; 
+            text-align: center;
+            color:white;
+            bottom: 80px;
+            font-family: "Montserrat", sans-serif;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        #about {
+            background-color:#EEE7E9 ;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            font-size: 18px;
+            border: 2px solid #e1dcdc;
+        }
+        #about h2 {
+            color: #273746 ;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        #gallery {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(184, 182, 182, 0.1);
+        }
+        #gallery h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 250px; 
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body styles="background-color:">
+    <div class="background-image">
+        <section class="header">
+            <nav>
+                <img src="image2.png">
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="\index_new.html">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="\Login\index.html">REGISTER</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <h2 class="banner-title">Anantam</h2>
+    </div>
+<br><br><br><br><br>
+    <div class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>The Mathematics Club of Amrita Vishwa Vidyapeetham, Coimbatore is known as Anantham. Anantham means “infinity”in Sanskrit.  This name was deliberately chosen as Mathematics to give space for everyone to understand various concepts in numerous (infinite) ways as how one perceives it or from what background it is looked at. Thus, sharing everyone’s experience on how it is interesting to one may be different from the other. Embracing the inherent nature of Mathematics, the Math-loving student community established Anantham as a platform for collaborative learning, where they can exchange experiences, engage in thought- provoking discussions, and nurture their passion for Math.</p>
+            <br>
+            <p>All students of Integrated MSc, MSc Mathematics, Integrated MSc Data Science, and MSc Applied Statistics and Data Analytics are members of Anantham by default. Additionally, students from various undergraduate Engineering programs who wish to listen or share their observations on Mathematics and its applications to their problems are always welcome to become members of this club. We strongly believe that interactions through the club among disciplines foster a healthy academic culture. Furthermore, it is significant to note that this will strategically alleviate mathophobia for anyone wishing to overcome it.</p>
+            <br> 
+            <p>Concept description by using models, understanding of problems by using Mathematical software, discussions, lectures, certain Mathematical games, and quizzes are certain activities that are often found in various events of Anantham. It is quite sure that the informal environment of the club activities provides an avenue beyond the classroom experience. It facilitates the student to imbibe social qualities like cooperation, tolerance, adjustment, and open-mindedness, as they work in groups. Experts in various fields of Mathematics will be invited to deliver Expert Lectures. The History of Mathematics will be cherished by conducting events on occasions connected to Mathematicians.</p>
+            <br>    
+            <p>Thus, this Forum helps students to appreciate the beauty and subtlety of mathematics and to learn about the origin and development of various fields in mathematics. Students also get opportunities to learn about recent developments, which broaden and deepen their knowledge in the field.</p>
+            <br>    
+            <p>Dr. K. Gayathri, Assistant Professor-SG, and the Class Advisors of all Programmes of the Department of Mathematics are the Faculty Coordinators of Anantham.</p>
+        </section>
+        <br><br><br>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="ana1.jpg" alt="Gallery Image 1">
+                <img src="ana2.jpg" alt="Gallery Image 2">
+                <img src="ana3.jpg" alt="Gallery Image 3">
+                <img src="ana4.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="gallery">
+                <img src="ana5.jpg" alt="Gallery Image 1">
+                <img src="ana6.jpg" alt="Gallery Image 2">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

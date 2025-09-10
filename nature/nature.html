@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Club</title>
+    <link rel="icon" type="image/x-icon" href="symbol_title.png">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .background-image{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(nature_background.jpg);
+            background-size: cover;
+            background-repeat:no-repeat;
+            font-size: 30px;
+            line-height: normal;
+            height: auto;
+            min-height: 635px;
+        }
+        .header{
+            nav{
+                display:flex;
+                padding:2% 6%;
+                justify-content:space-between;
+                align-items:center;
+            }
+            nav img{
+                width: 250px;
+            }
+            .nav-links{
+                flex: l;
+                text-align:right;
+            }
+            .nav-links ul li{
+                list-style: none;
+                display:inline-block;
+                padding:15px 25px;
+                position:relative;
+            }
+            .nav-links ul li a{
+                color:#fff;
+                text-decoration:none;
+                font-size:16px;
+            }
+            .nav-links ul li::after{
+                content: '';
+                width:0%;
+                height:2px;
+                background:#f44336;
+                display:block;
+                margin:auto;
+                transition:0.5s;
+
+            }
+            .nav-links ul li:hover::after{
+                width:100%;
+            }
+
+        }
+        .banner-title{
+            position: absolute; 
+            width:100%; 
+            text-align: center;
+            color:white;
+            bottom: 80px;
+            font-family: "Montserrat", sans-serif;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        #about {
+            background-color:#EEE7E9 ;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            font-size: 18px;
+            border: 2px solid #e1dcdc;
+        }
+        #about h2 {
+            color: #273746 ;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        #about h3 {
+            color: #273746 ;
+            margin-bottom: 20px;
+            font-size: 35px;
+            text-align: center;
+        }
+        
+        #gallery {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(184, 182, 182, 0.1);
+        }
+        #gallery h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 250px; 
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .float-left {
+            float: left;
+            margin-right: 20px;
+            width:30%; 
+        }
+        
+        .float-right {
+            float: right;
+            margin-left: 20px;
+        }
+        
+        .content {
+            overflow: hidden; 
+        }
+
+    </style>
+</head>
+<body styles="background-color:">
+    <div class="background-image">
+        <section class="header">
+            <nav>
+                <img src="image2.png">
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="\index_new.html">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="\Login\index.html">REGISTER</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <h2 class="banner-title">Nature</h2>
+    </div>
+<br><br><br><br><br>
+    <div class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="content">
+                <img src="mi_image2.jpg" class="float-right" alt="Image">
+                <div id="text">
+                    <p>The Nature Club of Amrita works with a mission to instill among the youth the love for the plants and animals, developing respect for the oneness of life in all elements of nature and preserving the pristine beauty and purity of nature. The Club plans to involve the students and the staff in preserving the campus ecosphere and promoting eco friendly way of life through awareness camps. It plans to organize seminars and talks on environmental awareness</p>
+                </div>
+            </div>
+            </section>
+        <br><br>
+        <section id="about">
+            <h3>Report of Spot Photography Event at Amrita Vishwa Vidyapeetham</h3>
+            <p style="color:#71108c">18th April 2023</p>
+            <br>
+            <p>EIACP, Ministry of Environment and Forest RP Amrita Vishwa Vidyapeetham (AVV) and Nature Club of AVV organized an award function to honor and felicitate women who have been in the forefront of animal rescue. The Award is named as Animal Rescue Warrior Award. Nine awardees from different walks of life ranging from corporate sector, NGO, retired professors, housewives to housekeeping and domestic helpers were identified and honored.</p>
+            <br>
+            <p>“When we see Mother Nature as the embodiment of God, we will automatically serve and protect her.”</p>
+            <br>
+            <p>Nature is an indispensable part of human. It has its own stories to tell and emotions to express.  From a tiny insect to the largest animal on earth, each life has its role to sustain this ecosystem and co - exist with each other.</p>
+            <br>
+            <p>As a part of Azadi ka Amrut Mahotsav and Mission Life, the nature club of Amrita Vishwa Vidyapeetham and EIACP RP at Amrita Vishwa Vidyapeetham is organizing a cleanliness drive and a film screening of the Oscar award winning film ” The Elephant Whisperers” along with an award ceremony.</p>
+            <br>
+            <p>Along with them, we will also be awarding student ambassadors from Amrita Animal Welfare Club and Nature Club who have been actively participating in club activities like anti - rabies vaccination drives, feeding drives and volunteered at the times of need to vaccinate different puppies and kittens in campus.</p>
+            <br>
+            <p>“If we have any pet animal, we should feed them before taking our food. Perceive God in every living being and feed them with that attitude.”</p>
+            <br>
+            <div class="content">
+                <img src="mid_image.png" class="float-left">
+                <div id="text">
+                    <p>Prof. C. Parameswaran, Principal Director of Corporate Industrial Relations at Amrita University was the chief guest. He emphasized the need for a safe society for animals to live coexist with nature. This award is one of a kind to honor women working for animal welfare. The program was coordinated by Dr, Maya Mahajan who is coordinator of EIACP Center of Ministry of Environment and Amrita Vishwa Vidyapeetham.</p>
+                    <br>
+                    <p>Function was followed by Award winning movie screening Elephant Whisperers. The program was graced by Dr. Sankaran, Registrar, Amrita Vishwa Vidyapeetham. More than 300 students from the University attended this award function and appreciated the efforts by these women warriors. The students enjoyed watching the movie and were enthralled by the Oscar winning movie “Elephant Whisperers”.</p>
+                </div>
+            </div>
+            <br>
+            <p>The program will be graced by Prof. C. Parameswaran, Principal Director of Corporate Industrial Relations, Amrita Vishwa Vidyapeetham and he will be distributing the prizes. We will be honoring 9 women who have done exceptional work for the cause of Animal Welfare. The women awardees are from different walks of life. They hail from high profile corporate employees to retired professors and home makers, NGO representatives, housekeeping and domestic maids who are working for the cause of stray animals with their own savings.</p>
+            <br>
+            <p style="color:#71108c;">Summary:
+            <br>
+            <p>Prof. C. Parameswaran, Principal Director of Corporate Industrial Relations at Amrita University was the chief guest.The program was coordinated by Dr Maya Mahajan who is coordinator of EIACP Center of Ministry of Environment and Amrita University.The students enjoyed watching the movie and were enthralled by the Oscar winning movie “Elephant Whisperers”.Scheduled to be completed by 05:30pm.</p>
+            <br>
+            <p style="color:#71108c; font-size:20px">Eco - Ganesh Making Contest / Kozhukattai (Modhak)Making Contest</p>
+            <p>Vinayaka Chaturthi was celebrated at the Coimbatore campus from September 18thto 20thSeptember2023. As part of the festivities, we organized an eco-friendly Ganesha Idol making and Kozhukattai (Modhak) making Contest competition for students to showcase their artistic skills and promote sustainability to protect our environment. A large number of students enthusiastically participated, and the entire atmosphere was imbued with the essence of traditional Indian culture.</p>
+            <br>
+            <p>The materials used for Ganesha idol making contest was made from paper and waste potato powderand for campus decorations were primarily paper, symbolizing flowers and leaves, as a testament to our commitment to sustainability intertwined with spirituality.</p>
+            <br>
+            <p style="color:#71108c">Eco - Ganesh Making Contest</p>
+            <br>
+            <p>First Place: Ms Dhanya V G</p>
+            <br>
+            <p>First Place: Ms Sruthika A CB.EN.U4AEE21085</p>
+            <br>
+            <p>III Yr Aerospace Engineering, Contact No:8921648821</p>
+            <br>
+            <p>Second Place: Mr Aayush M R CB.SB.P2SCW23051</p>
+            <br>
+            <p>I Yr MSW Contact No:9496207764</p>
+            <br>
+            <p style="color:#71108c">Kozhukattai / Modhak Contest</p>
+            <br>
+            <p>First Place: Mrs Radhika S</p>
+            <br>
+            <p>First Place: Ms Sruthika A CB.EN.U4AEE21085 III Yr Aerospace Engineering, Contact No:8921648821</p>
+            <section id="Gallery">
+                <div class="gallery">
+                    <img src="p_image1.jpg">
+                    <img src="p_image2.jpg">
+                </div>
+            </section>
+        </section>
+        <br><br><br>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="nat1.jpg" alt="Gallery Image 1">
+                <img src="nat2.jpg" alt="Gallery Image 2">
+                <img src="nat3.jpg" alt="Gallery Image 3">
+                <img src="nat4.jpg" alt="Gallery Image 4">
+            </div>
+        </section>
+        <section>
+            <div class="gallery">
+                <img src="nat5.jpg" alt="Gallery Image 5">
+                <img src="nat6.jpg" alt="Gallery Image 6">
+            </div>
+        </section>
+    </div>
+</body>
+</html>

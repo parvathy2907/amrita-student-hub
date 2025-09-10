@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Page</title>
+    <link rel="icon" type="image/x-icon" href="symbol_title.png">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .background-image{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(image_1.png);
+            background-size: cover;
+            background-repeat:no-repeat;
+            font-size: 30px;
+            line-height: normal;
+            height: auto;
+            min-height: 635px;
+        }
+        .header{
+            nav{
+                display:flex;
+                padding:2% 6%;
+                justify-content:space-between;
+                align-items:center;
+            }
+            nav img{
+                width: 250px;
+            }
+            .nav-links{
+                flex: l;
+                text-align:right;
+            }
+            .nav-links ul li{
+                list-style: none;
+                display:inline-block;
+                padding:15px 25px;
+                position:relative;
+            }
+            .nav-links ul li a{
+                color:#fff;
+                text-decoration:none;
+                font-size:16px;
+            }
+            .nav-links ul li::after{
+                content: '';
+                width:0%;
+                height:2px;
+                background:#f44336;
+                display:block;
+                margin:auto;
+                transition:0.5s;
+
+            }
+            .nav-links ul li:hover::after{
+                width:100%;
+            }
+
+        }
+        .banner-title{
+            position: absolute; 
+            width:100%; 
+            text-align: center;
+            color:white;
+            bottom: 100px;
+            font-family: "Montserrat", sans-serif;
+        }
+        .container {
+            padding: 20px;
+        }
+        #about {
+            background-color:#fff ;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            font-size: 20px;
+            border: 2px solid #e1dcdc;
+        }
+        #about h2 {
+            color: #273746 ;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+
+        #gallery {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(184, 182, 182, 0.1);
+            border: 2px solid #e1dcdc;
+        }
+        #gallery h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 250px; 
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        #videoitem {
+            margin-left: 170px;
+        }
+
+        #video {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(184, 182, 182, 0.1);
+            flex-wrap: wrap;
+            border: 2px solid #e1dcdc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+
+        #video div {
+         max-width: 100%; 
+        }
+
+
+        #video h2{
+            font-size: 30px;
+        }
+
+        *{
+             margin:0;
+             padding:0;
+             box-sizing:border-box;
+        } 
+        footer{
+             background-color:#111;
+        }
+        .footerContainer{
+             width:100%;
+             padding:20px 30px 20px;
+        }
+        .socialIcons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .socialIcons img {
+            width: 24px;
+            height: 24px; 
+            vertical-align: middle;
+        }
+
+        .socialIcons a {
+            text-decoration: none;
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .socialIcons a i {
+            font-size: 2em;
+            color: black;
+            opacity: 0.9;
+        }
+
+        .socialIcons a:hover {
+            background-color: #111;
+            transition: 0.5s;
+        }
+
+        .socialIcons a:hover i {
+            color: white;
+            transition: 0.5s;
+        }
+        .follow-us {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <section class="header">
+            <nav>
+                <img src="image2.png" alt="Amrita">
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="\index_new.html">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="\Login\index.html">REGISTER</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <h2 class="banner-title">ELITE Club</h2>
+    </div>
+<br><br><br><br><br>
+    <div class="container">
+        <section id="about" style="display: flex; flex-direction: column;">
+            <h2>About Us</h2>
+            <p>
+                The Elite club is to instill a profound appreciation for entrepreneurship, leadership, business ideation fundamentals, ethical professionalism in business and the vibrant start up culture within the bright minds of the esteemed students .Our goal is to nurture and develop entrepreneurs who will not only enrich the Indian economy but also catalyse the growth and self sufficiency of the Indian market, reducing its dependence on foreign corporations
+            </p><br>
+            <p>At the heart of the Elite Club lies a commitment to empower tomorrow's leaders. Through a combination of workshops, seminars, and interactive sessions, we provide our members with the knowledge, skills, and mindset needed to thrive in the fast-paced world of entrepreneurship and business. From honing their pitching skills to mastering the art of negotiation, our programs are designed to cultivate a generation of ethical and visionary leaders who can navigate challenges with confidence and integrity.
+            </p><br>
+            <p>Innovation is the lifeblood of progress, and collaboration is its catalyst. The Elite Club serves as a hub for creative thinking and collaborative problem-solving, where ideas are incubated, refined, and brought to fruition. By fostering a culture of innovation and collaboration, we empower our members to think outside the box, challenge the status quo, and create solutions that address pressing societal needs. Together, we aspire to ignite a spark of entrepreneurship in every member, transforming ideas into impactful ventures that drive positive change in our society and beyond.
+            </p><br>
+        </section>
+        
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="img1.jpg" alt="Gallery Image 1">
+                <img src="img2.jpg" alt="Gallery Image 2">
+                <img src="img3.jpg" alt="Gallery Image 3">
+                <img src="img4.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="gallery">
+                <img src="img5.jpg" alt="Gallery Image 1">
+                <img src="img6.jpg" alt="Gallery Image 2">
+                <img src="img7.jpg" alt="Gallery Image 3">
+                <img src="img8.jpg" alt="Gallery Image 4">
+            </div>
+            <div class="gallery">
+                <img src="img9.jpg" alt="Gallery Image 1">
+                <img src="img10.jpg" alt="Gallery Image 2">
+                <img src="img11.jpg" alt="Gallery Image 3">
+                <img src="img12.jpg" alt="Gallery Image 4">
+            </div>
+        </section>
+        <br><br><br>
+
+        <section id="video">
+            <div>
+                <video width="100%" height="315" autoplay muted loop>
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+        
+    </div>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="follow-us">Follow Us on Instagram</div>
+             <div class="socialIcons">
+                <a href="https://www.instagram.com/the_elite_club_amrita/" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram">
+                </a>
+             </div>
+        </div>
+    </footer>
+        
+    
+</body>
+</html>

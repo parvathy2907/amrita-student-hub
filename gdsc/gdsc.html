@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Page</title>
+    <link rel="icon" type="image/x-icon" href="symbol_title.png">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .background-image{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(image_1.jpeg);
+            background-size: cover;
+            background-repeat:no-repeat;
+            font-size: 30px;
+            line-height: normal;
+            height: auto;
+            min-height: 635px;
+        }
+        .header{
+            nav{
+                display:flex;
+                padding:2% 6%;
+                justify-content:space-between;
+                align-items:center;
+            }
+            nav img{
+                width: 250px;
+            }
+            .nav-links{
+                flex: l;
+                text-align:right;
+            }
+            .nav-links ul li{
+                list-style: none;
+                display:inline-block;
+                padding:15px 25px;
+                position:relative;
+            }
+            .nav-links ul li a{
+                color:#fff;
+                text-decoration:none;
+                font-size:16px;
+            }
+            .nav-links ul li::after{
+                content: '';
+                width:0%;
+                height:2px;
+                background:#f44336;
+                display:block;
+                margin:auto;
+                transition:0.5s;
+
+            }
+            .nav-links ul li:hover::after{
+                width:100%;
+            }
+
+        }
+        .banner-title{
+            position: absolute; 
+            width:100%; 
+            text-align: center;
+            color:white;
+            bottom: 100px;
+            font-family: "Montserrat", sans-serif;
+        }
+        .container {
+            padding: 20px;
+        }
+        #about {
+            background-color:#fff ;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            font-size: 20px;
+            border: 2px solid #e1dcdc;
+        }
+        #about h2 {
+            color: #273746 ;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+
+        #gallery {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(184, 182, 182, 0.1);
+            border: 2px solid #e1dcdc;
+        }
+        #gallery h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 250px; 
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        #videoitem {
+            margin-left: 170px;
+        }
+
+        #video {
+            background-color: #d5f6ff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(184, 182, 182, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            border: 2px solid #e1dcdc;
+        }
+
+        #video h2{
+            font-size: 30px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+        }
+
+        .social-icons img {
+            width: 50px; 
+            height: 50px;
+            vertical-align: middle; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <section class="header">
+            <nav>
+                <img src="image2.png" alt="Amrita">
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="\index_new.html">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="#video">SOCIALS</a></li>
+                        <li><a href="\Login\index.html">REGISTER</a></li>
+                        
+                </div>
+            </nav>
+        </section>
+        <h2 class="banner-title">Google Developer Student Club</h2>
+    </div>
+<br><br><br><br><br>
+    <div class="container">
+        <section id="about" style="display: flex; flex-direction: column;">
+            <h2>About Us</h2>
+            <div style="display: flex; justify-content: space-between;">
+                <div style="flex: 1;">
+                    <h4>Connect</h4>
+                    <p>Meet students interested in developer technologies at your college or university. All are welcome, including those with diverse backgrounds and different majors.</p>
+                </div>
+                <div style="flex: 1;">
+                    <h4>Learn</h4>
+                    <p>Learn about a range of technical topics and gain new skills through hands-on workshops, events, talks, and project-building activities online and in-person.</p>
+                </div>
+                <div style="flex: 1;">
+                    <h4>Grow</h4>
+                    <p>Apply new learnings to build great solutions for local problems. Advance your skills, career, and network. Give back to your community by helping others learn.</p>
+                </div>
+            </div>
+            <br><br><a href="https://gdsc.community.dev/amrita-school-of-computing-coimbatore-india/" target="_blank">GDSC ASC Chapter Official Website</a>
+        </section>
+        
+       
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="gdsc.png" alt="Gallery Image 1">
+                <img src="img2.jpeg" alt="Gallery Image 2">
+                <img src="img3.jpeg" alt="Gallery Image 3">
+                <img src="img4.jpeg" alt="Gallery Image 3">
+            </div>
+            <div class="gallery">
+                <img src="img5.jpeg" alt="Gallery Image 1">
+                <img src="img6.jpeg" alt="Gallery Image 2">
+                <img src="img7.jpeg" alt="Gallery Image 3">
+            </div>
+        </section>
+        <br><br><br>
+
+        <section id="video" style="display: flex; justify-content: space-between;">
+            <div style="flex: 1; margin-right: 50px;">
+                <video width="100%" height="315" autoplay muted loop>
+                    <source src="gdscvideo1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div style="flex: 1;">
+                <h2>Follow Us</h2><br>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/gdsc.ase.cbe/"><img src="instagram-icon.png" alt="Instagram">  Instagram</a><br><br>                    
+                    <a href="https://www.youtube.com/hashtag/developerstudentclubs"><img src="youtube-icon.png" alt="YouTube">  #developerstudentclubs</a><br><br>
+                    <br><br><h2>Google for Developers</h2><br>
+                    <a href="https://www.instagram.com/googlefordevs/"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="https://twitter.com/googledevs"><img src="twitter-icon.png" alt="X"></a>
+                    <a href="https://www.linkedin.com/showcase/googledevelopers/"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                    <a href="https://www.facebook.com/googlefordevs"><img src="facebook-icon.png" alt="Facebook"></a>
+                </div>
+            </div>
+        </section>
+    </div>
+        
+    
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Page</title>
+    <link rel="icon" type="image/x-icon" href="symbol_title.png">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .background-image{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(nss_main.jpeg);
+            background-size: cover;
+            background-repeat:no-repeat;
+            font-size: 30px;
+            line-height: normal;
+            height: auto;
+            min-height: 635px;
+        }
+        .header{
+            nav{
+                display:flex;
+                padding:2% 6%;
+                justify-content:space-between;
+                align-items:center;
+            }
+            nav img{
+                width: 250px;
+            }
+            .nav-links{
+                flex: l;
+                text-align:right;
+            }
+            .nav-links ul li{
+                list-style: none;
+                display:inline-block;
+                padding:15px 25px;
+                position:relative;
+            }
+            .nav-links ul li a{
+                color:#fff;
+                text-decoration:none;
+                font-size:16px;
+            }
+            .nav-links ul li::after{
+                content: '';
+                width:0%;
+                height:2px;
+                background:#f44336;
+                display:block;
+                margin:auto;
+                transition:0.5s;
+
+            }
+            .nav-links ul li:hover::after{
+                width:100%;
+            }
+
+        }
+        .banner-title{
+            position: absolute; 
+            width:100%; 
+            text-align: center;
+            color:white;
+            bottom: 100px;
+            font-family: "Montserrat", sans-serif;
+        }
+        .container {
+            padding: 20px;
+        }
+        #about {
+            background-color:#fff ;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            font-size: 20px;
+            border: 2px solid #e1dcdc;
+        }
+        #about h2 {
+            color: #273746 ;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+
+        #gallery {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(184, 182, 182, 0.1);
+            border: 2px solid #e1dcdc;
+        }
+        #gallery h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 250px; 
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        #videoitem {
+            margin-left: 170px;
+        }
+
+        #video {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(184, 182, 182, 0.1);
+            flex-wrap: wrap;
+            border: 2px solid #e1dcdc;
+            display: flex;
+        }
+
+
+        #video h2{
+            font-size: 30px;
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        footer{
+            background-color:#111;
+        }
+        .footerContainer{
+            width:100%;
+            padding:20px 30px 20px;
+        }
+        .socialIcons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .socialIcons img {
+            width: 24px;
+            height: 24px; 
+            vertical-align: middle;
+        }
+
+        .socialIcons a {
+            text-decoration: none;
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .socialIcons a i {
+            font-size: 2em;
+            color: black;
+            opacity: 0.9;
+        }
+
+        .socialIcons a:hover {
+            background-color: #111;
+            transition: 0.5s;
+        }
+
+        .socialIcons a:hover i {
+            color: white;
+            transition: 0.5s;
+        }
+        .follow-us {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <section class="header">
+            <nav>
+                <img src="image2.png" alt="Amrita">
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="\index_new.html">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="\Login\index.html">REGISTER</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <h2 class="banner-title">NSS (NATIONAL SERVICE SCHEME)</h2>
+    </div>
+<br><br><br><br><br>
+    <div class="container">
+        <section id="about" style="display: flex; flex-direction: column;">
+            <h2>About Us</h2>
+            <p>National Service Scheme (NSS) in India was started in 1969, this public service program is sponsored by the Government of India and is conducted by the Department of Youth Affairs and Sports. National Service Scheme (NSS) is a voluntary program in which young people from colleges, universities, and also +2 level work towards creating a campus-community linkage. 
+            </p><br>
+            <p>National Service Scheme (NSS) is beneficial to both students as well as society in various different means. NSS helps the student to grow individually and also as a group. It makes the students confident, develops leadership skills, and gain knowledge about different people from different walks of life. Students also learn other skills that help them lead a better life in various situations. It teaches you to be disciplined and organized with the objectives you set for yourself and your goals. 
+            </p><br>
+            <b>Symbol of N.S.S (National Service Scheme)<b><br>
+            <br><p>The symbol for the NSS has been based on the giant Rath Wheel of the world-famous Konark Sun Temple (The Black Pagoda) situated in Odisha, India. The wheel portrays the cycle of creation, preservation and release. It signifies the movement in life across time and space, the symbol thus stands for continuity as well as change and implies the continuous striving of NSS for social change. The eight bars in the wheel represents 24 hours of a day. The red colour indicates that the volunteer is full of young blood that is lively, active, energetic and full of high spirit. The navy blue colour indicates the cosmos of which the NSS is tiny part, ready to contribute its share for the welfare of the mankind. It stands for continuity as well as change and implies the continuous striving of NSS. 
+            </p>
+        </section>
+        
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="nss1.jpeg" alt="Gallery Image 1">
+                <img src="nss2.jpeg" alt="Gallery Image 2">
+                <img src="nss3.jpeg" alt="Gallery Image 3">
+                <img src="nss4.jpeg" alt="Gallery Image 3">
+            </div>
+            <div class="gallery">
+                <img src="nss5.jpeg" alt="Gallery Image 1">
+                <img src="nss6.jpeg" alt="Gallery Image 2">
+                <img src="nss7.jpeg" alt="Gallery Image 3">
+                <img src="nss8.jpeg" alt="Gallery Image 4">
+            </div>
+            <div class="gallery">
+                <img src="nss9.jpg" alt="Gallery Image 1">
+                <img src="nss10.jpg" alt="Gallery Image 2">
+                <img src="nss11.jpg" alt="Gallery Image 3">
+                <img src="nss12.jpg" alt="Gallery Image 4">
+            </div>
+        </section>
+        <br><br><br>
+
+        <section id="video" style="display: flex; justify-content: space-between;">
+            <div style="flex: 1; margin-right: 50px;">
+                <video width="100%" height="315" autoplay muted loop>
+                    <source src="nssvideo1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div style="flex: 1; margin-right: 50px;">
+                <video width="100%" height="315" autoplay muted loop>
+                    <source src="nssvideo2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+        
+    </div>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="follow-us">Follow Us on Instagram</div>
+             <div class="socialIcons">
+                <a href="https://www.instagram.com/nss_amrita/?hl=en" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram">
+                </a>
+             </div>
+        </div>
+    </footer>
+        
+    
+</body>
+</html>

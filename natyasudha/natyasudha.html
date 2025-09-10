@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Page</title>
+    <link rel="icon" type="image/x-icon" href="symbol_title.png">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .background-image{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(natya_main.jpg);
+            background-size: cover;
+            background-repeat:no-repeat;
+            font-size: 30px;
+            line-height: normal;
+            height: auto;
+            min-height: 635px;
+        }
+        .header{
+            nav{
+                display:flex;
+                padding:2% 6%;
+                justify-content:space-between;
+                align-items:center;
+            }
+            nav img{
+                width: 250px;
+            }
+            .nav-links{
+                flex: l;
+                text-align:right;
+            }
+            .nav-links ul li{
+                list-style: none;
+                display:inline-block;
+                padding:15px 25px;
+                position:relative;
+            }
+            .nav-links ul li a{
+                color:#fff;
+                text-decoration:none;
+                font-size:16px;
+            }
+            .nav-links ul li::after{
+                content: '';
+                width:0%;
+                height:2px;
+                background:#f44336;
+                display:block;
+                margin:auto;
+                transition:0.5s;
+
+            }
+            .nav-links ul li:hover::after{
+                width:100%;
+            }
+
+        }
+        .banner-title{
+            position: absolute; 
+            width:100%; 
+            text-align: center;
+            color:white;
+            bottom: 100px;
+            font-family: "Montserrat", sans-serif;
+        }
+        .container {
+            padding: 20px;
+        }
+        #about {
+            background-color:#fff ;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            font-size: 20px;
+            border: 2px solid #e1dcdc;
+        }
+        #about h2 {
+            color: #273746 ;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+
+        #gallery {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(184, 182, 182, 0.1);
+            border: 2px solid #e1dcdc;
+        }
+        #gallery h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 250px; 
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        #videoitem {
+            margin-left: 170px;
+        }
+
+        #video {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(184, 182, 182, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            border: 2px solid #e1dcdc;
+        }
+
+        #video h2{
+            font-size: 30px;
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        footer{
+            background-color:#111;
+        }
+        .footerContainer{
+            width:100%;
+            padding:20px 30px 20px;
+        }
+        .socialIcons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .socialIcons img {
+            width: 24px;
+            height: 24px; 
+            vertical-align: middle;
+        }
+
+        .socialIcons a {
+            text-decoration: none;
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .socialIcons a i {
+            font-size: 2em;
+            color: black;
+            opacity: 0.9;
+        }
+
+        .socialIcons a:hover {
+            background-color: #111;
+            transition: 0.5s;
+        }
+
+        .socialIcons a:hover i {
+            color: white;
+            transition: 0.5s;
+        }
+        .follow-us {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <section class="header">
+            <nav>
+                <img src="image2.png" alt="Amrita">
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="\index_new.html">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="\Login\index.html">REGISTER</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <h2 class="banner-title">Natyasudha</h2>
+    </div>
+<br><br><br><br><br>
+    <div class="container">
+        <section id="about" style="display: flex; flex-direction: column;">
+            <h2>About Us</h2>
+            <p>
+            This is the Dance Club which promotes knowledge and practice of classical and current dance forms, and encourages students to eschew filmi gyrations which are more titillating than enriching.</p><br>
+            <p>Welcome to the vibrant world of Natyasudha Dance Club, where tradition meets innovation, and passion fuels every move. Our club is a melting pot of creativity, bringing together students from diverse backgrounds to celebrate the rich tapestry of Indian dance forms. Whether you have a love for the timeless grace of classical dance or the dynamic energy of contemporary styles, our club offers a platform for all enthusiasts to learn, perform, and grow.</p><br>
+            <p>At the Natyasudha Dance Club, our mission is to foster a love for dance in its many forms, while promoting cultural appreciation and artistic excellence. We aim to provide a supportive environment where students can explore their creativity, develop their skills, and share their passion for dance with the community.</p>
+        </section>
+        
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="natya1.jpg" alt="Gallery Image 1">
+                <img src="natya2.jpg" alt="Gallery Image 2">
+                <img src="natya3.jpg" alt="Gallery Image 3">
+                <img src="natya4.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="gallery">
+                <img src="natya5.jpg" alt="Gallery Image 1">
+                <img src="natya6.jpg" alt="Gallery Image 2">
+                <img src="natya7.jpg" alt="Gallery Image 3">
+                <img src="natya8.jpg" alt="Gallery Image 4">
+            </div>
+            <div class="gallery">
+                <img src="natya9.jpg" alt="Gallery Image 1">
+                <img src="natya10.jpg" alt="Gallery Image 2">
+                <img src="natya11.jpg" alt="Gallery Image 3">
+                <img src="natya12.jpg" alt="Gallery Image 4">
+            </div>
+        </section>
+        <br><br><br>
+
+        <section id="video" style="display: flex; justify-content: space-between;">
+            <div style="flex: 1; margin-right: 50px;">
+                <video width="100%" height="315" autoplay muted loop>
+                    <source src="natyavideo1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div style="flex: 1; margin-right: 50px;">
+                <video width="100%" height="315" autoplay muted loop>
+                    <source src="natyavideo2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div style="flex: 1; margin-right: 50px;">
+                <video width="100%" height="315" autoplay muted loop>
+                    <source src="natyavideo3.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="follow-us">Follow Us on Instagram</div>
+             <div class="socialIcons">
+                <a href="https://www.instagram.com/team_natya_/" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram">
+                </a>
+             </div>
+        </div>
+    </footer>
+        
+    
+</body>
+</html>

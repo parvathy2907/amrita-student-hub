@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teammedia Club</title>
+    <link rel="icon" type="image/x-icon" href="symbol_title.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .background-image{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(title_back.jpg);
+            background-size: cover;
+            background-repeat:no-repeat;
+            font-size: 30px;
+            line-height: normal;
+            height: auto;
+            min-height: 635px;
+        }
+        .header{
+            nav{
+                display:flex;
+                padding:2% 6%;
+                justify-content:space-between;
+                align-items:center;
+            }
+            nav img{
+                width: 250px;
+            }
+            .nav-links{
+                flex: l;
+                text-align:right;
+            }
+            .nav-links ul li{
+                list-style: none;
+                display:inline-block;
+                padding:15px 25px;
+                position:relative;
+            }
+            .nav-links ul li a{
+                color:#fff;
+                text-decoration:none;
+                font-size:16px;
+            }
+            .nav-links ul li::after{
+                content: '';
+                width:0%;
+                height:2px;
+                background:#f44336;
+                display:block;
+                margin:auto;
+                transition:0.5s;
+
+            }
+            .nav-links ul li:hover::after{
+                width:100%;
+            }
+
+        }
+        .banner-title{
+            position: absolute; 
+            width:100%; 
+            text-align: center;
+            color:white;
+            bottom: 80px;
+            font-family: "Montserrat", sans-serif;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        #about {
+            background-color:#EEE7E9 ;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            font-size: 18px;
+            border: 2px solid #e1dcdc;
+        }
+        #about h2 {
+            color: #273746 ;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        #about h3 {
+            color: #273746 ;
+            margin-bottom: 20px;
+            font-size: 35px;
+            text-align: center;
+        }
+        
+        #gallery {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(184, 182, 182, 0.1);
+        }
+        #gallery h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 250px; 
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .float-left {
+            float: left;
+            margin-right: 20px;
+            width:30%; 
+        }
+        
+        .float-right {
+            float: right;
+            margin-left: 20px;
+            width: 300px;
+            margin-top: -1px;
+        }
+        
+        .content {
+            overflow: hidden; 
+        }
+        .follow-us {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body styles="background-color:">
+    <div class="background-image">
+        <section class="header">
+            <nav>
+                <img src="image2.png">
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="\index_new.html">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="\Login\index.html">REGISTER</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <h2 class="banner-title">Team Media</h2>
+    </div>
+<br><br><br><br><br>
+    <div class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="content">
+                <img src="p_image0.jpg" class="float-right" alt="Image">
+                <div id="text">
+                    <p>Team Media focuses on capturing the vibe and emotion of every event in our campus. This a great opportunity for all the amateur photographers, cinematographers and editors to showcase their talents, to learn and to gain experience.</p>
+                </div>
+            </div>
+            </section>
+        <br><br>
+        <section id="about">
+            <p style="color:#BC1669 "><b>Rules and Regulations:</b></p>
+            <br>
+            <p>Following the introductions, important rules and regulations governing student media activities were presented to ensure a conducive and respectful environment for all participants. Emphasis was placed on adherence to ethical standards, responsible reporting, and respectful behavior towards peers and faculty.</p>
+            <br>
+            <p style="color:#BC1669 "><b>Club Activities Information:</b></p>
+            <br>
+            <p>Subsequently, detailed information about club activities, initiatives, and upcoming events was shared with the attendees. Students were encouraged to actively participate in club activities, workshops, and projects to enhance their skills and contribute to the vibrant media community on campus.</p>
+            <br>
+            <p style="color:#BC1669 "><b>Distribution of Club T-Shirts and ID Cards:</b></p>
+            <br>
+            <p>As a gesture of membership acknowledgment, club t-shirts and identification cards were distributed to all registered members. The distribution process was efficiently managed, ensuring that every student received their respective club merchandise and identification credentials.</p>
+            <br>
+            <p style="color:#BC1669 "><b>Vote of Thanks:</b></p>
+            <br>
+            <p>The event concluded with a heartfelt vote of thanks extended to all attendees, club heads, faculty advisors, and the organizing committee for their contributions to making the induction event a success. Gratitude was expressed for the enthusiastic participation and commitment shown by the students towards fostering a dynamic and inclusive media environment on campus.</p>
+            <br>
+            <p style="color:#BC1669 "><b>Conclusion:</b></p> 
+            <p>In conclusion, the Team Media Induction Event served as a platform for fostering camaraderie, enthusiasm, and a sense of belonging among students interested in media-related activities. With the introduction of new heads, dissemination of essential information, and distribution of club merchandise, the event laid the groundwork for an exciting and productive academic term ahead.</p>
+            <section id="Gallery">
+                <div class="gallery">
+                    <img src="p_image1.jpg">
+                    <img src="p_image2.jpg">
+                </div>
+            </section>
+        </section>
+        <br><br><br>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="media_1.jpg" alt="Gallery Image 1">
+                <img src="media_2.jpg" alt="Gallery Image 2">
+                <img src="media_3.jpg" alt="Gallery Image 3">
+                <img src="media_4.jpg" alt="Gallery Image 4">
+            </div>
+        </section>
+        <section>
+            <div class="gallery">
+                <img src="media_5.jpg" alt="Gallery Image 5">
+                <img src="media_6.jpg" alt="Gallery Image 6">
+                <img src="media_7.jpg" alt="Gallery Image 7">
+                <img src="media_8.jpg" alt="Gallery Image 8">
+            </div>
+        </section>
+        <section>
+            <div class="gallery">
+                <img src="media_9.jpg" alt="Gallery Image 9">
+                <img src="media_10.jpg" alt="Gallery Image 10">
+                <img src="media_11.jpg" alt="Gallery Image 11">
+                <img src="media_12.jpg" alt="Gallery Image 12">
+            </div>
+        </section>
+        <br><br><br>
+        <section id="video" style="display: flex; justify-content: space-between;">
+            <div style="flex: 1; margin-right: 50px;">
+                <video width="100%" height="315" autoplay muted loop>
+                    <source src="team_media.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+    </div> 
+    <footer>
+        <div class="footerContainer">
+            <div class="follow-us">Follow Us On</div>
+             <div class="socialIcons">
+                <a href="https://www.facebook.com/TeamMediaAmrita/"target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/teammedia.amrita/?hl=en"target="_blank"><i class="fab fa-instagram"></i></a>
+             </div>
+        </div> 
+    </footer>
+</body>
+</html>
+  

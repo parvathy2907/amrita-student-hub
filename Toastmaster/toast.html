@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toastmasters club</title>
+    <link rel="icon" type="image/x-icon" href="symbol_title.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .background-image{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(title.jpg);
+            background-size: cover;
+            background-repeat:no-repeat;
+            font-size: 30px;
+            line-height: normal;
+            height: auto;
+            min-height: 635px;
+        }
+        .header{
+            nav{
+                display:flex;
+                padding:2% 6%;
+                justify-content:space-between;
+                align-items:center;
+            }
+            nav img{
+                width: 250px;
+            }
+            .nav-links{
+                flex: l;
+                text-align:right;
+            }
+            .nav-links ul li{
+                list-style: none;
+                display:inline-block;
+                padding:15px 25px;
+                position:relative;
+            }
+            .nav-links ul li a{
+                color:#fff;
+                text-decoration:none;
+                font-size:16px;
+            }
+            .nav-links ul li::after{
+                content: '';
+                width:0%;
+                height:2px;
+                background:#f44336;
+                display:block;
+                margin:auto;
+                transition:0.5s;
+
+            }
+            .nav-links ul li:hover::after{
+                width:100%;
+            }
+
+        }
+        .banner-title{
+            position: absolute; 
+            width:100%; 
+            text-align: center;
+            color:white;
+            bottom: 80px;
+            font-family: "Montserrat", sans-serif;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        #about {
+            background-color:#EEE7E9 ;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            font-size: 18px;
+            border: 2px solid #e1dcdc;
+        }
+        #about h2 {
+            color: #273746 ;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        #gallery {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(184, 182, 182, 0.1);
+        }
+        #gallery h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 250px; 
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        .float-right {
+                float: right;
+                margin-left: 20px;
+                width: 150px;
+                margin-top: -20px;
+        }
+        .follow-us {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body styles="background-color:">
+    <div class="background-image">
+        <section class="header">
+            <nav>
+                <img src="image2.png">
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="\index_new.html">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="\Login\index.html">REGISTER</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <h2 class="banner-title">Toast Masters</h2>
+    </div>
+<br><br><br><br><br>
+    <div class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <img src="toast.png" class="float-right" alt="Image">
+            <p>Toastmasters club builds confidence and teaches public speaking skills they meet online and in person. In a supportive community or corporate environment, members prepare and deliver speeches, respond to impromptu questions, and give and receive constructive feedback. It is through this regular practice that members are empowered to meet personal and professional communication goals.</p>
+            <br>
+        </section>
+        <br><br><br>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="toast_1.jpg" alt="Gallery Image 1">
+                <img src="toast_2.jpg" alt="Gallery Image 2">
+                <img src="toast_3.jpg" alt="Gallery Image 3">
+                <img src="toast_4.jpg" alt="Gallery Image 4">
+            </div>
+            <div class="gallery">
+                <img src="toast_5.jpg" alt="Gallery Image 5">
+                <img src="toast_6.jpg" alt="Gallery Image 6">
+                <img src="toast_7.jpg" alt="Gallery Image 7">
+                <img src="toast_8.jpg" alt="Gallery Image 8">
+            </div>
+            <div class="gallery">
+                <img src="toast_9.jpg" alt="Gallery Image 9">
+                <img src="toast_10.jpg" alt="Gallery Image 10">
+                <img src="toast_11.jpg" alt="Gallery Image 11">
+                <img src="toast_12.jpg" alt="Gallery Image 12">
+            </div>
+        </section>
+        <br><br><br>
+        <section id="video" style="display: flex; justify-content: space-between;">
+            <div style="flex: 1; margin-right: 50px;">
+                <video width="100%" height="315" autoplay muted loop>
+                    <source src="toast_1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div style="flex: 1; margin-right: 50px;">
+                <video width="100%" height="315" autoplay muted loop>
+                    <source src="toast_2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="footerContainer">
+            <div class="follow-us">Follow Us On</div>
+             <div class="socialIcons">
+                <a href="https://www.facebook.com/TMamrita/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/tmamrita/" target="_blank"><i class="fab fa-instagram"></i></a>
+             </div>
+        </div> 
+    </footer>
+</body>
+</html>

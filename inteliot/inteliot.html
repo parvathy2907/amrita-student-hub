@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Page</title>
+    <link rel="icon" type="image/x-icon" href="symbol_title.png">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .background-image{
+            background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(main_iot.jpg);
+            background-size: cover;
+            background-repeat:no-repeat;
+            font-size: 30px;
+            line-height: normal;
+            height: auto;
+            min-height: 635px;
+        }
+        .header{
+            nav{
+                display:flex;
+                padding:2% 6%;
+                justify-content:space-between;
+                align-items:center;
+            }
+            nav img{
+                width: 250px;
+            }
+            .nav-links{
+                flex: l;
+                text-align:right;
+            }
+            .nav-links ul li{
+                list-style: none;
+                display:inline-block;
+                padding:15px 25px;
+                position:relative;
+            }
+            .nav-links ul li a{
+                color:#fff;
+                text-decoration:none;
+                font-size:16px;
+            }
+            .nav-links ul li::after{
+                content: '';
+                width:0%;
+                height:2px;
+                background:#f44336;
+                display:block;
+                margin:auto;
+                transition:0.5s;
+
+            }
+            .nav-links ul li:hover::after{
+                width:100%;
+            }
+
+        }
+        .banner-title{
+            position: absolute; 
+            width:100%; 
+            text-align: center;
+            color:white;
+            bottom: 100px;
+            font-family: "Montserrat", sans-serif;
+        }
+        .container {
+            padding: 20px;
+        }
+        #about {
+            background-color:#fff ;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            font-size: 20px;
+            border: 2px solid #e1dcdc;
+        }
+        #about h2 {
+            color: #273746 ;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+
+        #gallery {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(184, 182, 182, 0.1);
+            border: 2px solid #e1dcdc;
+        }
+        #gallery h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 250px; 
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        #videoitem {
+            margin-left: 170px;
+        }
+
+        #video {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(184, 182, 182, 0.1);
+            flex-wrap: wrap;
+            border: 2px solid #e1dcdc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+        }
+
+        #video div {
+         max-width: 100%; 
+        }
+
+
+        #video h2{
+            font-size: 30px;
+        }
+
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+footer{
+    background-color:#111;
+}
+.footerContainer{
+    width:100%;
+    padding:20px 30px 20px;
+}
+.socialIcons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .socialIcons img {
+            width: 24px;
+            height: 24px; 
+            vertical-align: middle;
+        }
+
+        .socialIcons a {
+            text-decoration: none;
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .socialIcons a i {
+            font-size: 2em;
+            color: black;
+            opacity: 0.9;
+        }
+
+        .socialIcons a:hover {
+            background-color: #111;
+            transition: 0.5s;
+        }
+
+        .socialIcons a:hover i {
+            color: white;
+            transition: 0.5s;
+        }
+        .follow-us {
+            text-align: center;
+            color: white;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <section class="header">
+            <nav>
+                <img src="image2.png" alt="Amrita">
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="\index_new.html">HOME</a></li>
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="\Login\index.html">REGISTER</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+        <h2 class="banner-title">Intel IoT Club</h2>
+    </div>
+<br><br><br><br><br>
+    <div class="container">
+        <section id="about" style="display: flex; flex-direction: column;">
+            <h2>About Us</h2>
+            <p>At Intel IoT Club, our mission is to empower and
+                nurture students who are eager to engage with
+                developer communities and drive innovation in the
+                fields of IoT and AI.
+            </p>
+            <p>We believe that the key to solving real-world
+                problems lies in collaboration and knowledge-sharing,
+                which is why we offer a variety of Events,
+                Workshops, Industrial Trainings and resources that
+                enable our students to deepen their skills and stay upto-date with the latest hardware and software
+                solutions by Intel.
+            </p>
+            <p>Our IoT track, in particular, is designed to provide
+                students with hands-on experience and practical
+                knowledge that can help them tackle complex
+                challenges and develop impactful projects. Join us
+                and be part of a community that is passionate about
+                learning, creativity, and social impact!
+            </p>
+        </section>
+        
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="iot1.jpg" alt="Gallery Image 1">
+                <img src="iot2.jpg" alt="Gallery Image 2">
+                <img src="iot3.jpg" alt="Gallery Image 3">
+                <img src="iot4.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="gallery">
+                <img src="iot5.jpg" alt="Gallery Image 1">
+                <img src="iot6.jpg" alt="Gallery Image 2">
+                <img src="iot7.jpg" alt="Gallery Image 3">
+                <img src="iot8.jpg" alt="Gallery Image 4">
+            </div>
+            <div class="gallery">
+                <img src="iot9.jpg" alt="Gallery Image 1">
+                <img src="iot10.jpg" alt="Gallery Image 2">
+                <img src="iot11.jpg" alt="Gallery Image 3">
+                <img src="iot12.jpg" alt="Gallery Image 4">
+            </div>
+        </section>
+        <br><br><br>
+
+        <section id="video">
+            <div>
+                <video width="100%" height="315" autoplay muted loop>
+                    <source src="iot_video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+        
+    </div>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="follow-us">Follow Us on Instagram</div>
+              <div class="socialIcons">
+                <a href="https://www.instagram.com/inteliotclub/" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram">
+                </a>
+              </div>
+        </div>
+    </footer>
+        
+    
+</body>
+</html>

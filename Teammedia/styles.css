@@ -1,0 +1,38 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+footer{
+    background-color:#111;
+}
+.footerContainer{
+    width:100%;
+    padding:20px 30px 20px;
+}
+.socialIcons{
+    display:flex;
+    justify-content:center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:10px;
+    background-color: white;
+    margin:10px;
+    border-radius:50%;
+}
+.socialIcons a i{
+    font-size:2em;
+    color:black;
+    opacity:0.9;
+}
+.socialIcons a:hover{
+    background-color:#111;
+    transition:0.5s;
+}
+.socialIcons a:hover i{
+    color:white;
+    transition:0.5s;
+}
+
+
