@@ -1,5 +1,4 @@
-# amrita-student-hub
-# 🎓 AMRITA Student Clubs Website
+# 🎓 AMRITA Student Hub
 
 > A user interface design project to organize and showcase all the student clubs in Amrita Vishwa Vidyapeetham.
 
