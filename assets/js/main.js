@@ -256,5 +256,32 @@
     videos.forEach((v) => io.observe(v));
   }
 
+  // ------------------------------------------------------------ video cards (click to play with sound)
+  $$('.video-card').forEach((card) => {
+    const video = $('video', card);
+    const btn = $('.play', card);
+    btn.addEventListener('click', () => {
+      $$('.video-card.playing video').forEach((v) => { if (v !== video) v.pause(); });
+      video.controls = true;
+      video.muted = false;
+      video.play().catch(() => {});
+      card.classList.add('playing');
+      video.focus({ preventScroll: true });
+    });
+    video.addEventListener('ended', () => { card.classList.remove('playing'); video.controls = false; });
+  });
+
+  // ------------------------------------------------------------ mobile join bar (club pages)
+  const joinBar = $('.join-bar');
+  const hero = $('.club-hero2');
+  const finale = $('.finale');
+  if (joinBar && hero && 'IntersectionObserver' in window) {
+    let heroVisible = true;
+    let finaleVisible = false;
+    const sync = () => joinBar.classList.toggle('show', !heroVisible && !finaleVisible);
+    new IntersectionObserver(([en]) => { heroVisible = en.isIntersecting; sync(); }).observe(hero);
+    if (finale) new IntersectionObserver(([en]) => { finaleVisible = en.isIntersecting; sync(); }).observe(finale);
+  }
+
   onScroll();
 })();
