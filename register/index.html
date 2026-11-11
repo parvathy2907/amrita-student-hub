@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — AMRITA Student Hub</title>
+  <meta name="description" content="Sign up for student clubs at Amrita Vishwa Vidyapeetham, Coimbatore.">
+  <meta property="og:title" content="Register — AMRITA Student Hub">
+  <meta property="og:description" content="Sign up for student clubs at Amrita Vishwa Vidyapeetham, Coimbatore.">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="preload" href="../assets/vendor/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../assets/vendor/fonts/fonts.css">
+  <link rel="stylesheet" href="../assets/vendor/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="../assets/vendor/fontawesome/css/solid.min.css">
+  <link rel="stylesheet" href="../assets/vendor/fontawesome/css/brands.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">
+      <img src="../assets/img/logo-dark.png" alt="Amrita Vishwa Vidyapeetham" width="142" height="40">
+      <span>Student Hub</span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><i class="fa-solid fa-bars"></i></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../index.html#clubs">Clubs</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="https://www.amrita.edu/events/">Events</a></li>
+        <li><a href="https://www.amrita.edu/admissions/">Admissions</a></li>
+        <li><a class="btn" href="../register/">Register</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" class="register">
+  <div class="wrap register-layout">
+    <aside class="register-aside" style="background-image:url('../assets/img/hero.jpg')">
+      <span class="eyebrow">Club registration</span>
+      <h1>Join a club.</h1>
+      <p>Music, dance, tech, service, writing — sign up for up to three clubs in one go.</p>
+      <ol class="steps">
+        <li><div><strong>Tell us about you</strong><span>Your name, college email and roll number.</span></div></li>
+        <li><div><strong>Pick your clubs</strong><span>Choose up to three. You can always join more later.</span></div></li>
+        <li><div><strong>Hear back from the clubs</strong><span>Club coordinators get in touch about inductions and the next meet-up.</span></div></li>
+      </ol>
+      <p class="aside-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Your details are only shared with the clubs you choose.</p>
+    </aside>
+
+    <div class="form-card">
+      <form id="register-form" novalidate>
+        <div class="form-summary" id="form-summary" role="alert"></div>
+
+        <fieldset>
+          <legend><span class="num">1</span> About you</legend>
+          <div class="fields">
+            <div class="field full" data-field="name">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" autocomplete="name" placeholder="e.g. Ananya Menon" required aria-describedby="name-error">
+              <p class="error" id="name-error"></p>
+            </div>
+            <div class="field" data-field="email">
+              <label for="email">College email</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="name@cb.students.amrita.edu" required aria-describedby="email-hint email-error">
+              <p class="hint" id="email-hint">Must be an amrita.edu address.</p>
+              <p class="error" id="email-error"></p>
+            </div>
+            <div class="field" data-field="roll">
+              <label for="roll">Roll number</label>
+              <input type="text" id="roll" name="roll" placeholder="CB.EN.U4CSE23001" autocapitalize="characters" spellcheck="false" required aria-describedby="roll-error">
+              <p class="error" id="roll-error"></p>
+            </div>
+            <div class="field" data-field="programme">
+              <label for="programme">Programme</label>
+              <select id="programme" name="programme" required aria-describedby="programme-error">
+              <option value="">Select your programme</option>
+              <option>B.Tech</option>
+              <option>M.Tech</option>
+              <option>Integrated M.Sc</option>
+              <option>M.Sc</option>
+              <option>BCA / MCA</option>
+              <option>B.Com / M.Com</option>
+              <option>BBA / MBA</option>
+              <option>B.A. / M.A.</option>
+              <option>Ph.D</option>
+              <option>Other</option>
+              </select>
+              <p class="error" id="programme-error"></p>
+            </div>
+            <div class="field" data-field="phone">
+              <label for="phone">Mobile <span class="opt">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="98765 43210" aria-describedby="phone-hint phone-error">
+              <p class="hint" id="phone-hint">For WhatsApp group invites.</p>
+              <p class="error" id="phone-error"></p>
+            </div>
+            <div class="field full" data-field="year" role="radiogroup" aria-labelledby="year-label">
+              <span class="label" id="year-label">Year of study</span>
+              <div class="segmented">
+              <input type="radio" id="year-1" name="year" value="1"><label for="year-1">1st year</label>
+              <input type="radio" id="year-2" name="year" value="2"><label for="year-2">2nd year</label>
+              <input type="radio" id="year-3" name="year" value="3"><label for="year-3">3rd year</label>
+              <input type="radio" id="year-4" name="year" value="4"><label for="year-4">4th year</label>
+              <input type="radio" id="year-5" name="year" value="5"><label for="year-5">5th year / PG</label>
+              </div>
+              <p class="error"></p>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="num">2</span> Pick your clubs</legend>
+          <div class="field" data-field="clubs">
+            <div class="club-picker">
+            <label class="club-option">
+              <input type="checkbox" name="clubs" value="raagasudha" data-name="Raagasudha" data-img="../assets/img/cards/raagasudha.jpg">
+              <span class="box"><img src="../assets/img/cards/raagasudha.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Raagasudha</strong><small>Cultural</small></span></span>
+              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            </label>
+            <label class="club-option">
+              <input type="checkbox" name="clubs" value="natyasudha" data-name="Natyasudha" data-img="../assets/img/cards/natyasudha.jpg">
+              <span class="box"><img src="../assets/img/cards/natyasudha.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Natyasudha</strong><small>Cultural</small></span></span>
+              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            </label>
+            <label class="club-option">
+              <input type="checkbox" name="clubs" value="nss" data-name="NSS" data-img="../assets/img/cards/nss.jpg">
+              <span class="box"><img src="../assets/img/cards/nss.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>NSS</strong><small>Service</small></span></span>
+              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            </label>
+            <label class="club-option">
+              <input type="checkbox" name="clubs" value="team-media" data-name="Team Media" data-img="../assets/img/cards/team-media.jpg">
+              <span class="box"><img src="../assets/img/cards/team-media.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Team Media</strong><small>Creative</small></span></span>
+              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            </label>
+            <label class="club-option">
+              <input type="checkbox" name="clubs" value="elite" data-name="Elite" data-img="../assets/img/cards/elite.jpg">
+              <span class="box"><img src="../assets/img/cards/elite.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Elite</strong><small>Entrepreneurship</small></span></span>
+              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            </label>
+            <label class="club-option">
+              <input type="checkbox" name="clubs" value="anantham" data-name="Anantham" data-img="../assets/img/cards/anantham.jpg">
+              <span class="box"><img src="../assets/img/cards/anantham.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Anantham</strong><small>Academic</small></span></span>
+              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            </label>
+            <label class="club-option">
+              <input type="checkbox" name="clubs" value="srishti" data-name="Srishti" data-img="../assets/img/cards/srishti.jpg">
+              <span class="box"><img src="../assets/img/cards/srishti.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Srishti</strong><small>Literary</small></span></span>
+              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            </label>
+            <label class="club-option">
+              <input type="checkbox" name="clubs" value="intel-iot" data-name="Intel IoT" data-img="../assets/img/cards/intel-iot.jpg">
+              <span class="box"><img src="../assets/img/cards/intel-iot.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Intel IoT</strong><small>Technical</small></span></span>
+              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            </label>
+            <label class="club-option">
+              <input type="checkbox" name="clubs" value="toastmasters" data-name="Toastmasters" data-img="../assets/img/cards/toastmasters.jpg">
+              <span class="box"><img src="../assets/img/cards/toastmasters.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Toastmasters</strong><small>Communication</small></span></span>
+              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            </label>
+            <label class="club-option">
+              <input type="checkbox" name="clubs" value="nature" data-name="Nature Club" data-img="../assets/img/cards/nature.jpg">
+              <span class="box"><img src="../assets/img/cards/nature.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Nature Club</strong><small>Environment</small></span></span>
+              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            </label>
+            <label class="club-option">
+              <input type="checkbox" name="clubs" value="photography" data-name="Photography" data-img="../assets/img/cards/photography.jpg">
+              <span class="box"><img src="../assets/img/cards/photography.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Photography</strong><small>Creative</small></span></span>
+              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            </label>
+            <label class="club-option">
+              <input type="checkbox" name="clubs" value="gdsc" data-name="GDSC" data-img="../assets/img/cards/gdsc.jpg">
+              <span class="box"><img src="../assets/img/cards/gdsc.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>GDSC</strong><small>Technical</small></span></span>
+              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+            </label>
+            </div>
+            <p class="picker-status" id="picker-status" aria-live="polite"></p>
+            <p class="error"></p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="num">3</span> Anything else?</legend>
+          <div class="field" data-field="why">
+            <label for="why">Why do you want to join? <span class="opt">(optional)</span> <span class="counter" id="why-count"></span></label>
+            <textarea id="why" name="why" maxlength="500" placeholder="Skills you'd like to learn, past experience, ideas for events…"></textarea>
+          </div>
+          <div class="field" data-field="consent" style="margin-top:1.1rem">
+            <label class="check"><input type="checkbox" id="consent" name="consent"> <span>I agree to share these details with the clubs I've selected so they can contact me.</span></label>
+            <p class="error"></p>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <p>All fields are required unless marked optional.</p>
+          <button type="submit" class="btn-primary"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Submit registration</button>
+        </div>
+      </form>
+
+      <div class="success" id="register-success" hidden>
+        <div class="success-icon"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
+        <h2 tabindex="-1">You're in, <span data-first-name></span>!</h2>
+        <p>Your registration has been received. Club coordinators will reach out at <strong data-email></strong> about inductions and upcoming events.</p>
+        <ul class="success-list"></ul>
+        <div class="success-actions">
+          <a class="btn-primary" href="../index.html#clubs">Explore more clubs</a>
+          <button type="button" class="btn-ghost" id="register-again">Register someone else</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Campuses</h4>
+        <ul>
+          <li><a href="https://www.amrita.edu/campus/amritapuri/">Amritapuri</a></li>
+          <li><a href="https://www.amrita.edu/campus/amaravati/">Amaravati</a></li>
+          <li><a href="https://www.amrita.edu/campus/bengaluru/">Bengaluru</a></li>
+          <li><a href="https://www.amrita.edu/campus/chennai/">Chennai</a></li>
+          <li><a href="https://www.amrita.edu/campus/coimbatore/">Coimbatore</a></li>
+          <li><a href="https://www.amrita.edu/campus/faridabad/">Faridabad</a></li>
+          <li><a href="https://www.amrita.edu/campus/kochi/">Kochi</a></li>
+          <li><a href="https://www.amrita.edu/campus/mysuru/">Mysuru</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Clubs</h4>
+        <ul>
+          <li><a href="../clubs/raagasudha/">Raagasudha</a></li>
+          <li><a href="../clubs/natyasudha/">Natyasudha</a></li>
+          <li><a href="../clubs/nss/">NSS</a></li>
+          <li><a href="../clubs/team-media/">Team Media</a></li>
+          <li><a href="../clubs/elite/">Elite</a></li>
+          <li><a href="../clubs/anantham/">Anantham</a></li>
+          <li><a href="../index.html#clubs">All clubs &rarr;</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Apply</h4>
+        <ul>
+          <li><a href="https://www.amrita.edu/admissions/">Admissions</a></li>
+          <li><a href="https://www.amrita.edu/admissions/btech/">B.Tech applications</a></li>
+          <li><a href="https://www.amrita.edu/contact/">Contact Amrita</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Amrita</h4>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AmritaUniversity" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://x.com/AMRITAedu" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/amrita_university/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/school/amrita-vishwa-vidyapeetham-official/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">A student UI design project showcasing clubs at Amrita Vishwa Vidyapeetham. Not an official university website.</div>
+  </div>
+</footer>
+<script src="../assets/js/main.js" defer></script>
+<script src="../assets/js/register.js" defer></script>
+</body>
+</html>
