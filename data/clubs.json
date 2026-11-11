@@ -1,0 +1,484 @@
+[
+  {
+    "slug": "raagasudha",
+    "name": "Raagasudha",
+    "category": "Cultural",
+    "tagline": "The music club, where melodies rise beyond classrooms.",
+    "custom_page": true,
+    "card": "raagasudha.jpg"
+  },
+  {
+    "slug": "natyasudha",
+    "name": "Natyasudha",
+    "category": "Cultural",
+    "tagline": "The dance club celebrating classical and contemporary Indian dance.",
+    "hero": "hero.jpg",
+    "about": [
+      "This is the Dance Club which promotes knowledge and practice of classical and current dance forms, and encourages students to eschew filmi gyrations which are more titillating than enriching.",
+      "Welcome to the vibrant world of Natyasudha Dance Club, where tradition meets innovation, and passion fuels every move. Our club is a melting pot of creativity, bringing together students from diverse backgrounds to celebrate the rich tapestry of Indian dance forms. Whether you have a love for the timeless grace of classical dance or the dynamic energy of contemporary styles, our club offers a platform for all enthusiasts to learn, perform, and grow.",
+      "At the Natyasudha Dance Club, our mission is to foster a love for dance in its many forms, while promoting cultural appreciation and artistic excellence. We aim to provide a supportive environment where students can explore their creativity, develop their skills, and share their passion for dance with the community."
+    ],
+    "gallery": [
+      "natya1.jpg",
+      "natya2.jpg",
+      "natya3.jpg",
+      "natya4.jpg",
+      "natya5.jpg",
+      "natya6.jpg",
+      "natya7.jpg",
+      "natya8.jpg",
+      "natya9.jpg",
+      "natya10.jpg",
+      "natya11.jpg",
+      "natya12.jpg"
+    ],
+    "videos": [
+      "natyavideo1.mp4",
+      "natyavideo2.mp4",
+      "natyavideo3.mp4"
+    ],
+    "socials": [
+      {
+        "type": "instagram",
+        "label": "@team_natya_",
+        "url": "https://www.instagram.com/team_natya_/"
+      }
+    ],
+    "card": "natyasudha.jpg"
+  },
+  {
+    "slug": "nss",
+    "name": "NSS",
+    "full_name": "National Service Scheme",
+    "category": "Service",
+    "tagline": "Volunteering that builds a link between campus and community.",
+    "hero": "hero.jpg",
+    "about": [
+      "National Service Scheme (NSS) in India was started in 1969. This public service program is sponsored by the Government of India and is conducted by the Department of Youth Affairs and Sports. NSS is a voluntary program in which young people from colleges, universities, and also +2 level work towards creating a campus-community linkage.",
+      "NSS is beneficial to both students and society in many ways. It helps students grow individually and as a group. It makes students confident, develops leadership skills, and helps them learn about people from different walks of life. Students also learn other skills that help them lead a better life in various situations, and it teaches them to be disciplined and organized in working towards their goals.",
+      "The NSS symbol is based on the giant Rath Wheel of the world-famous Konark Sun Temple (the Black Pagoda) in Odisha, India. The wheel portrays the cycle of creation, preservation and release, and signifies movement in life across time and space. The eight bars in the wheel represent the 24 hours of a day. The red colour indicates that the volunteer is lively, active, energetic and full of high spirit. The navy blue colour indicates the cosmos, of which NSS is a tiny part, ready to contribute its share to the welfare of mankind. The symbol stands for continuity as well as change, and implies the continuous striving of NSS for social change."
+    ],
+    "gallery": [
+      "nss1.jpg",
+      "nss2.jpg",
+      "nss3.jpg",
+      "nss4.jpg",
+      "nss5.jpg",
+      "nss6.jpg",
+      "nss7.jpg",
+      "nss8.jpg",
+      "nss9.jpg",
+      "nss10.jpg",
+      "nss11.jpg",
+      "nss12.jpg"
+    ],
+    "videos": [
+      "nssvideo1.mp4",
+      "nssvideo2.mp4"
+    ],
+    "socials": [
+      {
+        "type": "instagram",
+        "label": "@nss_amrita",
+        "url": "https://www.instagram.com/nss_amrita/"
+      }
+    ],
+    "card": "nss.jpg"
+  },
+  {
+    "slug": "team-media",
+    "name": "Team Media",
+    "category": "Creative",
+    "tagline": "Capturing the vibe and emotion of every event on campus.",
+    "hero": "hero.jpg",
+    "about": [
+      "Team Media focuses on capturing the vibe and emotion of every event on our campus. This is a great opportunity for all amateur photographers, cinematographers and editors to showcase their talents, to learn and to gain experience."
+    ],
+    "highlights": [
+      {
+        "title": "Team Media Induction Event",
+        "images": [
+          "p_image0.jpg",
+          "p_image1.jpg",
+          "p_image2.jpg"
+        ],
+        "sections": [
+          {
+            "heading": "Rules and Regulations",
+            "text": "Following the introductions, important rules and regulations governing student media activities were presented to ensure a conducive and respectful environment for all participants. Emphasis was placed on adherence to ethical standards, responsible reporting, and respectful behavior towards peers and faculty."
+          },
+          {
+            "heading": "Club Activities",
+            "text": "Detailed information about club activities, initiatives, and upcoming events was shared with the attendees. Students were encouraged to actively participate in club activities, workshops, and projects to enhance their skills and contribute to the vibrant media community on campus."
+          },
+          {
+            "heading": "Club T-Shirts and ID Cards",
+            "text": "As a gesture of membership acknowledgment, club t-shirts and identification cards were distributed to all registered members, ensuring that every student received their club merchandise and identification credentials."
+          },
+          {
+            "heading": "Vote of Thanks",
+            "text": "The event concluded with a vote of thanks to all attendees, club heads, faculty advisors, and the organizing committee for their contributions to making the induction a success."
+          },
+          {
+            "heading": "Conclusion",
+            "text": "The induction served as a platform for fostering camaraderie, enthusiasm, and a sense of belonging among students interested in media. With the introduction of new heads, essential information, and club merchandise, it laid the groundwork for an exciting and productive term ahead."
+          }
+        ]
+      }
+    ],
+    "gallery": [
+      "media_1.jpg",
+      "media_2.jpg",
+      "media_3.jpg",
+      "media_4.jpg",
+      "media_5.jpg",
+      "media_6.jpg",
+      "media_7.jpg",
+      "media_8.jpg",
+      "media_9.jpg",
+      "media_10.jpg",
+      "media_11.jpg",
+      "media_12.jpg"
+    ],
+    "videos": [
+      "team_media.mp4"
+    ],
+    "socials": [
+      {
+        "type": "instagram",
+        "label": "@teammedia.amrita",
+        "url": "https://www.instagram.com/teammedia.amrita/"
+      },
+      {
+        "type": "facebook",
+        "label": "Team Media Amrita",
+        "url": "https://www.facebook.com/TeamMediaAmrita/"
+      }
+    ],
+    "card": "team-media.jpg"
+  },
+  {
+    "slug": "elite",
+    "name": "Elite",
+    "category": "Entrepreneurship",
+    "tagline": "Entrepreneurship, leadership and start-up culture.",
+    "hero": "hero.jpg",
+    "about": [
+      "The Elite Club aims to instill a profound appreciation for entrepreneurship, leadership, business ideation fundamentals, ethical professionalism in business and the vibrant start-up culture among students. Our goal is to nurture entrepreneurs who will not only enrich the Indian economy but also catalyse the growth and self-sufficiency of the Indian market, reducing its dependence on foreign corporations.",
+      "At the heart of the Elite Club lies a commitment to empower tomorrow's leaders. Through workshops, seminars, and interactive sessions, we provide our members with the knowledge, skills, and mindset needed to thrive in the fast-paced world of entrepreneurship and business. From honing pitching skills to mastering the art of negotiation, our programs are designed to cultivate ethical and visionary leaders who can navigate challenges with confidence and integrity.",
+      "Innovation is the lifeblood of progress, and collaboration is its catalyst. The Elite Club serves as a hub for creative thinking and collaborative problem-solving, where ideas are incubated, refined, and brought to fruition. Together, we aspire to ignite a spark of entrepreneurship in every member, transforming ideas into impactful ventures that drive positive change in our society and beyond."
+    ],
+    "gallery": [
+      "img1.jpg",
+      "img2.jpg",
+      "img3.jpg",
+      "img4.jpg",
+      "img5.jpg",
+      "img6.jpg",
+      "img7.jpg",
+      "img8.jpg",
+      "img9.jpg",
+      "img10.jpg",
+      "img11.jpg",
+      "img12.jpg"
+    ],
+    "videos": [
+      "video1.mp4"
+    ],
+    "socials": [
+      {
+        "type": "instagram",
+        "label": "@the_elite_club_amrita",
+        "url": "https://www.instagram.com/the_elite_club_amrita/"
+      }
+    ],
+    "card": "elite.jpg"
+  },
+  {
+    "slug": "anantham",
+    "name": "Anantham",
+    "category": "Academic",
+    "tagline": "The Mathematics Club — infinite ways to see one idea.",
+    "hero": "hero.jpg",
+    "card": "anantham.jpg",
+    "about": [
+      "The Mathematics Club of Amrita Vishwa Vidyapeetham, Coimbatore is known as Anantham, which means “infinity” in Sanskrit. The name was chosen because Mathematics gives space for everyone to understand concepts in numerous (infinite) ways, depending on how one perceives it and the background one looks at it from. Embracing this, the math-loving student community established Anantham as a platform for collaborative learning, where they can exchange experiences, engage in thought-provoking discussions, and nurture their passion for Math.",
+      "All students of Integrated MSc, MSc Mathematics, Integrated MSc Data Science, and MSc Applied Statistics and Data Analytics are members of Anantham by default. Students from undergraduate Engineering programs who wish to listen to or share observations on Mathematics and its applications are always welcome to join. We believe that interactions among disciplines foster a healthy academic culture, and help anyone who wishes to overcome mathophobia.",
+      "Concept demonstrations with models, problem-solving with mathematical software, discussions, lectures, mathematical games, and quizzes are common at Anantham events. The informal environment provides an avenue beyond the classroom and helps students imbibe qualities like cooperation, tolerance, and open-mindedness as they work in groups. Experts in various fields of Mathematics are invited to deliver lectures, and the History of Mathematics is celebrated through events on occasions connected to mathematicians.",
+      "This forum helps students appreciate the beauty and subtlety of mathematics, learn about the origin and development of its various fields, and keep up with recent developments that broaden and deepen their knowledge.",
+      "Dr. K. Gayathri, Assistant Professor (SG), and the Class Advisors of all programmes of the Department of Mathematics are the Faculty Coordinators of Anantham."
+    ],
+    "gallery": [
+      "ana1.jpg",
+      "ana2.jpg",
+      "ana3.jpg",
+      "ana4.jpg",
+      "ana5.jpg",
+      "ana6.jpg"
+    ],
+    "videos": [],
+    "socials": []
+  },
+  {
+    "slug": "srishti",
+    "name": "Srishti",
+    "category": "Literary",
+    "tagline": "The literary club — poetry, debates, quizzes and more.",
+    "hero": "hero.jpg",
+    "about": [
+      "The literary club provides a platform to showcase the literary aspirations and talents of students. It is an excellent forum for self-expression and the cultural aspirations of students. Poetry-reading sessions, debates, extempore speeches, quizzes, crossword games, book and film reviews, play enactments, and classic movie screenings are showcased at the forum. Besides English events, the club also organizes events in regional languages like Tamil, Malayalam, Telugu and Hindi.",
+      "The wings of Srishti include Peek-A-Book, Bhaava, Clarion, Dhwani, Debate, Kaleidoscope, Poetree, Quikreig and Udaan, as well as the Tamil, Telugu and Malayalam Literature wings."
+    ],
+    "gallery": [
+      "shr1.jpg",
+      "shr2.jpg",
+      "shr3.jpg",
+      "shr4.jpg",
+      "shr5.jpg",
+      "shr6.jpg",
+      "shr7.jpg",
+      "shr8.jpg"
+    ],
+    "videos": [
+      "shrvideo1.mp4",
+      "shrvideo2.mp4"
+    ],
+    "socials": [
+      {
+        "type": "instagram",
+        "label": "@srishti_amrita",
+        "url": "https://www.instagram.com/srishti_amrita/"
+      }
+    ],
+    "card": "srishti.jpg"
+  },
+  {
+    "slug": "intel-iot",
+    "name": "Intel IoT",
+    "category": "Technical",
+    "tagline": "Hands-on IoT and AI with Intel hardware and software.",
+    "hero": "hero.jpg",
+    "card": "intel-iot.jpg",
+    "about": [
+      "At Intel IoT Club, our mission is to empower and nurture students who are eager to engage with developer communities and drive innovation in the fields of IoT and AI.",
+      "We believe that the key to solving real-world problems lies in collaboration and knowledge-sharing, which is why we offer a variety of events, workshops, industrial trainings and resources that enable our students to deepen their skills and stay up to date with the latest hardware and software solutions by Intel.",
+      "Our IoT track, in particular, is designed to provide students with hands-on experience and practical knowledge that can help them tackle complex challenges and develop impactful projects. Join us and be part of a community that is passionate about learning, creativity, and social impact!"
+    ],
+    "gallery": [
+      "iot1.jpg",
+      "iot2.jpg",
+      "iot3.jpg",
+      "iot4.jpg",
+      "iot5.jpg",
+      "iot6.jpg",
+      "iot7.jpg",
+      "iot8.jpg",
+      "iot9.jpg",
+      "iot10.jpg",
+      "iot11.jpg",
+      "iot12.jpg"
+    ],
+    "videos": [
+      "iot_video.mp4"
+    ],
+    "socials": [
+      {
+        "type": "instagram",
+        "label": "@inteliotclub",
+        "url": "https://www.instagram.com/inteliotclub/"
+      }
+    ]
+  },
+  {
+    "slug": "toastmasters",
+    "name": "Toastmasters",
+    "category": "Communication",
+    "tagline": "Build confidence and public speaking skills.",
+    "hero": "hero.jpg",
+    "about": [
+      "Toastmasters club builds confidence and teaches public speaking skills, meeting online and in person. In a supportive environment, members prepare and deliver speeches, respond to impromptu questions, and give and receive constructive feedback. It is through this regular practice that members are empowered to meet their personal and professional communication goals."
+    ],
+    "gallery": [
+      "toast.jpg",
+      "toast_1.jpg",
+      "toast_2.jpg",
+      "toast_3.jpg",
+      "toast_4.jpg",
+      "toast_5.jpg",
+      "toast_6.jpg",
+      "toast_7.jpg",
+      "toast_8.jpg",
+      "toast_9.jpg",
+      "toast_10.jpg",
+      "toast_11.jpg",
+      "toast_12.jpg"
+    ],
+    "videos": [
+      "toast_1.mp4",
+      "toast_2.mp4"
+    ],
+    "socials": [
+      {
+        "type": "instagram",
+        "label": "@tmamrita",
+        "url": "https://www.instagram.com/tmamrita/"
+      },
+      {
+        "type": "facebook",
+        "label": "TM Amrita",
+        "url": "https://www.facebook.com/TMamrita/"
+      }
+    ],
+    "card": "toastmasters.jpg"
+  },
+  {
+    "slug": "nature",
+    "name": "Nature Club",
+    "category": "Environment",
+    "tagline": "Love for plants and animals, and a greener campus.",
+    "hero": "hero.jpg",
+    "about": [
+      "The Nature Club of Amrita works with a mission to instill among the youth a love for plants and animals, developing respect for the oneness of life in all elements of nature and preserving the pristine beauty and purity of nature. The club involves students and staff in preserving the campus ecosphere and promoting an eco-friendly way of life through awareness camps, seminars and talks on environmental awareness."
+    ],
+    "highlights": [
+      {
+        "title": "Animal Rescue Warrior Award",
+        "date": "18 April 2023",
+        "images": [
+          "mi_image2.jpg",
+          "mid_image.png"
+        ],
+        "quote": "When we see Mother Nature as the embodiment of God, we will automatically serve and protect her.",
+        "sections": [
+          {
+            "text": "EIACP, Ministry of Environment and Forest RP at Amrita Vishwa Vidyapeetham (AVV) and the Nature Club of AVV organized an award function to honor women who have been at the forefront of animal rescue. Nine awardees from different walks of life — from the corporate sector, NGOs, retired professors and homemakers to housekeeping staff and domestic helpers, many working for stray animals with their own savings — were honored."
+          },
+          {
+            "text": "As part of Azadi ka Amrit Mahotsav and Mission LiFE, the event also included a cleanliness drive and a screening of the Oscar-winning film “The Elephant Whisperers”. Student ambassadors from the Amrita Animal Welfare Club and the Nature Club were recognised for their work in anti-rabies vaccination drives, feeding drives and caring for animals on campus."
+          },
+          {
+            "text": "Prof. C. Parameswaran, Principal Director of Corporate Industrial Relations, was the chief guest and emphasized the need for a society where animals can safely coexist with people. The program was coordinated by Dr. Maya Mahajan, coordinator of the EIACP Centre, and graced by Dr. Sankaran, Registrar. More than 300 students attended."
+          }
+        ]
+      },
+      {
+        "title": "Eco-Ganesha and Kozhukattai (Modak) Making Contest",
+        "date": "18–20 September 2023",
+        "images": [
+          "p_image1.jpg",
+          "p_image2.jpg"
+        ],
+        "quote": "If we have any pet animal, we should feed them before taking our food. Perceive God in every living being and feed them with that attitude.",
+        "sections": [
+          {
+            "text": "Vinayaka Chaturthi was celebrated at the Coimbatore campus with an eco-friendly Ganesha idol making contest and a Kozhukattai (Modak) making contest, giving students a chance to showcase their artistic skills while promoting sustainability. The idols were made from paper and waste potato powder, and campus decorations used paper flowers and leaves."
+          },
+          {
+            "heading": "Winners",
+            "text": "Eco-Ganesha: Ms. Dhanya V G and Ms. Sruthika A (First), Mr. Aayush M R (Second). Kozhukattai / Modak: Mrs. Radhika S and Ms. Sruthika A (First)."
+          }
+        ]
+      }
+    ],
+    "gallery": [
+      "nat1.jpg",
+      "nat2.jpg",
+      "nat3.jpg",
+      "nat4.jpg",
+      "nat5.jpg",
+      "nat6.jpg"
+    ],
+    "videos": [],
+    "socials": [],
+    "card": "nature.jpg"
+  },
+  {
+    "slug": "photography",
+    "name": "Photography",
+    "category": "Creative",
+    "tagline": "Short courses, exhibitions and creative photography.",
+    "hero": "hero.jpg",
+    "about": [
+      "The Photography Club tries to stimulate interest in creative photography. It organizes short-term courses on photography, conducts photo exhibitions and promotes amateur photography as a hobby among students."
+    ],
+    "highlights": [
+      {
+        "title": "Spot Photography: “Shapes and Shadows”",
+        "date": "8 October 2022",
+        "images": [
+          "mid_image.jpg"
+        ],
+        "sections": [
+          {
+            "text": "As part of the Gokulashtami celebrations, the Amrita Photography Club organized a spot photography event themed “Shapes and Shadows”, with 483 participants. Participants captured interesting shapes and shadows around campus and uploaded their photographs for judging."
+          },
+          {
+            "text": "The judges were impressed by the creativity and unique perspectives on display. First prize (Rs. 2500) went to Ms. Aparna Rajesh, second prize (Rs. 1500) to Mr. Rahul Menon, and third prize (Rs. 1000) to Ms. Neha Singh."
+          }
+        ]
+      }
+    ],
+    "gallery": [
+      "photo1.jpg",
+      "photo2.jpg",
+      "photo3.jpg",
+      "photo4.jpg"
+    ],
+    "videos": [],
+    "socials": [],
+    "card": "photography.jpg"
+  },
+  {
+    "slug": "gdsc",
+    "name": "GDSC",
+    "full_name": "Google Developer Student Club",
+    "category": "Technical",
+    "tagline": "Connect, learn and grow with developer technologies.",
+    "hero": "hero.jpg",
+    "card": "gdsc.jpg",
+    "pillars": [
+      {
+        "heading": "Connect",
+        "text": "Meet students interested in developer technologies at your college or university. All are welcome, including those with diverse backgrounds and different majors."
+      },
+      {
+        "heading": "Learn",
+        "text": "Learn about a range of technical topics and gain new skills through hands-on workshops, events, talks, and project-building activities online and in person."
+      },
+      {
+        "heading": "Grow",
+        "text": "Apply new learnings to build great solutions for local problems. Advance your skills, career, and network. Give back to your community by helping others learn."
+      }
+    ],
+    "about": [],
+    "gallery": [
+      "gdsc1.jpg",
+      "img2.jpg",
+      "img3.jpg",
+      "img4.jpg",
+      "img5.jpg",
+      "img6.jpg",
+      "img7.jpg"
+    ],
+    "videos": [
+      "gdscvideo1.mp4"
+    ],
+    "socials": [
+      {
+        "type": "globe",
+        "label": "GDSC ASC chapter",
+        "url": "https://gdsc.community.dev/amrita-school-of-computing-coimbatore-india/"
+      },
+      {
+        "type": "instagram",
+        "label": "@gdsc.ase.cbe",
+        "url": "https://www.instagram.com/gdsc.ase.cbe/"
+      },
+      {
+        "type": "youtube",
+        "label": "#developerstudentclubs",
+        "url": "https://www.youtube.com/hashtag/developerstudentclubs"
+      }
+    ]
+  }
+]
