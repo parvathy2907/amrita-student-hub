@@ -1,153 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Raagasudha</title>
-        <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.png">
-
-        <link rel="stylesheet" href="raagasudha.css" />
-        <link rel="stylesheet" href="https://unpkg.com/98.css" />
-    </head>
-
-    <body>
-        <nav>
-            <div class="logo">
-                <img src="logo.png" alt="Amrita Vishwa Vidyapeetham" /><br>
-                <a href="../../index.html" style="color: #fff">Amrita Student Clubs</a>
-            </div>
-
-            <div class="menu-toggle">
-                <p id="menu-open" style="color: #fff">Menu</p>
-                <p id="menu-close" style="color: #fff">Close</p>
-            </div> 
-        </nav>
-
-        <div class="menu-overlay">
-            <div class="menu-content">
-                <div class="menu-items">
-                    <div class="col-lg">
-                        <div class="menu-preview-img"><img src="students_background.jpg" alt=""/></div>
-                    </div>
-                    <div class="col-sm">
-                        <div class="menu-links">
-                            <div class="link"><a href="../../index.html" data-img="home.jpg" style="color: #fff">Home</a></div>
-                            <div class="link"><a href="../natyasudha/" data-img="natya_img.jpg" style="color: #fff">Natyasudha</a></div>
-                            <div class="link"><a href="../team-media/" data-img="media.jpg" style="color: #fff">Team Media</a></div>
-                            <div class="link"><a href="../srishti/" data-img="srishti.jpg" style="color: #fff">Srishti</a></div>
-                            <div class="link"><a href="./" data-img="raga_main.jpg" style="color: #fff">Raagasudha</a></div>
-                            <div class="link"><a href="../nss/" data-img="nss_main.jpeg" style="color: #fff">NSS</a></div>
-                            <div class="link"><a href="../elite/" data-img="elite.jpg" style="color: #fff">Elite</a></div>
-                            <div class="link"><a href="../anantham/" data-img="ana5.jpg" style="color: #fff">Anantham</a></div>
-                            <div class="link"><a href="../intel-iot/" data-img="iot4.jpg" style="color: #fff">Intel Iot</a></div>
-                            <div class="link"><a href="../toastmasters/" data-img="toastmasters.jpg" style="color: #fff">Toastmasters</a></div>
-                            <div class="link"><a href="../nature/" data-img="nature.jpg" style="color: #fff">Nature</a></div>
-                            <div class="link"><a href="../photography/" data-img="photography.jpg" style="color: #fff">Photography</a></div>
-                            <div class="link"><a href="../gdsc/" data-img="gdsc.png" style="color: #fff">GDSC</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raagasudha — AMRITA Student Hub</title>
+  <meta name="description" content="The music club, where melodies rise beyond classrooms.">
+  <meta name="theme-color" content="#1b0a12">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Raagasudha — AMRITA Student Hub">
+  <meta property="og:description" content="The music club, where melodies rise beyond classrooms.">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preload" href="../../assets/vendor/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../assets/vendor/fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../../assets/vendor/fonts/fonts.css">
+  <link rel="stylesheet" href="../../assets/vendor/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/fontawesome/css/solid.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/fontawesome/css/brands.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=3301a1f6">
+</head>
+<body class="overlay club-page" style="--accent:#6d28d9">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../../index.html" aria-label="AMRITA Student Hub home">
+      <img class="logo-dark" src="../../assets/img/logo-dark.png" alt="Amrita Vishwa Vidyapeetham" width="142" height="40">
+      <img class="logo-light" src="../../assets/img/logo.png" alt="" width="142" height="40">
+      <span>Student Hub</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span class="bars"></span></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="../../index.html#clubs">Clubs</a></li>
+        <li><a href="../../index.html#about">About</a></li>
+        <li><a href="../../index.html#moments">Moments</a></li>
+        <li><a href="../../index.html#join">How to join</a></li>
+        <li><a class="btn btn-primary" href="../../register/">Register <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
+      </ul>
+      <div class="nav-extra"><p>Jump to a club</p><div><a href="../../clubs/raagasudha/">Raagasudha</a><a href="../../clubs/natyasudha/">Natyasudha</a><a href="../../clubs/nss/">NSS</a><a href="../../clubs/team-media/">Team Media</a><a href="../../clubs/elite/">Elite</a><a href="../../clubs/anantham/">Anantham</a><a href="../../clubs/srishti/">Srishti</a><a href="../../clubs/intel-iot/">Intel IoT</a><a href="../../clubs/toastmasters/">Toastmasters</a><a href="../../clubs/nature/">Nature Club</a><a href="../../clubs/photography/">Photography</a><a href="../../clubs/gdsc/">GDSC</a></div></div>
+    </nav>
+  </div>
+  <div class="progress-bar" aria-hidden="true"></div>
+</header>
+<main id="main">
+  <section class="club-hero2" aria-label="Raagasudha">
+    <div class="bg" style="background-image:url('hero.jpg')" data-parallax="0.15"></div>
+    <div class="hero-word" aria-hidden="true">Raagasudha</div>
+    <div class="wrap hero-grid">
+      <div>
+        <nav class="crumbs fade-in" style="--d:.1s" aria-label="Breadcrumb"><a href="../../index.html#clubs"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All clubs</a><i class="sep fa-solid fa-chevron-right" aria-hidden="true"></i><span>Raagasudha</span></nav>
+        <span class="cat-pill fade-in" style="--d:.2s"><i class="fa-solid fa-music" aria-hidden="true"></i>Cultural</span>
+        <h1 class="line-reveal"><span class="line"><span>Raagasudha</span></span></h1>
+        <p class="sub fade-in" style="--d:.45s">The music club, where melodies rise beyond classrooms.</p>
+        <div class="meta-chips fade-in" style="--d:.6s"><span><i class="fa-brands fa-instagram" aria-hidden="true"></i>@__.raaga.__</span></div>
+        <div class="hero-actions-club fade-in" style="--d:.7s">
+          <a class="btn btn-gold" href="../../register/?club=raagasudha">Join Raagasudha <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/__.raaga.__/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" aria-hidden="true"></i> Follow</a>
         </div>
-
-        <div class="container">
-            <section class="hero">
-                <div class="hero-img"><img src="raga_main.jpg" alt="" /></div>
-                <h1>Raagasudha</h1>
-            </section>
-
-            <section class="gallery">
-                <div class="border">
-                    <h1 style="color: #fff; padding: 45px; text-align: left; width: 100%;">About Us</h1>
-
-                    <div style="display: flex; flex-wrap: wrap;"> <!-- to display the about section and first picture in a grid-->
-
-                    <div class="desc1"><p style="font-size: 31px;">Raagasudha is a haven for music lovers at Amrita, where melodies rise beyond classrooms and rhythms echo through hearts. Founded to celebrate the power of sound and self-expression, the club welcomes students from all backgrounds — whether trained musicians or passionate beginners.</p>
-                    </div>
-
-                    <div class="gallery-container">
-                        <div class="image" id="img3" style="z-index:10"><img src="gal10.jpeg" alt=""/></div>
-                        <div class="image" id="img2" style="z-index:9"><img src="gal1.jpeg" alt=""/></div>
-                        <div class="image" id="img1" style="z-index:8"><img src="gal3.jpeg" alt=""/></div>
-                        <div class="image" id="img4" style="z-index:7"><img src="gal4.jpeg" alt=""/></div>
-                        <div class="image" id="img5" style="z-index:6"><img src="gal5.jpeg" alt=""/></div>
-                        <div class="image" id="img6" style="z-index:5"><img src="gal6.jpeg" alt=""/></div>
-                        <div class="image" id="img7" style="z-index:4"><img src="gal8.jpeg" alt=""/></div>
-                        <div class="image" id="img8" style="z-index:3"><img src="gal9.jpeg" alt=""/></div>                    
-                        <div class="image" id="img9" style="z-index:0"><img src="raga_main.jpg" alt=""/></div>
-                        <div class="image" id="img10" style="z-index:1"><img src="gal11.jpeg" alt=""/></div>
-                        
-                        <div class="window">
-                        <div class="title-bar">
-                            <div class="title-bar-text">Raagasudha</div>
-                            <div class="title-bar-controls">
-                            <button aria-label="Close"></button>
-                            </div>
-                        </div>
-                        <div class="window-body">
-                        <p style="left: 15px; color: black;"> Join the Raagasudha music club and contribute to a vibrant community of artists, performers, and music lovers.</p>
-                        <button class="default"><a href="../../register/?club=raagasudha" style="color: #fff;">Register Here!</a></button>
-                        </div>
-                        </div>
-
-                    </div>
-
-                    <div class="desc2"><p style="font-size: 31px;">From soul-stirring ragas to upbeat fusion, Raagasudha encourages creativity, discipline, and cultural appreciation. <br><br>Our events are not just showcases — they are experiences that connect performers and listeners alike. Every voice matters. Every note counts.</p>
-                    </div>
-
-                    </div>
-
-                </div>
-            </section>
-
-            <section class="video-wrapper" style="display: flex; justify-content: space-between;">
-                <div class="video" style="flex: 1; margin-right: 50px;">
-                    <video width="100%" height="390px" autoplay muted loop controls>
-                        <source src="raga_1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-
-                    <div class="img-row">
-                        <img src="gal14.jpeg" alt="1" />
-                        <img src="gal15.jpeg" alt="2" />
-                        <img src="gal16.jpeg" alt="3" />
-                        <img src="gal13.jpeg" alt="4" />
-                        <img src="gal9.jpeg" alt="5" />
-                    </div>
-                </div>
-                <div class="socials" style="display: flex; flex: 1;">
-                    <div class="instagram-post" style="flex: 1;">
-                        <div class="post-header">
-                            <img src="raaga_logo.jpg" alt="Profile" class="profile-pic" />
-                            <a href="https://www.instagram.com/__.raaga.__/" target="_blank" class="username" style="text-decoration: none; color: inherit;">__.raaga.__</a>
-                        </div>
-
-                        <div class="post-image">
-                            <a href="https://www.instagram.com/__.raaga.__/" target="_blank"><img src="gal12.jpeg" alt="Post content" /></a>
-                        </div>
-
-                        <div class="post-caption" style="flex: 1;">
-                            <a href="https://www.instagram.com/__.raaga.__/" target="_blank" class="username" style="text-decoration: none; color: inherit;">__.raaga.__</a> Raaga Unplugged🎤<br>
-                            <span class="hashtag">#raagasudha #musicclub #amritaclubs</span>
-                        </div>
-                    </div>
-
-                    <div class="insta-desc">
-                        <p>Explore our performances<br> and stay in tune with our <br>latest updates by<br> following us on Instagram.</p>
-                        <br><br><img src="arrow1.png" alt="arrow" class="arrow" />
-                    </div>
-                </div>
-            </section>
-
-            <footer class="site-footer">
-                <div class="footer-content">
-                    <p>© 2025 Raagasudha Music Club, Amrita Vishwa Vidyapeetham, Coimbatore</p>
-                </div>
-            </footer>
-
+      </div>
+      <div class="photo-stack" aria-hidden="true">
+        <div class="float" style="position:absolute;inset:0"><figure class="p1"><img src="gal1.jpeg" alt="" loading="lazy" ></figure><figure class="p2"><img src="gal3.jpeg" alt="" loading="lazy" ></figure><figure class="p3"><img src="gal4.jpeg" alt="" ></figure></div>
+        <div class="stack-badge"><span class="ic"><i class="fa-solid fa-music"></i></span><span>14 photos<small>1 video</small></span></div>
+      </div>
+    </div>
+  </section>
+  <section class="stat-strip" aria-label="Raagasudha in numbers"><div class="wrap"><div class="stat" data-reveal style="--d:0.00s"><span class="ic"><i class="fa-solid fa-music" aria-hidden="true"></i></span><div><b style="font-size:1.15rem">Cultural</b><span>Category</span></div></div><div class="stat" data-reveal style="--d:0.07s"><span class="ic"><i class="fa-solid fa-image" aria-hidden="true"></i></span><div><b data-count="14">14</b><span>Photos</span></div></div><div class="stat" data-reveal style="--d:0.14s"><span class="ic"><i class="fa-solid fa-play" aria-hidden="true"></i></span><div><b data-count="1">1</b><span>Video</span></div></div><div class="stat" data-reveal style="--d:0.21s"><span class="ic"><i class="fa-solid fa-share-nodes" aria-hidden="true"></i></span><div><b data-count="1">1</b><span>Social channel</span></div></div></div></section>
+  <nav class="tabs" aria-label="On this page">
+    <div class="wrap">
+      <ul><li><a href="#about">About</a></li><li><a href="#do">What you'll do</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#videos">Videos</a></li><li><a href="#follow">Follow</a></li><li><a href="#more">More clubs</a></li></ul>
+      <a class="btn btn-primary" href="../../register/?club=raagasudha">Join <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </nav>
+  <section class="section" id="about">
+    <div class="wrap club-about">
+      <div>
+        <span class="kicker" data-reveal>About Raagasudha</span>
+        <p class="lead-in" data-reveal style="--d:.08s">Raagasudha is a haven for music lovers at Amrita, where melodies rise beyond classrooms and rhythms echo through hearts. Founded to celebrate the power of sound and self-expression, the club welcomes students from all backgrounds — whether trained musicians or passionate beginners.</p>
+        <div class="prose">
+          <p data-reveal>From soul-stirring ragas to upbeat fusion, Raagasudha encourages creativity, discipline, and cultural appreciation. Our events are not just showcases — they are experiences that connect performers and listeners alike. Every voice matters. Every note counts.</p>
+          <p data-reveal>Join the Raagasudha music club and contribute to a vibrant community of artists, performers, and music lovers.</p>
         </div>
+      </div>
+      <aside class="glance" data-reveal="right">
+        <h3>At a glance</h3>
+        <dl><div><dt>Category</dt><dd>Cultural</dd></div><div><dt>Photos</dt><dd>14</dd></div><div><dt>Videos</dt><dd>1</dd></div></dl>
+        <div class="socials"><a href="https://www.instagram.com/__.raaga.__/" target="_blank" rel="noopener" aria-label="Raagasudha on Instagram"><i class="fa-brands fa-instagram"></i></a></div>
+        <a class="btn btn-primary" href="../../register/?club=raagasudha">Join Raagasudha <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </aside>
+    </div>
+  </section>
+  <section class="section" id="do" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head"><div><span class="kicker" data-reveal>What you'll do</span><h2 data-reveal style="--d:.08s">Life as a member</h2></div><p data-reveal style="--d:.16s">A taste of what Raagasudha gets up to through the year.</p></div>
+      <div class="activities">
+        <article class="activity" data-reveal style="--d:0.0s">
+          <span class="ic"><i class="fa-solid fa-guitar" aria-hidden="true"></i></span>
+          <h3>Perform</h3>
+          <p>Take the stage at campus events, from soul-stirring ragas to upbeat fusion.</p>
+        </article>
+        <article class="activity" data-reveal style="--d:0.1s">
+          <span class="ic"><i class="fa-solid fa-users" aria-hidden="true"></i></span>
+          <h3>Jam together</h3>
+          <p>Trained musician or passionate beginner, everyone is welcome to play and sing.</p>
+        </article>
+        <article class="activity" data-reveal style="--d:0.2s">
+          <span class="ic"><i class="fa-solid fa-headphones" aria-hidden="true"></i></span>
+          <h3>Listen and connect</h3>
+          <p>Events built as experiences that connect performers and listeners.</p>
+        </article>
+      </div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="raagasudha.js"></script>
-    </body>
+    </div>
+  </section>
+  <section class="section" id="gallery" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head"><div><span class="kicker" data-reveal>Gallery</span><h2 data-reveal style="--d:.08s">Through the lens</h2></div><p data-reveal style="--d:.16s">14 photos. Click any one to view it full screen, then use the arrow keys or swipe.</p></div>
+      <div class="masonry">
+        <button type="button" data-lightbox="gal1.jpeg" aria-label="Open photo 1 of 14" data-reveal style="--d:0.06s"><img src="gal1.jpeg" alt="Raagasudha photo 1" loading="lazy"></button>
+        <button type="button" data-lightbox="gal3.jpeg" aria-label="Open photo 2 of 14" data-reveal style="--d:0.12s"><img src="gal3.jpeg" alt="Raagasudha photo 2" loading="lazy"></button>
+        <button type="button" data-lightbox="gal4.jpeg" aria-label="Open photo 3 of 14" data-reveal style="--d:0.00s"><img src="gal4.jpeg" alt="Raagasudha photo 3" loading="lazy"></button>
+        <button type="button" data-lightbox="gal5.jpeg" aria-label="Open photo 4 of 14" data-reveal style="--d:0.06s"><img src="gal5.jpeg" alt="Raagasudha photo 4" loading="lazy"></button>
+        <button type="button" data-lightbox="gal6.jpeg" aria-label="Open photo 5 of 14" data-reveal style="--d:0.12s"><img src="gal6.jpeg" alt="Raagasudha photo 5" loading="lazy"></button>
+        <button type="button" data-lightbox="gal8.jpeg" aria-label="Open photo 6 of 14" data-reveal style="--d:0.00s"><img src="gal8.jpeg" alt="Raagasudha photo 6" loading="lazy"></button>
+        <button type="button" data-lightbox="gal9.jpeg" aria-label="Open photo 7 of 14" data-reveal style="--d:0.06s"><img src="gal9.jpeg" alt="Raagasudha photo 7" loading="lazy"></button>
+        <button type="button" data-lightbox="gal10.jpeg" aria-label="Open photo 8 of 14" data-reveal style="--d:0.12s"><img src="gal10.jpeg" alt="Raagasudha photo 8" loading="lazy"></button>
+        <button type="button" data-lightbox="gal11.jpeg" aria-label="Open photo 9 of 14" data-reveal style="--d:0.00s"><img src="gal11.jpeg" alt="Raagasudha photo 9" loading="lazy"></button>
+        <button type="button" data-lightbox="gal12.jpeg" aria-label="Open photo 10 of 14" data-reveal style="--d:0.06s"><img src="gal12.jpeg" alt="Raagasudha photo 10" loading="lazy"></button>
+        <button type="button" data-lightbox="gal13.jpeg" aria-label="Open photo 11 of 14" data-reveal style="--d:0.12s"><img src="gal13.jpeg" alt="Raagasudha photo 11" loading="lazy"></button>
+        <button type="button" data-lightbox="gal14.jpeg" aria-label="Open photo 12 of 14" data-reveal style="--d:0.00s"><img src="gal14.jpeg" alt="Raagasudha photo 12" loading="lazy"></button>
+        <button type="button" data-lightbox="gal15.jpeg" aria-label="Open photo 13 of 14" data-reveal style="--d:0.06s"><img src="gal15.jpeg" alt="Raagasudha photo 13" loading="lazy"></button>
+        <button type="button" data-lightbox="gal16.jpeg" aria-label="Open photo 14 of 14" data-reveal style="--d:0.12s"><img src="gal16.jpeg" alt="Raagasudha photo 14" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="videos" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head"><div><span class="kicker" data-reveal>Videos</span><h2 data-reveal style="--d:.08s">See it in motion</h2></div></div>
+      <div class="videos">
+        <div class="video-card" data-reveal style="--d:0.0s">
+          <video src="raga_1.mp4" poster="raga_1-poster.jpg" playsinline preload="none"></video>
+          <button class="play" type="button" aria-label="Play Raagasudha video 1"><span><i class="fa-solid fa-play" aria-hidden="true"></i></span><em>Raagasudha &middot; video 1</em></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="follow" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head"><div><span class="kicker" data-reveal>Stay in the loop</span><h2 data-reveal style="--d:.08s">Follow Raagasudha</h2></div></div>
+      <div class="follow-grid">
+        <a class="social-card" href="https://www.instagram.com/__.raaga.__/" target="_blank" rel="noopener" data-reveal style="--d:0.00s">
+          <span class="ic instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>
+          <span><small>Instagram</small><strong>@__.raaga.__</strong></span>
+          <i class="go fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="section clubs-section" id="more">
+    <div class="wrap">
+      <div class="section-head"><div><span class="kicker" data-reveal>Keep exploring</span><h2 data-reveal style="--d:.08s">You might also like</h2></div><a class="btn btn-outline" href="../../index.html#clubs" data-reveal>All clubs <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+      <div class="related">
+      <a class="club-card-home" href="../../clubs/natyasudha/" data-category="Cultural" data-reveal style="--d:0.00s">
+        <div class="media"><img src="../../assets/img/cards/natyasudha.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Cultural</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>12</span><span><i class="fa-solid fa-play" aria-hidden="true"></i>3</span></div></div>
+        <div class="body">
+          <h3>Natyasudha</h3>
+          <p>The dance club celebrating classical and contemporary Indian dance.</p>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+      <a class="club-card-home" href="../../clubs/nss/" data-category="Service" data-reveal style="--d:0.07s">
+        <div class="media"><img src="../../assets/img/cards/nss.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Service</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>12</span><span><i class="fa-solid fa-play" aria-hidden="true"></i>2</span></div></div>
+        <div class="body">
+          <h3>NSS</h3>
+          <p>Volunteering that builds a link between campus and community.</p>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+      <a class="club-card-home" href="../../clubs/team-media/" data-category="Creative" data-reveal style="--d:0.14s">
+        <div class="media"><img src="../../assets/img/cards/team-media.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Creative</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>15</span><span><i class="fa-solid fa-play" aria-hidden="true"></i>1</span></div></div>
+        <div class="body">
+          <h3>Team Media</h3>
+          <p>Capturing the vibe and emotion of every event on campus.</p>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+      </div>
+    </div>
+  </section>
+  <section class="section tight">
+    <div class="wrap finale">
+      <div class="join-card" data-reveal="left">
+        <span class="kicker light">Registrations open</span>
+        <h2>Want to join <em>Raagasudha?</em></h2>
+        <p>Register in about two minutes. The coordinators will get in touch about inductions and the next meet-up.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="../../register/?club=raagasudha">Register now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn-ghost" href="../../index.html#clubs">Browse all clubs</a>
+        </div>
+      </div>
+      <a class="next-club" href="../natyasudha/" data-reveal="right">
+        <img src="../../assets/img/cards/natyasudha.jpg" alt="" loading="lazy">
+        <small>Next club</small>
+        <strong>Natyasudha <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></strong>
+        <span>The dance club celebrating classical and contemporary Indian dance.</span>
+      </a>
+    </div>
+  </section>
+</main>
+<div class="join-bar" aria-hidden="true"><strong><small>Interested?</small>Raagasudha</strong><a class="btn" href="../../register/?club=raagasudha" tabindex="-1">Join <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../../assets/img/logo.png" alt="Amrita Vishwa Vidyapeetham" width="149" height="42" loading="lazy">
+        <p>Every student club at Amrita Vishwa Vidyapeetham, Coimbatore, in one place. Find your people, then go make something.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/amrita_university/" aria-label="Amrita on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/AmritaUniversity" aria-label="Amrita on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://x.com/AMRITAedu" aria-label="Amrita on X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.linkedin.com/school/amrita-vishwa-vidyapeetham-official/" aria-label="Amrita on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Clubs</h4>
+        <ul>
+          <li><a href="../../clubs/raagasudha/">Raagasudha</a></li>
+          <li><a href="../../clubs/natyasudha/">Natyasudha</a></li>
+          <li><a href="../../clubs/nss/">NSS</a></li>
+          <li><a href="../../clubs/team-media/">Team Media</a></li>
+          <li><a href="../../clubs/elite/">Elite</a></li>
+          <li><a href="../../clubs/anantham/">Anantham</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>&nbsp;</h4>
+        <ul>
+          <li><a href="../../clubs/srishti/">Srishti</a></li>
+          <li><a href="../../clubs/intel-iot/">Intel IoT</a></li>
+          <li><a href="../../clubs/toastmasters/">Toastmasters</a></li>
+          <li><a href="../../clubs/nature/">Nature Club</a></li>
+          <li><a href="../../clubs/photography/">Photography</a></li>
+          <li><a href="../../clubs/gdsc/">GDSC</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Amrita</h4>
+        <ul>
+          <li><a href="../../register/">Register for clubs</a></li>
+          <li><a href="https://www.amrita.edu/admissions/">Admissions</a></li>
+          <li><a href="https://www.amrita.edu/events/">Events</a></li>
+          <li><a href="https://www.amrita.edu/campus/amritapuri/">Amritapuri</a></li>
+          <li><a href="https://www.amrita.edu/campus/amaravati/">Amaravati</a></li>
+          <li><a href="https://www.amrita.edu/campus/bengaluru/">Bengaluru</a></li>
+          <li><a href="https://www.amrita.edu/campus/chennai/">Chennai</a></li>
+          <li><a href="https://www.amrita.edu/campus/coimbatore/">Coimbatore</a></li>
+          <li><a href="https://www.amrita.edu/campus/faridabad/">Faridabad</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer-word" aria-hidden="true">Student Hub</p>
+    <div class="footer-bottom">
+      <span>A student project showcasing clubs at Amrita Vishwa Vidyapeetham. Not an official university website.</span>
+      <span>Club names, logos and photos belong to their clubs.</span>
+    </div>
+  </div>
+</footer>
+<script src="../../assets/js/main.js?v=d87ac436" defer></script>
+</body>
 </html>
