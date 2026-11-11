@@ -14,6 +14,8 @@ Browse 12 clubs, filter them by interest, and open each club's page for its stor
 [![Python](https://img.shields.io/badge/Build-Python%203-3776AB?style=for-the-badge&logo=python&logoColor=white)](#editing-content)
 [![License: MIT](https://img.shields.io/badge/License-MIT-a4123f?style=for-the-badge)](LICENSE)
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fparvathy2907%2Famrita-student-hub&project-name=amrita-student-hub)
+
 [**View the live site**](https://parvathy2907.github.io/amrita-student-hub/) · [Report a bug](https://github.com/parvathy2907/amrita-student-hub/issues) · [Suggest a club](https://github.com/parvathy2907/amrita-student-hub/issues)
 
 <img src="docs/screenshots/home.jpg" alt="AMRITA Student Hub home page" width="100%">
@@ -93,7 +95,7 @@ Information about student clubs at Amrita is scattered across Instagram pages, n
 - **Python 3** — a small, dependency-free [build script](scripts/build.py) that turns [`data/clubs.json`](data/clubs.json) into HTML pages
 - **[GSAP](https://gsap.com/)** — animations on the Raagasudha page
 - **[Inter](https://rsms.me/inter/), [Fraunces](https://fonts.google.com/specimen/Fraunces) and [Font Awesome](https://fontawesome.com/)** — self-hosted fonts and icons
-- **GitHub Pages** — hosting
+- **Vercel / GitHub Pages** — hosting
 
 ## Getting started
 
@@ -190,18 +192,23 @@ amrita-student-hub/
 │   ├── js/main.js           # Menu, filters, gallery viewer, video autoplay
 │   ├── img/                 # Logo, favicon, hero and club cards
 │   └── vendor/              # Self-hosted fonts and icons
-└── docs/screenshots/        # Images used in this README
+├── docs/screenshots/        # Images used in this README
+└── vercel.json              # Vercel settings (clean URLs, caching)
 ```
 
 ## Deploying
 
-The site is fully static. To publish it with GitHub Pages:
+The site is fully static: no build step and no server. The pages are already built and committed.
 
-1. Go to **Settings → Pages**.
-2. Under *Build and deployment*, choose **Deploy from a branch**.
-3. Pick **`main`** and **`/ (root)`**, then save.
+### Vercel (recommended)
 
-It will be live at `https://<username>.github.io/amrita-student-hub/` in a minute or two.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fparvathy2907%2Famrita-student-hub&project-name=amrita-student-hub)
+
+Click the button, or on [vercel.com/new](https://vercel.com/new) import this repo and leave **Framework Preset** as *Other* with no build command. [`vercel.json`](vercel.json) sets clean URLs and caching for images, videos and fonts. Every push to `main` then redeploys automatically.
+
+### GitHub Pages
+
+Go to **Settings → Pages → Deploy from a branch**, then pick **`main`** and **`/ (root)`**. The site will be at `https://<username>.github.io/amrita-student-hub/`.
 
 ## Roadmap
 
