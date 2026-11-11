@@ -3,219 +3,282 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AMRITA Student Hub — Student Clubs</title>
+  <title>AMRITA Student Hub — Find your club</title>
   <meta name="description" content="Discover every student club at Amrita Vishwa Vidyapeetham, Coimbatore: music, dance, tech, service, literature and more.">
-  <meta property="og:title" content="AMRITA Student Hub — Student Clubs">
+  <meta name="theme-color" content="#1b0a12">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AMRITA Student Hub — Find your club">
   <meta property="og:description" content="Discover every student club at Amrita Vishwa Vidyapeetham, Coimbatore: music, dance, tech, service, literature and more.">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <script>document.documentElement.classList.add('js')</script>
   <link rel="preload" href="assets/vendor/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/vendor/fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/vendor/fonts/fonts.css">
   <link rel="stylesheet" href="assets/vendor/fontawesome/css/fontawesome.min.css">
   <link rel="stylesheet" href="assets/vendor/fontawesome/css/solid.min.css">
   <link rel="stylesheet" href="assets/vendor/fontawesome/css/brands.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=b2242d4e">
+  <link rel="stylesheet" href="assets/css/style.css?v=dd51fa91">
 </head>
-<body>
+<body class="overlay">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html">
-      <img src="assets/img/logo-dark.png" alt="Amrita Vishwa Vidyapeetham" width="142" height="40">
+    <a class="brand" href="index.html" aria-label="AMRITA Student Hub home">
+      <img class="logo-dark" src="assets/img/logo-dark.png" alt="Amrita Vishwa Vidyapeetham" width="142" height="40">
+      <img class="logo-light" src="assets/img/logo.png" alt="" width="142" height="40">
       <span>Student Hub</span>
     </a>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><i class="fa-solid fa-bars"></i></button>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span class="bars"></span></button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <ul>
         <li><a href="index.html#clubs">Clubs</a></li>
         <li><a href="index.html#about">About</a></li>
-        <li><a href="https://www.amrita.edu/events/">Events</a></li>
-        <li><a href="https://www.amrita.edu/admissions/">Admissions</a></li>
-        <li><a class="btn" href="register/">Register</a></li>
+        <li><a href="index.html#moments">Moments</a></li>
+        <li><a href="index.html#join">How to join</a></li>
+        <li><a class="btn btn-primary" href="register/">Register <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
       </ul>
+      <div class="nav-extra"><p>Jump to a club</p><div><a href="clubs/raagasudha/">Raagasudha</a><a href="clubs/natyasudha/">Natyasudha</a><a href="clubs/nss/">NSS</a><a href="clubs/team-media/">Team Media</a><a href="clubs/elite/">Elite</a><a href="clubs/anantham/">Anantham</a><a href="clubs/srishti/">Srishti</a><a href="clubs/intel-iot/">Intel IoT</a><a href="clubs/toastmasters/">Toastmasters</a><a href="clubs/nature/">Nature Club</a><a href="clubs/photography/">Photography</a><a href="clubs/gdsc/">GDSC</a></div></div>
     </nav>
   </div>
+  <div class="progress-bar" aria-hidden="true"></div>
 </header>
 <main id="main">
-  <section class="hero" style="background-image:url('assets/img/hero.jpg')">
+  <section class="hero-home" aria-label="Introduction">
+    <div class="wall" aria-hidden="true" data-parallax="0.18">
+      <div class="wall-col"><img src="assets/img/cards/raagasudha.jpg" alt=""><img src="assets/img/cards/anantham.jpg" alt=""><img src="assets/img/cards/photography.jpg" alt=""><img src="assets/img/cards/nss.jpg" alt=""><img src="assets/img/cards/intel-iot.jpg" alt=""><img src="assets/img/cards/raagasudha.jpg" alt=""><img src="assets/img/cards/anantham.jpg" alt=""><img src="assets/img/cards/photography.jpg" alt=""><img src="assets/img/cards/nss.jpg" alt=""><img src="assets/img/cards/intel-iot.jpg" alt=""></div>
+      <div class="wall-col"><img src="assets/img/cards/natyasudha.jpg" alt=""><img src="assets/img/cards/srishti.jpg" alt=""><img src="assets/img/cards/gdsc.jpg" alt=""><img src="assets/img/cards/team-media.jpg" alt=""><img src="assets/img/cards/toastmasters.jpg" alt=""><img src="assets/img/cards/natyasudha.jpg" alt=""><img src="assets/img/cards/srishti.jpg" alt=""><img src="assets/img/cards/gdsc.jpg" alt=""><img src="assets/img/cards/team-media.jpg" alt=""><img src="assets/img/cards/toastmasters.jpg" alt=""></div>
+      <div class="wall-col"><img src="assets/img/cards/nss.jpg" alt=""><img src="assets/img/cards/intel-iot.jpg" alt=""><img src="assets/img/cards/elite.jpg" alt=""><img src="assets/img/cards/nature.jpg" alt=""><img src="assets/img/cards/nss.jpg" alt=""><img src="assets/img/cards/intel-iot.jpg" alt=""><img src="assets/img/cards/elite.jpg" alt=""><img src="assets/img/cards/nature.jpg" alt=""></div>
+      <div class="wall-col"><img src="assets/img/cards/team-media.jpg" alt=""><img src="assets/img/cards/toastmasters.jpg" alt=""><img src="assets/img/cards/raagasudha.jpg" alt=""><img src="assets/img/cards/anantham.jpg" alt=""><img src="assets/img/cards/photography.jpg" alt=""><img src="assets/img/cards/team-media.jpg" alt=""><img src="assets/img/cards/toastmasters.jpg" alt=""><img src="assets/img/cards/raagasudha.jpg" alt=""><img src="assets/img/cards/anantham.jpg" alt=""><img src="assets/img/cards/photography.jpg" alt=""></div>
+      <div class="wall-col"><img src="assets/img/cards/elite.jpg" alt=""><img src="assets/img/cards/nature.jpg" alt=""><img src="assets/img/cards/natyasudha.jpg" alt=""><img src="assets/img/cards/srishti.jpg" alt=""><img src="assets/img/cards/gdsc.jpg" alt=""><img src="assets/img/cards/elite.jpg" alt=""><img src="assets/img/cards/nature.jpg" alt=""><img src="assets/img/cards/natyasudha.jpg" alt=""><img src="assets/img/cards/srishti.jpg" alt=""><img src="assets/img/cards/gdsc.jpg" alt=""></div>
+    </div>
     <div class="wrap">
-      <span class="eyebrow">Amrita Vishwa Vidyapeetham &middot; Coimbatore</span>
-      <h1>Find your club.</h1>
-      <p>12 student clubs for music, dance, technology, service, literature and more — all in one place.</p>
+      <span class="kicker light fade-in" style="--d:.1s">Amrita Vishwa Vidyapeetham &middot; Coimbatore</span>
+      <h1 class="line-reveal"><span class="line"><span>Where campus</span></span><span class="line" style="--i:1"><span><em>comes alive.</em></span></span></h1>
+      <p class="hero-lead fade-in" style="--d:.55s">12 student clubs for music, dance, code, service, words and everything in between. Find the ones that feel like yours.</p>
+      <div class="hero-actions fade-in" style="--d:.7s">
+        <a class="btn btn-gold" href="#clubs">Explore clubs <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+        <a class="btn btn-ghost" href="register/">Join a club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <dl class="hero-stats fade-in" style="--d:.85s">
+        <div><dt>student clubs</dt><dd data-count="12" data-delay="900">12</dd></div>
+        <div><dt>categories</dt><dd data-count="9" data-delay="900">9</dd></div>
+        <div><dt>photos to explore</dt><dd data-count="128" data-delay="900">128<sup>+</sup></dd></div>
+        <div><dt>videos</dt><dd data-count="14" data-delay="900">14</dd></div>
+      </dl>
+      <a class="scroll-cue" href="#about">Scroll</a>
     </div>
   </section>
+
+  <div class="ribbon" aria-label="All clubs">
+    <div class="ribbon-track"><a href="clubs/raagasudha/">Raagasudha</a><a href="clubs/natyasudha/">Natyasudha</a><a href="clubs/nss/">NSS</a><a href="clubs/team-media/">Team Media</a><a href="clubs/elite/">Elite</a><a href="clubs/anantham/">Anantham</a><a href="clubs/srishti/">Srishti</a><a href="clubs/intel-iot/">Intel IoT</a><a href="clubs/toastmasters/">Toastmasters</a><a href="clubs/nature/">Nature Club</a><a href="clubs/photography/">Photography</a><a href="clubs/gdsc/">GDSC</a><a tabindex="-1" aria-hidden="true" href="clubs/raagasudha/">Raagasudha</a><a tabindex="-1" aria-hidden="true" href="clubs/natyasudha/">Natyasudha</a><a tabindex="-1" aria-hidden="true" href="clubs/nss/">NSS</a><a tabindex="-1" aria-hidden="true" href="clubs/team-media/">Team Media</a><a tabindex="-1" aria-hidden="true" href="clubs/elite/">Elite</a><a tabindex="-1" aria-hidden="true" href="clubs/anantham/">Anantham</a><a tabindex="-1" aria-hidden="true" href="clubs/srishti/">Srishti</a><a tabindex="-1" aria-hidden="true" href="clubs/intel-iot/">Intel IoT</a><a tabindex="-1" aria-hidden="true" href="clubs/toastmasters/">Toastmasters</a><a tabindex="-1" aria-hidden="true" href="clubs/nature/">Nature Club</a><a tabindex="-1" aria-hidden="true" href="clubs/photography/">Photography</a><a tabindex="-1" aria-hidden="true" href="clubs/gdsc/">GDSC</a></div>
+  </div>
 
   <section class="section" id="about">
-    <div class="wrap prose">
-      <h2>Student clubs at Amrita</h2>
-      <p>To further the overall development of students, participation in a wide range of extra-curricular, social and community development activities is encouraged. Associations like Toastmasters, GDSC and Srishti, along with clubs like Elite, Anantham, Intel IoT and the Photography Club, help bring out students' creative talents and promote team spirit.</p>
-      <p>Associations like NSS (National Service Scheme) and the Nature Club give students a platform to engage in humanitarian and environmental work.</p>
+    <div class="wrap about-grid">
+      <div class="about-copy">
+        <span class="kicker" data-reveal>Life beyond the classroom</span>
+        <p class="about-statement" data-reveal style="--d:.08s">The best part of college often happens <em>after</em> the last lecture.</p>
+        <p data-reveal style="--d:.16s">To further the overall development of students, Amrita encourages participation in a wide range of extra-curricular, social and community activities. Associations like Toastmasters, GDSC and Srishti, along with clubs like Elite, Anantham, Intel IoT and the Photography Club, bring out creative talent and build team spirit.</p>
+        <p data-reveal style="--d:.24s">NSS and the Nature Club give students a platform for humanitarian and environmental work, on campus and beyond.</p>
+      </div>
+      <div class="pillar-list">
+        <span class="kicker" data-reveal>What are you into?</span>
+        <a class="pillar-tile" href="#clubs" data-filter-link="Cultural" data-reveal="right" style="--d:0.0s">
+          <span class="ic"><i class="fa-solid fa-palette" aria-hidden="true"></i></span>
+          <span><h3>Create</h3><p>Raagasudha, Natyasudha, Team Media, Srishti, Photography</p></span>
+          <i class="go fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <a class="pillar-tile" href="#clubs" data-filter-link="Technical" data-reveal="right" style="--d:0.1s">
+          <span class="ic"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+          <span><h3>Build</h3><p>Elite, Anantham, Intel IoT, Toastmasters, GDSC</p></span>
+          <i class="go fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <a class="pillar-tile" href="#clubs" data-filter-link="Service" data-reveal="right" style="--d:0.2s">
+          <span class="ic"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></span>
+          <span><h3>Serve</h3><p>NSS, Nature Club</p></span>
+          <i class="go fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
   </section>
 
-  <section class="section" id="clubs">
+  <section class="section clubs-section" id="clubs">
     <div class="wrap">
       <div class="section-head">
-        <h2>Explore clubs</h2>
+        <div><span class="kicker" data-reveal>The directory</span><h2 data-reveal style="--d:.08s">Explore every club</h2></div>
+        <p data-reveal style="--d:.16s">Filter by what you love, or search by name. Each club has its own page with photos, events and how to join.</p>
       </div>
-      <div class="toolbar">
-        <div class="chips" role="group" aria-label="Filter by category">
-        <button class="chip" data-filter="All" aria-pressed="true">All</button>
-        <button class="chip" data-filter="Academic" aria-pressed="false">Academic</button>
-        <button class="chip" data-filter="Communication" aria-pressed="false">Communication</button>
-        <button class="chip" data-filter="Creative" aria-pressed="false">Creative</button>
-        <button class="chip" data-filter="Cultural" aria-pressed="false">Cultural</button>
-        <button class="chip" data-filter="Entrepreneurship" aria-pressed="false">Entrepreneurship</button>
-        <button class="chip" data-filter="Environment" aria-pressed="false">Environment</button>
-        <button class="chip" data-filter="Literary" aria-pressed="false">Literary</button>
-        <button class="chip" data-filter="Service" aria-pressed="false">Service</button>
-        <button class="chip" data-filter="Technical" aria-pressed="false">Technical</button>
+      <div class="toolbar" data-reveal>
+        <div class="chips" role="group" aria-label="Filter clubs by category">
+          <button class="chip" type="button" data-filter="All" aria-pressed="true">All</button>
+          <button class="chip" type="button" data-filter="Academic" aria-pressed="false">Academic</button>
+          <button class="chip" type="button" data-filter="Communication" aria-pressed="false">Communication</button>
+          <button class="chip" type="button" data-filter="Creative" aria-pressed="false">Creative</button>
+          <button class="chip" type="button" data-filter="Cultural" aria-pressed="false">Cultural</button>
+          <button class="chip" type="button" data-filter="Entrepreneurship" aria-pressed="false">Entrepreneurship</button>
+          <button class="chip" type="button" data-filter="Environment" aria-pressed="false">Environment</button>
+          <button class="chip" type="button" data-filter="Literary" aria-pressed="false">Literary</button>
+          <button class="chip" type="button" data-filter="Service" aria-pressed="false">Service</button>
+          <button class="chip" type="button" data-filter="Technical" aria-pressed="false">Technical</button>
         </div>
         <label class="search">
           <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-          <input id="club-search" type="search" placeholder="Search clubs" aria-label="Search clubs">
+          <input id="club-search" type="search" placeholder="Search clubs" aria-label="Search clubs" autocomplete="off">
         </label>
       </div>
-      <div class="grid" id="club-grid">
-      <a class="card" href="clubs/raagasudha/" data-category="Cultural">
-        <div class="card-media"><img src="assets/img/cards/raagasudha.jpg" alt="" loading="lazy" width="800" height="500"></div>
-        <div class="card-body">
-          <div class="tag">Cultural</div>
+      <div class="club-grid-home" id="club-grid" aria-live="polite">
+      <a class="club-card-home" href="clubs/raagasudha/" data-category="Cultural" data-reveal style="--d:0.00s">
+        <div class="media"><img src="assets/img/cards/raagasudha.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Cultural</span></div>
+        <div class="body">
           <h3>Raagasudha</h3>
           <p>The music club, where melodies rise beyond classrooms.</p>
-          <span class="more">Explore club &rarr;</span>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
         </div>
       </a>
-      <a class="card" href="clubs/natyasudha/" data-category="Cultural">
-        <div class="card-media"><img src="assets/img/cards/natyasudha.jpg" alt="" loading="lazy" width="800" height="500"></div>
-        <div class="card-body">
-          <div class="tag">Cultural</div>
+      <a class="club-card-home" href="clubs/natyasudha/" data-category="Cultural" data-reveal style="--d:0.07s">
+        <div class="media"><img src="assets/img/cards/natyasudha.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Cultural</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>12</span><span><i class="fa-solid fa-play" aria-hidden="true"></i>3</span></div></div>
+        <div class="body">
           <h3>Natyasudha</h3>
           <p>The dance club celebrating classical and contemporary Indian dance.</p>
-          <span class="more">Explore club &rarr;</span>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
         </div>
       </a>
-      <a class="card" href="clubs/nss/" data-category="Service">
-        <div class="card-media"><img src="assets/img/cards/nss.jpg" alt="" loading="lazy" width="800" height="500"></div>
-        <div class="card-body">
-          <div class="tag">Service</div>
+      <a class="club-card-home" href="clubs/nss/" data-category="Service" data-reveal style="--d:0.14s">
+        <div class="media"><img src="assets/img/cards/nss.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Service</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>12</span><span><i class="fa-solid fa-play" aria-hidden="true"></i>2</span></div></div>
+        <div class="body">
           <h3>NSS</h3>
           <p>Volunteering that builds a link between campus and community.</p>
-          <span class="more">Explore club &rarr;</span>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
         </div>
       </a>
-      <a class="card" href="clubs/team-media/" data-category="Creative">
-        <div class="card-media"><img src="assets/img/cards/team-media.jpg" alt="" loading="lazy" width="800" height="500"></div>
-        <div class="card-body">
-          <div class="tag">Creative</div>
+      <a class="club-card-home" href="clubs/team-media/" data-category="Creative" data-reveal style="--d:0.21s">
+        <div class="media"><img src="assets/img/cards/team-media.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Creative</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>15</span><span><i class="fa-solid fa-play" aria-hidden="true"></i>1</span></div></div>
+        <div class="body">
           <h3>Team Media</h3>
           <p>Capturing the vibe and emotion of every event on campus.</p>
-          <span class="more">Explore club &rarr;</span>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
         </div>
       </a>
-      <a class="card" href="clubs/elite/" data-category="Entrepreneurship">
-        <div class="card-media"><img src="assets/img/cards/elite.jpg" alt="" loading="lazy" width="800" height="500"></div>
-        <div class="card-body">
-          <div class="tag">Entrepreneurship</div>
+      <a class="club-card-home" href="clubs/elite/" data-category="Entrepreneurship" data-reveal style="--d:0.00s">
+        <div class="media"><img src="assets/img/cards/elite.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Entrepreneurship</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>12</span><span><i class="fa-solid fa-play" aria-hidden="true"></i>1</span></div></div>
+        <div class="body">
           <h3>Elite</h3>
           <p>Entrepreneurship, leadership and start-up culture.</p>
-          <span class="more">Explore club &rarr;</span>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
         </div>
       </a>
-      <a class="card" href="clubs/anantham/" data-category="Academic">
-        <div class="card-media"><img src="assets/img/cards/anantham.jpg" alt="" loading="lazy" width="800" height="500"></div>
-        <div class="card-body">
-          <div class="tag">Academic</div>
+      <a class="club-card-home" href="clubs/anantham/" data-category="Academic" data-reveal style="--d:0.07s">
+        <div class="media"><img src="assets/img/cards/anantham.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Academic</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>6</span></div></div>
+        <div class="body">
           <h3>Anantham</h3>
           <p>The Mathematics Club — infinite ways to see one idea.</p>
-          <span class="more">Explore club &rarr;</span>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
         </div>
       </a>
-      <a class="card" href="clubs/srishti/" data-category="Literary">
-        <div class="card-media"><img src="assets/img/cards/srishti.jpg" alt="" loading="lazy" width="800" height="500"></div>
-        <div class="card-body">
-          <div class="tag">Literary</div>
+      <a class="club-card-home" href="clubs/srishti/" data-category="Literary" data-reveal style="--d:0.14s">
+        <div class="media"><img src="assets/img/cards/srishti.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Literary</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>8</span><span><i class="fa-solid fa-play" aria-hidden="true"></i>2</span></div></div>
+        <div class="body">
           <h3>Srishti</h3>
           <p>The literary club — poetry, debates, quizzes and more.</p>
-          <span class="more">Explore club &rarr;</span>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
         </div>
       </a>
-      <a class="card" href="clubs/intel-iot/" data-category="Technical">
-        <div class="card-media"><img src="assets/img/cards/intel-iot.jpg" alt="" loading="lazy" width="800" height="500"></div>
-        <div class="card-body">
-          <div class="tag">Technical</div>
+      <a class="club-card-home" href="clubs/intel-iot/" data-category="Technical" data-reveal style="--d:0.21s">
+        <div class="media"><img src="assets/img/cards/intel-iot.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Technical</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>12</span><span><i class="fa-solid fa-play" aria-hidden="true"></i>1</span></div></div>
+        <div class="body">
           <h3>Intel IoT</h3>
           <p>Hands-on IoT and AI with Intel hardware and software.</p>
-          <span class="more">Explore club &rarr;</span>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
         </div>
       </a>
-      <a class="card" href="clubs/toastmasters/" data-category="Communication">
-        <div class="card-media"><img src="assets/img/cards/toastmasters.jpg" alt="" loading="lazy" width="800" height="500"></div>
-        <div class="card-body">
-          <div class="tag">Communication</div>
+      <a class="club-card-home" href="clubs/toastmasters/" data-category="Communication" data-reveal style="--d:0.00s">
+        <div class="media"><img src="assets/img/cards/toastmasters.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Communication</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>13</span><span><i class="fa-solid fa-play" aria-hidden="true"></i>2</span></div></div>
+        <div class="body">
           <h3>Toastmasters</h3>
           <p>Build confidence and public speaking skills.</p>
-          <span class="more">Explore club &rarr;</span>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
         </div>
       </a>
-      <a class="card" href="clubs/nature/" data-category="Environment">
-        <div class="card-media"><img src="assets/img/cards/nature.jpg" alt="" loading="lazy" width="800" height="500"></div>
-        <div class="card-body">
-          <div class="tag">Environment</div>
+      <a class="club-card-home" href="clubs/nature/" data-category="Environment" data-reveal style="--d:0.07s">
+        <div class="media"><img src="assets/img/cards/nature.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Environment</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>10</span></div></div>
+        <div class="body">
           <h3>Nature Club</h3>
           <p>Love for plants and animals, and a greener campus.</p>
-          <span class="more">Explore club &rarr;</span>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
         </div>
       </a>
-      <a class="card" href="clubs/photography/" data-category="Creative">
-        <div class="card-media"><img src="assets/img/cards/photography.jpg" alt="" loading="lazy" width="800" height="500"></div>
-        <div class="card-body">
-          <div class="tag">Creative</div>
+      <a class="club-card-home" href="clubs/photography/" data-category="Creative" data-reveal style="--d:0.14s">
+        <div class="media"><img src="assets/img/cards/photography.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Creative</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>5</span></div></div>
+        <div class="body">
           <h3>Photography</h3>
           <p>Short courses, exhibitions and creative photography.</p>
-          <span class="more">Explore club &rarr;</span>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
         </div>
       </a>
-      <a class="card" href="clubs/gdsc/" data-category="Technical">
-        <div class="card-media"><img src="assets/img/cards/gdsc.jpg" alt="" loading="lazy" width="800" height="500"></div>
-        <div class="card-body">
-          <div class="tag">Technical</div>
+      <a class="club-card-home" href="clubs/gdsc/" data-category="Technical" data-reveal style="--d:0.21s">
+        <div class="media"><img src="assets/img/cards/gdsc.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Technical</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>7</span><span><i class="fa-solid fa-play" aria-hidden="true"></i>1</span></div></div>
+        <div class="body">
           <h3>GDSC</h3>
           <p>Connect, learn and grow with developer technologies.</p>
-          <span class="more">Explore club &rarr;</span>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
         </div>
       </a>
       </div>
-      <p class="empty" id="no-results" hidden>No clubs match that search.</p>
+      <p class="empty" id="no-results" hidden><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>No clubs match that. Try another word or category.</p>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section moments" id="moments">
     <div class="wrap">
-      <div class="cta">
-        <div>
-          <h2>Ready to join?</h2>
-          <p>Sign up for up to three clubs with your college email. It takes two minutes.</p>
+      <div class="section-head">
+        <div><span class="kicker light" data-reveal>Moments</span><h2 data-reveal style="--d:.08s">Life on campus, in frames</h2></div>
+        <p data-reveal style="--d:.16s">Performances, hackathons, drives and late-night rehearsals. Tap a photo to visit the club behind it.</p>
+      </div>
+    </div>
+    <div class="moment-row"><a class="moment" href="clubs/anantham/" tabindex="-1"><img src="assets/img/moments/anantham__ana2.jpg" alt="" loading="lazy"><span>Anantham</span></a><a class="moment" href="clubs/elite/" tabindex="-1"><img src="assets/img/moments/elite__img2.jpg" alt="" loading="lazy"><span>Elite</span></a><a class="moment" href="clubs/gdsc/" tabindex="-1"><img src="assets/img/moments/gdsc__img2.jpg" alt="" loading="lazy"><span>GDSC</span></a><a class="moment" href="clubs/intel-iot/" tabindex="-1"><img src="assets/img/moments/intel-iot__iot2.jpg" alt="" loading="lazy"><span>Intel IoT</span></a><a class="moment" href="clubs/nature/" tabindex="-1"><img src="assets/img/moments/nature__nat2.jpg" alt="" loading="lazy"><span>Nature Club</span></a><a class="moment" href="clubs/natyasudha/" tabindex="-1"><img src="assets/img/moments/natyasudha__natya2.jpg" alt="" loading="lazy"><span>Natyasudha</span></a><a class="moment" href="clubs/nss/" tabindex="-1"><img src="assets/img/moments/nss__nss2.jpg" alt="" loading="lazy"><span>NSS</span></a><a class="moment" href="clubs/photography/" tabindex="-1"><img src="assets/img/moments/photography__photo1.jpg" alt="" loading="lazy"><span>Photography</span></a><a class="moment" href="clubs/raagasudha/" tabindex="-1"><img src="assets/img/moments/raagasudha__gal10.jpg" alt="" loading="lazy"><span>Raagasudha</span></a><a class="moment" href="clubs/srishti/" tabindex="-1"><img src="assets/img/moments/srishti__shr2.jpg" alt="" loading="lazy"><span>Srishti</span></a><a class="moment" href="clubs/team-media/" tabindex="-1"><img src="assets/img/moments/team-media__media_2.jpg" alt="" loading="lazy"><span>Team Media</span></a><a class="moment" href="clubs/toastmasters/" tabindex="-1"><img src="assets/img/moments/toastmasters__toast_1.jpg" alt="" loading="lazy"><span>Toastmasters</span></a><a class="moment" href="clubs/anantham/" tabindex="-1"><img src="assets/img/moments/anantham__ana2.jpg" alt="" loading="lazy"><span>Anantham</span></a><a class="moment" href="clubs/elite/" tabindex="-1"><img src="assets/img/moments/elite__img2.jpg" alt="" loading="lazy"><span>Elite</span></a><a class="moment" href="clubs/gdsc/" tabindex="-1"><img src="assets/img/moments/gdsc__img2.jpg" alt="" loading="lazy"><span>GDSC</span></a><a class="moment" href="clubs/intel-iot/" tabindex="-1"><img src="assets/img/moments/intel-iot__iot2.jpg" alt="" loading="lazy"><span>Intel IoT</span></a><a class="moment" href="clubs/nature/" tabindex="-1"><img src="assets/img/moments/nature__nat2.jpg" alt="" loading="lazy"><span>Nature Club</span></a><a class="moment" href="clubs/natyasudha/" tabindex="-1"><img src="assets/img/moments/natyasudha__natya2.jpg" alt="" loading="lazy"><span>Natyasudha</span></a><a class="moment" href="clubs/nss/" tabindex="-1"><img src="assets/img/moments/nss__nss2.jpg" alt="" loading="lazy"><span>NSS</span></a><a class="moment" href="clubs/photography/" tabindex="-1"><img src="assets/img/moments/photography__photo1.jpg" alt="" loading="lazy"><span>Photography</span></a><a class="moment" href="clubs/raagasudha/" tabindex="-1"><img src="assets/img/moments/raagasudha__gal10.jpg" alt="" loading="lazy"><span>Raagasudha</span></a><a class="moment" href="clubs/srishti/" tabindex="-1"><img src="assets/img/moments/srishti__shr2.jpg" alt="" loading="lazy"><span>Srishti</span></a><a class="moment" href="clubs/team-media/" tabindex="-1"><img src="assets/img/moments/team-media__media_2.jpg" alt="" loading="lazy"><span>Team Media</span></a><a class="moment" href="clubs/toastmasters/" tabindex="-1"><img src="assets/img/moments/toastmasters__toast_1.jpg" alt="" loading="lazy"><span>Toastmasters</span></a></div>
+    <div class="moment-row reverse"><a class="moment" href="clubs/anantham/" tabindex="-1"><img src="assets/img/moments/anantham__ana5.jpg" alt="" loading="lazy"><span>Anantham</span></a><a class="moment" href="clubs/elite/" tabindex="-1"><img src="assets/img/moments/elite__img5.jpg" alt="" loading="lazy"><span>Elite</span></a><a class="moment" href="clubs/gdsc/" tabindex="-1"><img src="assets/img/moments/gdsc__img5.jpg" alt="" loading="lazy"><span>GDSC</span></a><a class="moment" href="clubs/intel-iot/" tabindex="-1"><img src="assets/img/moments/intel-iot__iot5.jpg" alt="" loading="lazy"><span>Intel IoT</span></a><a class="moment" href="clubs/nature/" tabindex="-1"><img src="assets/img/moments/nature__nat5.jpg" alt="" loading="lazy"><span>Nature Club</span></a><a class="moment" href="clubs/natyasudha/" tabindex="-1"><img src="assets/img/moments/natyasudha__natya5.jpg" alt="" loading="lazy"><span>Natyasudha</span></a><a class="moment" href="clubs/nss/" tabindex="-1"><img src="assets/img/moments/nss__nss5.jpg" alt="" loading="lazy"><span>NSS</span></a><a class="moment" href="clubs/photography/" tabindex="-1"><img src="assets/img/moments/photography__photo2.jpg" alt="" loading="lazy"><span>Photography</span></a><a class="moment" href="clubs/raagasudha/" tabindex="-1"><img src="assets/img/moments/raagasudha__gal3.jpg" alt="" loading="lazy"><span>Raagasudha</span></a><a class="moment" href="clubs/srishti/" tabindex="-1"><img src="assets/img/moments/srishti__shr5.jpg" alt="" loading="lazy"><span>Srishti</span></a><a class="moment" href="clubs/team-media/" tabindex="-1"><img src="assets/img/moments/team-media__media_5.jpg" alt="" loading="lazy"><span>Team Media</span></a><a class="moment" href="clubs/toastmasters/" tabindex="-1"><img src="assets/img/moments/toastmasters__toast_4.jpg" alt="" loading="lazy"><span>Toastmasters</span></a><a class="moment" href="clubs/anantham/" tabindex="-1"><img src="assets/img/moments/anantham__ana5.jpg" alt="" loading="lazy"><span>Anantham</span></a><a class="moment" href="clubs/elite/" tabindex="-1"><img src="assets/img/moments/elite__img5.jpg" alt="" loading="lazy"><span>Elite</span></a><a class="moment" href="clubs/gdsc/" tabindex="-1"><img src="assets/img/moments/gdsc__img5.jpg" alt="" loading="lazy"><span>GDSC</span></a><a class="moment" href="clubs/intel-iot/" tabindex="-1"><img src="assets/img/moments/intel-iot__iot5.jpg" alt="" loading="lazy"><span>Intel IoT</span></a><a class="moment" href="clubs/nature/" tabindex="-1"><img src="assets/img/moments/nature__nat5.jpg" alt="" loading="lazy"><span>Nature Club</span></a><a class="moment" href="clubs/natyasudha/" tabindex="-1"><img src="assets/img/moments/natyasudha__natya5.jpg" alt="" loading="lazy"><span>Natyasudha</span></a><a class="moment" href="clubs/nss/" tabindex="-1"><img src="assets/img/moments/nss__nss5.jpg" alt="" loading="lazy"><span>NSS</span></a><a class="moment" href="clubs/photography/" tabindex="-1"><img src="assets/img/moments/photography__photo2.jpg" alt="" loading="lazy"><span>Photography</span></a><a class="moment" href="clubs/raagasudha/" tabindex="-1"><img src="assets/img/moments/raagasudha__gal3.jpg" alt="" loading="lazy"><span>Raagasudha</span></a><a class="moment" href="clubs/srishti/" tabindex="-1"><img src="assets/img/moments/srishti__shr5.jpg" alt="" loading="lazy"><span>Srishti</span></a><a class="moment" href="clubs/team-media/" tabindex="-1"><img src="assets/img/moments/team-media__media_5.jpg" alt="" loading="lazy"><span>Team Media</span></a><a class="moment" href="clubs/toastmasters/" tabindex="-1"><img src="assets/img/moments/toastmasters__toast_4.jpg" alt="" loading="lazy"><span>Toastmasters</span></a></div>
+  </section>
+
+  <section class="section" id="join">
+    <div class="wrap">
+      <div class="section-head">
+        <div><span class="kicker" data-reveal>How to join</span><h2 data-reveal style="--d:.08s">Three steps. Two minutes.</h2></div>
+        <p data-reveal style="--d:.16s">One form signs you up for up to three clubs. The coordinators take it from there.</p>
+      </div>
+      <div class="steps-row">
+        <div class="step-card" data-reveal><span class="ic"><i class="fa-solid fa-compass" aria-hidden="true"></i></span><h3>Explore</h3><p>Browse the clubs, look through their photos and find the ones that click.</p></div>
+        <div class="step-card" data-reveal style="--d:.1s"><span class="ic"><i class="fa-solid fa-pen-to-square" aria-hidden="true"></i></span><h3>Register</h3><p>Fill in one short form with your details and pick up to three clubs.</p></div>
+        <div class="step-card" data-reveal style="--d:.2s"><span class="ic"><i class="fa-solid fa-people-group" aria-hidden="true"></i></span><h3>Show up</h3><p>Coordinators reach out about inductions. Turn up, meet people, make things.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="wrap">
+      <div class="cta-band" data-reveal="zoom">
+        <span class="kicker light">Registrations open</span>
+        <h2>Ready to find <em>your people?</em></h2>
+        <p>Registrations are open for every club. It takes about two minutes.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="register/">Register now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn-ghost" href="index.html#clubs">Browse all clubs</a>
         </div>
-        <a class="button" href="register/">Register now</a>
       </div>
     </div>
   </section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <h4>Campuses</h4>
-        <ul>
-          <li><a href="https://www.amrita.edu/campus/amritapuri/">Amritapuri</a></li>
-          <li><a href="https://www.amrita.edu/campus/amaravati/">Amaravati</a></li>
-          <li><a href="https://www.amrita.edu/campus/bengaluru/">Bengaluru</a></li>
-          <li><a href="https://www.amrita.edu/campus/chennai/">Chennai</a></li>
-          <li><a href="https://www.amrita.edu/campus/coimbatore/">Coimbatore</a></li>
-          <li><a href="https://www.amrita.edu/campus/faridabad/">Faridabad</a></li>
-          <li><a href="https://www.amrita.edu/campus/kochi/">Kochi</a></li>
-          <li><a href="https://www.amrita.edu/campus/mysuru/">Mysuru</a></li>
-        </ul>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/img/logo.png" alt="Amrita Vishwa Vidyapeetham" width="149" height="42" loading="lazy">
+        <p>Every student club at Amrita Vishwa Vidyapeetham, Coimbatore, in one place. Find your people, then go make something.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/amrita_university/" aria-label="Amrita on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/AmritaUniversity" aria-label="Amrita on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://x.com/AMRITAedu" aria-label="Amrita on X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.linkedin.com/school/amrita-vishwa-vidyapeetham-official/" aria-label="Amrita on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
       </div>
       <div>
         <h4>Clubs</h4>
@@ -226,30 +289,41 @@
           <li><a href="clubs/team-media/">Team Media</a></li>
           <li><a href="clubs/elite/">Elite</a></li>
           <li><a href="clubs/anantham/">Anantham</a></li>
-          <li><a href="index.html#clubs">All clubs &rarr;</a></li>
         </ul>
       </div>
       <div>
-        <h4>Apply</h4>
+        <h4>&nbsp;</h4>
         <ul>
-          <li><a href="https://www.amrita.edu/admissions/">Admissions</a></li>
-          <li><a href="https://www.amrita.edu/admissions/btech/">B.Tech applications</a></li>
-          <li><a href="https://www.amrita.edu/contact/">Contact Amrita</a></li>
+          <li><a href="clubs/srishti/">Srishti</a></li>
+          <li><a href="clubs/intel-iot/">Intel IoT</a></li>
+          <li><a href="clubs/toastmasters/">Toastmasters</a></li>
+          <li><a href="clubs/nature/">Nature Club</a></li>
+          <li><a href="clubs/photography/">Photography</a></li>
+          <li><a href="clubs/gdsc/">GDSC</a></li>
         </ul>
       </div>
       <div>
-        <h4>Follow Amrita</h4>
-        <div class="footer-social">
-          <a href="https://www.facebook.com/AmritaUniversity" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://x.com/AMRITAedu" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://www.instagram.com/amrita_university/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/school/amrita-vishwa-vidyapeetham-official/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        </div>
+        <h4>Amrita</h4>
+        <ul>
+          <li><a href="register/">Register for clubs</a></li>
+          <li><a href="https://www.amrita.edu/admissions/">Admissions</a></li>
+          <li><a href="https://www.amrita.edu/events/">Events</a></li>
+          <li><a href="https://www.amrita.edu/campus/amritapuri/">Amritapuri</a></li>
+          <li><a href="https://www.amrita.edu/campus/amaravati/">Amaravati</a></li>
+          <li><a href="https://www.amrita.edu/campus/bengaluru/">Bengaluru</a></li>
+          <li><a href="https://www.amrita.edu/campus/chennai/">Chennai</a></li>
+          <li><a href="https://www.amrita.edu/campus/coimbatore/">Coimbatore</a></li>
+          <li><a href="https://www.amrita.edu/campus/faridabad/">Faridabad</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">A student UI design project showcasing clubs at Amrita Vishwa Vidyapeetham. Not an official university website.</div>
+    <p class="footer-word" aria-hidden="true">Student Hub</p>
+    <div class="footer-bottom">
+      <span>A student project showcasing clubs at Amrita Vishwa Vidyapeetham. Not an official university website.</span>
+      <span>Club names, logos and photos belong to their clubs.</span>
+    </div>
   </div>
 </footer>
-<script src="assets/js/main.js?v=7681f5cc" defer></script>
+<script src="assets/js/main.js?v=e2f297b8" defer></script>
 </body>
 </html>
