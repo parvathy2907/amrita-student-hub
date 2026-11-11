@@ -1,68 +1,233 @@
-# 🎓 AMRITA Student Hub
+<div align="center">
 
-> A user interface design project to organize and showcase all the student clubs in Amrita Vishwa Vidyapeetham.
+<img src="assets/img/logo-dark.png" alt="Amrita Vishwa Vidyapeetham" height="56">
 
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+# AMRITA Student Hub
 
----
+**Every student club at Amrita Vishwa Vidyapeetham, Coimbatore, in one place.**
 
-## 📌 Project Overview
+Browse 12 clubs, filter them by interest, and open each club's page for its story, events, photos, videos and socials.
 
-This is a **User Interface Design** project built using **HTML, CSS, and JavaScript**, aimed at organizing the information of all the student clubs in Amrita University. Each club is featured with a clean card layout, visuals, and links to learn more.
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#tech-stack)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#tech-stack)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](#tech-stack)
+[![Python](https://img.shields.io/badge/Build-Python%203-3776AB?style=for-the-badge&logo=python&logoColor=white)](#editing-content)
+[![License: MIT](https://img.shields.io/badge/License-MIT-a4123f?style=for-the-badge)](LICENSE)
 
----
+[**View the live site**](https://parvathy2907.github.io/amrita-student-hub/) · [Report a bug](https://github.com/parvathy2907/amrita-student-hub/issues) · [Suggest a club](https://github.com/parvathy2907/amrita-student-hub/issues)
 
-## 🎯 Objectives
+<img src="docs/screenshots/home.jpg" alt="AMRITA Student Hub home page" width="100%">
 
-- Centralize and present all club-related information on one platform.
-- Provide quick access to details about each club, including activities and goals.
-- Design an attractive, responsive, and intuitive UI.
-
----
-
-## 📂 Features
-
-- 🖼️ Modern UI with banner, hero section, and club cards.
-- 🧭 Navigation bar with external links to official Amrita pages.
-- 📸 Visual presentation with images for each club.
-- 🦶 Custom footer with social media links and campus information.
-- 📱 Responsive layout using pure CSS.
+</div>
 
 ---
 
-## 🚀 Future Developments
+## Contents
 
-- 🔁 **Enhanced animations** and **graphics** for a more dynamic user experience.
-- 🔐 **Login and signup** system for students using their **college email IDs**.
-- 🌐 **Convert to Full Stack**:
-  - Backend integration using Django or Node.js
-  - Database (PostgreSQL/MySQL) for club details and user logins
-  - Admin panel for managing club content
-- 📨 Club application and feedback submission features
+- [About the project](#about-the-project)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Clubs](#clubs)
+- [Tech stack](#tech-stack)
+- [Getting started](#getting-started)
+- [Editing content](#editing-content)
+- [Project structure](#project-structure)
+- [Deploying](#deploying)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
 
----
+## About the project
 
-## 🛠️ Technologies Used
+Information about student clubs at Amrita is scattered across Instagram pages, notice boards and word of mouth, so new students often don't know what's out there. AMRITA Student Hub brings it all together. It started as a **User Interface Design** course project and has since been rebuilt with a cleaner design, faster pages and content that is easy to update.
 
-- HTML5
-- CSS3
-- JavaScript
-- Font Awesome (Icons)
+## Features
 
----
+| | |
+|---|---|
+| 🔎 **Find clubs fast** | Filter by category (Cultural, Technical, Service…) and search as you type |
+| 🖼️ **Rich club pages** | About, event highlights, a photo gallery with a full-screen viewer, videos and social links |
+| 📱 **Responsive** | Designed for phones, tablets and desktops, with a mobile menu |
+| ♿ **Accessible** | Skip link, keyboard-friendly gallery (<kbd>Esc</kbd> <kbd>←</kbd> <kbd>→</kbd>), alt text, focus styles, respects *reduced motion* |
+| ⚡ **Lightweight** | Compressed media, lazy-loaded images, videos that play only while on screen, self-hosted fonts and no frameworks |
+| 🧩 **Easy to update** | All text lives in one JSON file; one command rebuilds every page |
+| 🌐 **Works without JavaScript** | JS only adds filtering, the gallery viewer and the mobile menu |
 
-## 📷 Deployed
+## Screenshots
 
-The website is deployed. Click deployment to view the website.
+<table>
+  <tr>
+    <td width="70%"><img src="docs/screenshots/clubs.jpg" alt="Club directory with filters and search"></td>
+    <td width="30%" rowspan="2"><img src="docs/screenshots/mobile.jpg" alt="Club page on a phone"></td>
+  </tr>
+  <tr>
+    <td><img src="docs/screenshots/club-page.jpg" alt="Natyasudha club page"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Club directory and a club page</sub></td>
+    <td align="center"><sub>On mobile</sub></td>
+  </tr>
+</table>
 
----
+## Clubs
 
-## 📄 License
+| Club | Category | What it's about |
+|---|---|---|
+| [Raagasudha](clubs/raagasudha/) | Cultural | Music club — vocals, instruments and bands |
+| [Natyasudha](clubs/natyasudha/) | Cultural | Classical and contemporary Indian dance |
+| [NSS](clubs/nss/) | Service | National Service Scheme — community volunteering |
+| [Team Media](clubs/team-media/) | Creative | Photography, cinematography and editing for campus events |
+| [Elite](clubs/elite/) | Entrepreneurship | Entrepreneurship, leadership and start-up culture |
+| [Anantham](clubs/anantham/) | Academic | The Mathematics Club |
+| [Srishti](clubs/srishti/) | Literary | Poetry, debates, quizzes and regional-language literature |
+| [Intel IoT](clubs/intel-iot/) | Technical | Hands-on IoT and AI with Intel tools |
+| [Toastmasters](clubs/toastmasters/) | Communication | Public speaking and leadership |
+| [Nature Club](clubs/nature/) | Environment | Conservation, animal welfare and a greener campus |
+| [Photography](clubs/photography/) | Creative | Photo walks, contests and exhibitions |
+| [GDSC](clubs/gdsc/) | Technical | Google Developer Student Club |
 
-This project is open-source and available under the [MIT License](LICENSE).
+## Tech stack
 
----
+- **HTML5 and CSS3** — semantic markup, CSS custom properties, Grid and Flexbox
+- **Vanilla JavaScript** — about 100 lines in [`assets/js/main.js`](assets/js/main.js), no frameworks
+- **Python 3** — a small, dependency-free [build script](scripts/build.py) that turns [`data/clubs.json`](data/clubs.json) into HTML pages
+- **[GSAP](https://gsap.com/)** — animations on the Raagasudha page
+- **[Inter](https://rsms.me/inter/), [Fraunces](https://fonts.google.com/specimen/Fraunces) and [Font Awesome](https://fontawesome.com/)** — self-hosted fonts and icons
+- **GitHub Pages** — hosting
 
+## Getting started
 
+You only need a browser. To run it locally:
+
+```bash
+git clone https://github.com/parvathy2907/amrita-student-hub.git
+cd amrita-student-hub
+python3 -m http.server 8000
+```
+
+Then open <http://localhost:8000>. Any static file server works (VS Code Live Server, `npx serve`, and so on).
+
+## Editing content
+
+The pages are **generated**. Edit the data, not the HTML.
+
+1. Open [`data/clubs.json`](data/clubs.json) and change what you need.
+2. Put any new photos or videos in `clubs/<slug>/`.
+3. Rebuild:
+
+   ```bash
+   python3 scripts/build.py
+   ```
+
+<details>
+<summary><b>Adding a new club</b> (example entry)</summary>
+
+```json
+{
+  "slug": "robotics",
+  "name": "Robotics Club",
+  "full_name": "Amrita Robotics Club",
+  "category": "Technical",
+  "tagline": "Build, code and race robots.",
+  "card": "robotics.jpg",
+  "hero": "hero.jpg",
+  "about": ["First paragraph…", "Second paragraph…"],
+  "highlights": [
+    {
+      "title": "RoboWars 2025",
+      "date": "12 March 2025",
+      "images": ["robowars.jpg"],
+      "sections": [{ "heading": "Results", "text": "…" }],
+      "quote": "Optional pull quote"
+    }
+  ],
+  "gallery": ["photo1.jpg", "photo2.jpg"],
+  "videos": ["promo.mp4"],
+  "socials": [
+    { "type": "instagram", "label": "@robotics_amrita", "url": "https://instagram.com/…" }
+  ]
+}
+```
+
+- `card` goes in `assets/img/cards/`; everything else goes in `clubs/<slug>/`.
+- For each video, add a `<name>-poster.jpg` preview image next to it.
+- `socials.type` can be `instagram`, `facebook`, `youtube`, `linkedin`, `x` or `globe`.
+- Optional fields: `full_name`, `highlights`, `pillars`, `videos`, `socials`.
+- Add `"custom_page": true` to keep a hand-written page (as Raagasudha does).
+
+</details>
+
+<details>
+<summary><b>Compressing media before you add it</b></summary>
+
+Keep the site fast by shrinking files first:
+
+```bash
+# Photos: max 1400px wide
+mogrify -resize '1400x1400>' -quality 80 clubs/<slug>/*.jpg
+
+# Videos: 720p, no audio, web-optimised, plus a poster frame
+ffmpeg -i input.mp4 -vf "scale='min(720,iw)':-2" -c:v libx264 -crf 30 -an -movflags +faststart clubs/<slug>/clip.mp4
+ffmpeg -ss 1 -i clubs/<slug>/clip.mp4 -frames:v 1 clubs/<slug>/clip-poster.jpg
+```
+
+</details>
+
+## Project structure
+
+```
+amrita-student-hub/
+├── index.html               # Home page (generated)
+├── data/
+│   └── clubs.json           # All club content
+├── scripts/
+│   └── build.py             # Generates index.html and clubs/*/index.html
+├── clubs/
+│   ├── <slug>/              # One folder per club: index.html + photos and videos
+│   └── raagasudha/          # Hand-built page with GSAP animations
+├── assets/
+│   ├── css/style.css        # Shared styles
+│   ├── js/main.js           # Menu, filters, gallery viewer, video autoplay
+│   ├── img/                 # Logo, favicon, hero and club cards
+│   └── vendor/              # Self-hosted fonts and icons
+└── docs/screenshots/        # Images used in this README
+```
+
+## Deploying
+
+The site is fully static. To publish it with GitHub Pages:
+
+1. Go to **Settings → Pages**.
+2. Under *Build and deployment*, choose **Deploy from a branch**.
+3. Pick **`main`** and **`/ (root)`**, then save.
+
+It will be live at `https://<username>.github.io/amrita-student-hub/` in a minute or two.
+
+## Roadmap
+
+- [x] Responsive redesign with a shared design system
+- [x] Club filters and search
+- [x] Gallery viewer and on-screen video playback
+- [x] Data-driven pages from a single JSON file
+- [ ] Sign-up and login with college email IDs
+- [ ] Club applications and feedback forms
+- [ ] Events calendar across all clubs
+- [ ] Backend (Django or Node.js) with an admin panel so clubs can manage their own pages
+
+## Contributing
+
+Suggestions and fixes are welcome, especially from club members who can keep their club's information current.
+
+1. Fork the repo and create a branch: `git checkout -b update-nss-events`
+2. Edit `data/clubs.json`, then run `python3 scripts/build.py`
+3. Commit and open a pull request
+
+## License
+
+The code is released under the [MIT License](LICENSE).
+
+Club names, logos and photos belong to their clubs and to Amrita Vishwa Vidyapeetham. This is a student project and **not an official university website**.
+
+<div align="center">
+<sub>Made with ❤️ by <a href="https://github.com/parvathy2907">Parvathy Krishna A</a></sub>
+</div>
