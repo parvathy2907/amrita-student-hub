@@ -227,7 +227,3 @@ Suggestions and fixes are welcome, especially from club members who can keep the
 The code is released under the [MIT License](LICENSE).
 
 Club names, logos and photos belong to their clubs and to Amrita Vishwa Vidyapeetham. This is a student project and **not an official university website**.
-
-<div align="center">
-<sub>Made with ❤️ by <a href="https://github.com/parvathy2907">Parvathy Krishna A</a></sub>
-</div>
