@@ -6,7 +6,7 @@
 
 **Every student club at Amrita Vishwa Vidyapeetham, Coimbatore, in one place.**
 
-Browse 12 clubs, filter them by interest, and open each club's page for its story, events, photos, videos and socials.
+Browse 12 clubs, filter them by interest, open each club's page for its story, events, photos, videos and socials, and sign up for up to three clubs from one form.
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#tech-stack)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](#tech-stack)
@@ -48,6 +48,7 @@ Information about student clubs at Amrita is scattered across Instagram pages, n
 | | |
 |---|---|
 | 🔎 **Find clubs fast** | Filter by category (Cultural, Technical, Service…) and search as you type |
+| 📝 **Club registration** | One form to join up to three clubs, with friendly validation for Amrita emails and roll numbers, and a confirmation screen |
 | 🖼️ **Rich club pages** | About, event highlights, a photo gallery with a full-screen viewer, videos and social links |
 | 📱 **Responsive** | Designed for phones, tablets and desktops, with a mobile menu |
 | ♿ **Accessible** | Skip link, keyboard-friendly gallery (<kbd>Esc</kbd> <kbd>←</kbd> <kbd>→</kbd>), alt text, focus styles, respects *reduced motion* |
@@ -60,14 +61,18 @@ Information about student clubs at Amrita is scattered across Instagram pages, n
 <table>
   <tr>
     <td width="70%"><img src="docs/screenshots/clubs.jpg" alt="Club directory with filters and search"></td>
-    <td width="30%" rowspan="2"><img src="docs/screenshots/mobile.jpg" alt="Club page on a phone"></td>
+    <td width="30%" rowspan="2" valign="top"><img src="docs/screenshots/mobile.jpg" alt="Club page on a phone"></td>
   </tr>
   <tr>
     <td><img src="docs/screenshots/club-page.jpg" alt="Natyasudha club page"></td>
   </tr>
   <tr>
-    <td align="center"><sub>Club directory and a club page</sub></td>
-    <td align="center"><sub>On mobile</sub></td>
+    <td><img src="docs/screenshots/register.jpg" alt="Club registration form"></td>
+    <td><img src="docs/screenshots/register-success.jpg" alt="Registration confirmation"></td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Club directory, a club page and the registration form</sub></td>
+    <td align="center"><sub>On mobile, and after registering</sub></td>
   </tr>
 </table>
 
@@ -175,11 +180,27 @@ ffmpeg -ss 1 -i clubs/<slug>/clip.mp4 -frames:v 1 clubs/<slug>/clip-poster.jpg
 
 </details>
 
+<details>
+<summary><b>Collecting registrations</b></summary>
+
+The site is static, so out of the box the form runs in **demo mode**: it validates the answers and shows the confirmation, but doesn't store them. To collect real sign-ups, point it at any service that accepts a JSON `POST`, such as [Formspree](https://formspree.io), [Getform](https://getform.io), a Google Apps Script web app writing to a Google Sheet, or your own API:
+
+1. In `scripts/build.py`, find `<form id="register-form" novalidate>` and add your endpoint:
+   ```html
+   <form id="register-form" novalidate data-endpoint="https://formspree.io/f/your-id">
+   ```
+2. Run `python3 scripts/build.py`, then commit and push.
+
+Each submission includes `name`, `email`, `roll`, `programme`, `year`, `phone`, `clubs`, `why` and `submittedAt`. Club pages link to `register/?club=<slug>`, so that club is ticked when the form opens.
+
+</details>
+
 ## Project structure
 
 ```
 amrita-student-hub/
 ├── index.html               # Home page (generated)
+├── register/index.html      # Club registration form (generated)
 ├── data/
 │   └── clubs.json           # All club content
 ├── scripts/
@@ -190,6 +211,7 @@ amrita-student-hub/
 ├── assets/
 │   ├── css/style.css        # Shared styles
 │   ├── js/main.js           # Menu, filters, gallery viewer, video autoplay
+│   ├── js/register.js       # Registration form validation and confirmation
 │   ├── img/                 # Logo, favicon, hero and club cards
 │   └── vendor/              # Self-hosted fonts and icons
 ├── docs/screenshots/        # Images used in this README
@@ -216,8 +238,10 @@ Go to **Settings → Pages → Deploy from a branch**, then pick **`main`** and 
 - [x] Club filters and search
 - [x] Gallery viewer and on-screen video playback
 - [x] Data-driven pages from a single JSON file
-- [ ] Sign-up and login with college email IDs
-- [ ] Club applications and feedback forms
+- [x] Club registration form
+- [ ] Store registrations in a database and email coordinators
+- [ ] Login with college email IDs
+- [ ] Feedback forms
 - [ ] Events calendar across all clubs
 - [ ] Backend (Django or Node.js) with an admin panel so clubs can manage their own pages
 
