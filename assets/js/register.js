@@ -11,7 +11,8 @@
   if (!form) return;
 
   const MAX_CLUBS = 3;
-  const EMAIL_RE = /^[^\s@]+@([a-z0-9-]+\.)*amrita\.edu$/i;
+  const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[a-z]{2,}$/i;
+  const AMRITA_RE = /@([a-z0-9-]+\.)*amrita\.edu$/i;
   const ROLL_RE = /^[A-Z]{2}\.[A-Z]{2,4}\.[A-Z0-9]{3,6}\d{3,5}$/i;
   const PHONE_RE = /^(\+91)?[6-9]\d{9}$/;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -27,8 +28,8 @@
   // ---------------------------------------------------------------- rules
   const rules = {
     name: (v) => (v.trim().length >= 2 ? '' : 'Please enter your full name.'),
-    email: (v) => (!v.trim() ? 'Please enter your college email.'
-      : EMAIL_RE.test(v.trim()) ? '' : 'Use your Amrita email, e.g. name@cb.students.amrita.edu'),
+    email: (v) => (!v.trim() ? 'Please enter your email.'
+      : EMAIL_RE.test(v.trim()) ? '' : 'That doesn\u2019t look like an email address.'),
     roll: (v) => (!v.trim() ? 'Please enter your roll number.'
       : ROLL_RE.test(v.trim()) ? '' : 'That doesn’t look like a roll number (e.g. CB.EN.U4CSE23001).'),
     programme: (v) => (v ? '' : 'Please choose your programme.'),
@@ -76,6 +77,16 @@
     const live = () => { if (f.classList.contains('invalid') || f.classList.contains('valid')) check(name); };
     f.addEventListener('input', live);
     f.addEventListener('change', live);
+  });
+
+  // Gentle nudge (not an error) when the email isn't an Amrita address.
+  const emailHint = $('#email-hint');
+  const emailHintDefault = emailHint.textContent;
+  form.elements.email.addEventListener('input', () => {
+    const val = form.elements.email.value.trim();
+    const personal = EMAIL_RE.test(val) && !AMRITA_RE.test(val);
+    emailHint.textContent = personal ? 'Tip: clubs can verify you faster with your amrita.edu email.' : emailHintDefault;
+    emailHint.classList.toggle('nudge', personal);
   });
 
   // Floating label for <select> (no :placeholder-shown for selects).
@@ -409,18 +420,4 @@
     })();
   }
 
-  // Count-up for the stats on the left
-  if (!reduceMotion) {
-    $$('[data-count]').forEach((el) => {
-      const target = Number(el.dataset.count);
-      const start = performance.now() + 500;
-      const step = (t) => {
-        const p = Math.min(1, Math.max(0, (t - start) / 900));
-        el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
-        if (p < 1) requestAnimationFrame(step);
-      };
-      el.textContent = '0';
-      requestAnimationFrame(step);
-    });
-  }
 })();
