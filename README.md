@@ -47,14 +47,15 @@ Information about student clubs at Amrita is scattered across Instagram pages, n
 
 | | |
 |---|---|
-| 🔎 **Find clubs fast** | Filter by category (Cultural, Technical, Service…) and search as you type |
-| 📝 **Club registration** | A three-step animated sign-up: details, a visual club picker (up to three), and a review step. Checks Amrita emails and roll numbers, and finishes with confetti and a personalised member pass |
-| 🖼️ **Rich club pages** | About, event highlights, a photo gallery with a full-screen viewer, videos and social links |
-| 📱 **Responsive** | Designed for phones, tablets and desktops, with a mobile menu |
-| ♿ **Accessible** | Skip link, keyboard-friendly gallery (<kbd>Esc</kbd> <kbd>←</kbd> <kbd>→</kbd>), alt text, focus styles, respects *reduced motion* |
-| ⚡ **Lightweight** | Compressed media, lazy-loaded images, videos that play only while on screen, self-hosted fonts and no frameworks |
+| ✨ **Immersive home page** | Full-screen hero over a moving wall of club photos, headline reveal, count-up stats, a scrolling ribbon of club names, and "Moments" photo ribbons |
+| 🔎 **Find clubs fast** | Category filters with a sliding highlight, live search, and cards that animate in as you filter |
+| 🖼️ **Rich club pages** | Parallax hero, sticky section tabs, an "at a glance" card, highlight stories, a masonry gallery with a full-screen viewer (keyboard and swipe), videos, social cards and related clubs |
+| 📝 **Club registration** | A three-step animated sign-up: details, a visual club picker (up to three) and a review step, finishing with confetti and a personalised member pass |
+| 📱 **Mobile first** | Full-screen animated menu, touch-friendly layouts, swipeable gallery |
+| 🎞️ **Thoughtful motion** | Scroll-triggered reveals, a header that hides on scroll down and returns on scroll up, a reading-progress bar and a back-to-top button. Animations switch off for people who prefer reduced motion |
+| ♿ **Accessible** | Skip link, focus styles, keyboard support everywhere, alt text, ARIA labels, and a branded 404 page |
+| ⚡ **Lightweight** | No frameworks. Compressed media, lazy-loaded images, videos that play only on screen, self-hosted fonts, and versioned CSS/JS so updates show up instantly |
 | 🧩 **Easy to update** | All text lives in one JSON file; one command rebuilds every page |
-| 🌐 **Works without JavaScript** | JS only adds filtering, the gallery viewer and the mobile menu |
 
 ## Screenshots
 
@@ -203,6 +204,7 @@ Each submission includes `name`, `email`, `roll`, `programme`, `year`, `phone`, 
 ```
 amrita-student-hub/
 ├── index.html               # Home page (generated)
+├── 404.html                 # Not-found page (generated)
 ├── register/index.html      # Club registration form (generated)
 ├── data/
 │   └── clubs.json           # All club content
@@ -213,10 +215,10 @@ amrita-student-hub/
 │   └── raagasudha/          # Hand-built page with GSAP animations
 ├── assets/
 │   ├── css/style.css        # Shared styles
-│   ├── js/main.js           # Menu, filters, gallery viewer, video autoplay
+│   ├── js/main.js           # Header, menu, scroll reveals, filters, gallery viewer, videos
 │   ├── css/register.css     # Registration page styles and animations
 │   ├── js/register.js       # Three-step registration, confetti, member pass
-│   ├── img/                 # Logo, favicon, hero and club cards
+│   ├── img/                 # Logo, favicon, hero, club cards and Moments thumbnails
 │   └── vendor/              # Self-hosted fonts and icons
 ├── docs/screenshots/        # Images used in this README
 └── vercel.json              # Vercel settings (clean URLs, caching)
@@ -243,6 +245,7 @@ Go to **Settings → Pages → Deploy from a branch**, then pick **`main`** and 
 - [x] Gallery viewer and on-screen video playback
 - [x] Data-driven pages from a single JSON file
 - [x] Animated three-step club registration
+- [x] Full redesign with scroll animations, parallax and a 404 page
 - [ ] Store registrations in a database and email coordinators
 - [ ] Login with college email IDs
 - [ ] Feedback forms
