@@ -5,120 +5,174 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Srishti — AMRITA Student Hub</title>
   <meta name="description" content="The literary club — poetry, debates, quizzes and more.">
+  <meta name="theme-color" content="#1b0a12">
+  <meta property="og:type" content="website">
   <meta property="og:title" content="Srishti — AMRITA Student Hub">
   <meta property="og:description" content="The literary club — poetry, debates, quizzes and more.">
   <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
+  <script>document.documentElement.classList.add('js')</script>
   <link rel="preload" href="../../assets/vendor/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../../assets/vendor/fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../../assets/vendor/fonts/fonts.css">
   <link rel="stylesheet" href="../../assets/vendor/fontawesome/css/fontawesome.min.css">
   <link rel="stylesheet" href="../../assets/vendor/fontawesome/css/solid.min.css">
   <link rel="stylesheet" href="../../assets/vendor/fontawesome/css/brands.min.css">
-  <link rel="stylesheet" href="../../assets/css/style.css?v=b2242d4e">
+  <link rel="stylesheet" href="../../assets/css/style.css?v=dd51fa91">
 </head>
-<body>
+<body class="overlay">
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="../../index.html">
-      <img src="../../assets/img/logo-dark.png" alt="Amrita Vishwa Vidyapeetham" width="142" height="40">
+    <a class="brand" href="../../index.html" aria-label="AMRITA Student Hub home">
+      <img class="logo-dark" src="../../assets/img/logo-dark.png" alt="Amrita Vishwa Vidyapeetham" width="142" height="40">
+      <img class="logo-light" src="../../assets/img/logo.png" alt="" width="142" height="40">
       <span>Student Hub</span>
     </a>
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><i class="fa-solid fa-bars"></i></button>
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span class="bars"></span></button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <ul>
         <li><a href="../../index.html#clubs">Clubs</a></li>
         <li><a href="../../index.html#about">About</a></li>
-        <li><a href="https://www.amrita.edu/events/">Events</a></li>
-        <li><a href="https://www.amrita.edu/admissions/">Admissions</a></li>
-        <li><a class="btn" href="../../register/">Register</a></li>
+        <li><a href="../../index.html#moments">Moments</a></li>
+        <li><a href="../../index.html#join">How to join</a></li>
+        <li><a class="btn btn-primary" href="../../register/">Register <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></li>
       </ul>
+      <div class="nav-extra"><p>Jump to a club</p><div><a href="../../clubs/raagasudha/">Raagasudha</a><a href="../../clubs/natyasudha/">Natyasudha</a><a href="../../clubs/nss/">NSS</a><a href="../../clubs/team-media/">Team Media</a><a href="../../clubs/elite/">Elite</a><a href="../../clubs/anantham/">Anantham</a><a href="../../clubs/srishti/">Srishti</a><a href="../../clubs/intel-iot/">Intel IoT</a><a href="../../clubs/toastmasters/">Toastmasters</a><a href="../../clubs/nature/">Nature Club</a><a href="../../clubs/photography/">Photography</a><a href="../../clubs/gdsc/">GDSC</a></div></div>
     </nav>
   </div>
+  <div class="progress-bar" aria-hidden="true"></div>
 </header>
 <main id="main">
-  <section class="hero" style="background-image:url('hero.jpg')">
+  <section class="club-hero" aria-label="Srishti">
+    <div class="bg" style="background-image:url('hero.jpg')" data-parallax="0.25"></div>
     <div class="wrap">
-      <a class="back-link" href="../../index.html#clubs"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All clubs</a><br>
-      <span class="eyebrow">Literary</span>
-      <h1>Srishti</h1>
-      <p>The literary club — poetry, debates, quizzes and more.</p>
+      <nav class="crumbs fade-in" style="--d:.1s" aria-label="Breadcrumb"><a href="../../index.html#clubs"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All clubs</a><i class="sep fa-solid fa-chevron-right" aria-hidden="true"></i><span>Literary</span></nav>
+      <h1 class="line-reveal"><span class="line"><span>Srishti</span></span></h1>
+      <p class="sub fade-in" style="--d:.45s">The literary club — poetry, debates, quizzes and more.</p>
+      <div class="meta-chips fade-in" style="--d:.6s"><span><i class="fa-solid fa-feather-pointed" aria-hidden="true"></i>Literary</span><span><i class="fa-solid fa-image" aria-hidden="true"></i>8 photos</span><span><i class="fa-solid fa-play" aria-hidden="true"></i>2 videos</span><span><i class="fa-brands fa-instagram" aria-hidden="true"></i>@srishti_amrita</span></div>
+      <div class="hero-actions-club fade-in" style="--d:.75s">
+        <a class="btn btn-gold" href="../../register/?club=srishti">Join Srishti <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/srishti_amrita/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" aria-hidden="true"></i> Follow</a>
+      </div>
     </div>
   </section>
+  <nav class="tabs" aria-label="On this page">
+    <div class="wrap">
+      <ul><li><a href="#about">About</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#videos">Videos</a></li><li><a href="#follow">Follow</a></li><li><a href="#more">More clubs</a></li></ul>
+      <a class="btn btn-primary" href="../../register/?club=srishti">Join <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+  </nav>
   <section class="section" id="about">
-    <div class="wrap">
-      <h2>About Srishti</h2>
-      <div class="prose">
-        <p>The literary club provides a platform to showcase the literary aspirations and talents of students. It is an excellent forum for self-expression and the cultural aspirations of students. Poetry-reading sessions, debates, extempore speeches, quizzes, crossword games, book and film reviews, play enactments, and classic movie screenings are showcased at the forum. Besides English events, the club also organizes events in regional languages like Tamil, Malayalam, Telugu and Hindi.</p>
-        <p>The wings of Srishti include Peek-A-Book, Bhaava, Clarion, Dhwani, Debate, Kaleidoscope, Poetree, Quikreig and Udaan, as well as the Tamil, Telugu and Malayalam Literature wings.</p>
-      </div>
-
-    </div>
-  </section>
-  <section class="section" id="gallery">
-    <div class="wrap">
-      <h2>Gallery</h2>
-      <div class="gallery">
-        <button type="button" data-lightbox="shr1.jpg" aria-label="Open photo 1 of 8"><img src="shr1.jpg" alt="Srishti photo 1" loading="lazy"></button>
-        <button type="button" data-lightbox="shr2.jpg" aria-label="Open photo 2 of 8"><img src="shr2.jpg" alt="Srishti photo 2" loading="lazy"></button>
-        <button type="button" data-lightbox="shr3.jpg" aria-label="Open photo 3 of 8"><img src="shr3.jpg" alt="Srishti photo 3" loading="lazy"></button>
-        <button type="button" data-lightbox="shr4.jpg" aria-label="Open photo 4 of 8"><img src="shr4.jpg" alt="Srishti photo 4" loading="lazy"></button>
-        <button type="button" data-lightbox="shr5.jpg" aria-label="Open photo 5 of 8"><img src="shr5.jpg" alt="Srishti photo 5" loading="lazy"></button>
-        <button type="button" data-lightbox="shr6.jpg" aria-label="Open photo 6 of 8"><img src="shr6.jpg" alt="Srishti photo 6" loading="lazy"></button>
-        <button type="button" data-lightbox="shr7.jpg" aria-label="Open photo 7 of 8"><img src="shr7.jpg" alt="Srishti photo 7" loading="lazy"></button>
-        <button type="button" data-lightbox="shr8.jpg" aria-label="Open photo 8 of 8"><img src="shr8.jpg" alt="Srishti photo 8" loading="lazy"></button>
-      </div>
-    </div>
-  </section>
-  <section class="section" id="videos">
-    <div class="wrap">
-      <h2>Videos</h2>
-      <div class="videos">
-        <video src="shrvideo1.mp4" poster="shrvideo1-poster.jpg" muted loop playsinline controls preload="none" data-autoplay></video>
-        <video src="shrvideo2.mp4" poster="shrvideo2-poster.jpg" muted loop playsinline controls preload="none" data-autoplay></video>
-      </div>
-    </div>
-  </section>
-  <section class="section" id="follow">
-    <div class="wrap">
-      <h2>Follow Srishti</h2>
-      <div class="socials">
-        <a class="social" href="https://www.instagram.com/srishti_amrita/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram" aria-hidden="true"></i>@srishti_amrita</a>
-      </div>
-    </div>
-  </section>
-  <section class="section">
-    <div class="wrap">
-      <div class="cta">
-        <div>
-          <h2>Want to join Srishti?</h2>
-          <p>Register with your college email to sign up.</p>
+    <div class="wrap club-about">
+      <div>
+        <span class="kicker" data-reveal>About Srishti</span>
+        <p class="lead-in" data-reveal style="--d:.08s">The literary club provides a platform to showcase the literary aspirations and talents of students. It is an excellent forum for self-expression and the cultural aspirations of students. Poetry-reading sessions, debates, extempore speeches, quizzes, crossword games, book and film reviews, play enactments, and classic movie screenings are showcased at the forum. Besides English events, the club also organizes events in regional languages like Tamil, Malayalam, Telugu and Hindi.</p>
+        <div class="prose">
+          <p data-reveal>The wings of Srishti include Peek-A-Book, Bhaava, Clarion, Dhwani, Debate, Kaleidoscope, Poetree, Quikreig and Udaan, as well as the Tamil, Telugu and Malayalam Literature wings.</p>
         </div>
-        <a class="button" href="../../register/?club=srishti">Register now</a>
+
+      </div>
+      <aside class="glance" data-reveal="right">
+        <h3>At a glance</h3>
+        <dl><div><dt>Category</dt><dd>Literary</dd></div><div><dt>Photos</dt><dd>8</dd></div><div><dt>Videos</dt><dd>2</dd></div></dl>
+        <div class="socials"><a href="https://www.instagram.com/srishti_amrita/" target="_blank" rel="noopener" aria-label="Srishti on Instagram"><i class="fa-brands fa-instagram"></i></a></div>
+        <a class="btn btn-primary" href="../../register/?club=srishti">Join Srishti <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </aside>
+    </div>
+  </section>
+  <section class="section" id="gallery" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head"><div><span class="kicker" data-reveal>Gallery</span><h2 data-reveal style="--d:.08s">Through the lens</h2></div><p data-reveal style="--d:.16s">8 photos. Click any one to view it full screen, then use the arrow keys or swipe.</p></div>
+      <div class="masonry">
+        <button type="button" data-lightbox="shr1.jpg" aria-label="Open photo 1 of 8" data-reveal style="--d:0.06s"><img src="shr1.jpg" alt="Srishti photo 1" loading="lazy"></button>
+        <button type="button" data-lightbox="shr2.jpg" aria-label="Open photo 2 of 8" data-reveal style="--d:0.12s"><img src="shr2.jpg" alt="Srishti photo 2" loading="lazy"></button>
+        <button type="button" data-lightbox="shr3.jpg" aria-label="Open photo 3 of 8" data-reveal style="--d:0.00s"><img src="shr3.jpg" alt="Srishti photo 3" loading="lazy"></button>
+        <button type="button" data-lightbox="shr4.jpg" aria-label="Open photo 4 of 8" data-reveal style="--d:0.06s"><img src="shr4.jpg" alt="Srishti photo 4" loading="lazy"></button>
+        <button type="button" data-lightbox="shr5.jpg" aria-label="Open photo 5 of 8" data-reveal style="--d:0.12s"><img src="shr5.jpg" alt="Srishti photo 5" loading="lazy"></button>
+        <button type="button" data-lightbox="shr6.jpg" aria-label="Open photo 6 of 8" data-reveal style="--d:0.00s"><img src="shr6.jpg" alt="Srishti photo 6" loading="lazy"></button>
+        <button type="button" data-lightbox="shr7.jpg" aria-label="Open photo 7 of 8" data-reveal style="--d:0.06s"><img src="shr7.jpg" alt="Srishti photo 7" loading="lazy"></button>
+        <button type="button" data-lightbox="shr8.jpg" aria-label="Open photo 8 of 8" data-reveal style="--d:0.12s"><img src="shr8.jpg" alt="Srishti photo 8" loading="lazy"></button>
       </div>
     </div>
   </section>
-  <section class="section">
-    <div class="wrap pager">
-      <a class="prev" href="../anantham/"><small>&larr; Previous club</small><strong>Anantham</strong></a>
-      <a class="next" href="../intel-iot/"><small>Next club &rarr;</small><strong>Intel IoT</strong></a>
+  <section class="section" id="videos" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head"><div><span class="kicker" data-reveal>Videos</span><h2 data-reveal style="--d:.08s">See it in motion</h2></div></div>
+      <div class="videos">
+        <div class="video-frame" data-reveal><video src="shrvideo1.mp4" poster="shrvideo1-poster.jpg" muted loop playsinline controls preload="none" data-autoplay></video></div>
+        <div class="video-frame" data-reveal><video src="shrvideo2.mp4" poster="shrvideo2-poster.jpg" muted loop playsinline controls preload="none" data-autoplay></video></div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="follow" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head"><div><span class="kicker" data-reveal>Stay in the loop</span><h2 data-reveal style="--d:.08s">Follow Srishti</h2></div></div>
+      <div class="follow-grid">
+        <a class="social-card" href="https://www.instagram.com/srishti_amrita/" target="_blank" rel="noopener" data-reveal style="--d:0.00s">
+          <span class="ic instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></span>
+          <span><small>Instagram</small><strong>@srishti_amrita</strong></span>
+          <i class="go fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="section clubs-section" id="more">
+    <div class="wrap">
+      <div class="section-head"><div><span class="kicker" data-reveal>Keep exploring</span><h2 data-reveal style="--d:.08s">You might also like</h2></div><a class="btn btn-outline" href="../../index.html#clubs" data-reveal>All clubs <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+      <div class="related">
+      <a class="club-card-home" href="../../clubs/intel-iot/" data-category="Technical" data-reveal style="--d:0.00s">
+        <div class="media"><img src="../../assets/img/cards/intel-iot.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Technical</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>12</span><span><i class="fa-solid fa-play" aria-hidden="true"></i>1</span></div></div>
+        <div class="body">
+          <h3>Intel IoT</h3>
+          <p>Hands-on IoT and AI with Intel hardware and software.</p>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+      <a class="club-card-home" href="../../clubs/toastmasters/" data-category="Communication" data-reveal style="--d:0.07s">
+        <div class="media"><img src="../../assets/img/cards/toastmasters.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Communication</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>13</span><span><i class="fa-solid fa-play" aria-hidden="true"></i>2</span></div></div>
+        <div class="body">
+          <h3>Toastmasters</h3>
+          <p>Build confidence and public speaking skills.</p>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+      <a class="club-card-home" href="../../clubs/nature/" data-category="Environment" data-reveal style="--d:0.14s">
+        <div class="media"><img src="../../assets/img/cards/nature.jpg" alt="" loading="lazy" width="800" height="600"><span class="tag">Environment</span><div class="counts"><span><i class="fa-solid fa-image" aria-hidden="true"></i>10</span></div></div>
+        <div class="body">
+          <h3>Nature Club</h3>
+          <p>Love for plants and animals, and a greener campus.</p>
+          <span class="more">Explore club <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+        </div>
+      </a>
+      </div>
+    </div>
+  </section>
+  <section class="section tight">
+    <div class="wrap">
+      <div class="cta-band" data-reveal="zoom">
+        <span class="kicker light">Registrations open</span>
+        <h2>Want to join <em>Srishti?</em></h2>
+        <p>Register in about two minutes. The coordinators will get in touch about inductions.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="../../register/?club=srishti">Register now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn-ghost" href="../../index.html#clubs">Browse all clubs</a>
+        </div>
+      </div>
     </div>
   </section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <h4>Campuses</h4>
-        <ul>
-          <li><a href="https://www.amrita.edu/campus/amritapuri/">Amritapuri</a></li>
-          <li><a href="https://www.amrita.edu/campus/amaravati/">Amaravati</a></li>
-          <li><a href="https://www.amrita.edu/campus/bengaluru/">Bengaluru</a></li>
-          <li><a href="https://www.amrita.edu/campus/chennai/">Chennai</a></li>
-          <li><a href="https://www.amrita.edu/campus/coimbatore/">Coimbatore</a></li>
-          <li><a href="https://www.amrita.edu/campus/faridabad/">Faridabad</a></li>
-          <li><a href="https://www.amrita.edu/campus/kochi/">Kochi</a></li>
-          <li><a href="https://www.amrita.edu/campus/mysuru/">Mysuru</a></li>
-        </ul>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../../assets/img/logo.png" alt="Amrita Vishwa Vidyapeetham" width="149" height="42" loading="lazy">
+        <p>Every student club at Amrita Vishwa Vidyapeetham, Coimbatore, in one place. Find your people, then go make something.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/amrita_university/" aria-label="Amrita on Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/AmritaUniversity" aria-label="Amrita on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://x.com/AMRITAedu" aria-label="Amrita on X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.linkedin.com/school/amrita-vishwa-vidyapeetham-official/" aria-label="Amrita on LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
       </div>
       <div>
         <h4>Clubs</h4>
@@ -129,30 +183,41 @@
           <li><a href="../../clubs/team-media/">Team Media</a></li>
           <li><a href="../../clubs/elite/">Elite</a></li>
           <li><a href="../../clubs/anantham/">Anantham</a></li>
-          <li><a href="../../index.html#clubs">All clubs &rarr;</a></li>
         </ul>
       </div>
       <div>
-        <h4>Apply</h4>
+        <h4>&nbsp;</h4>
         <ul>
-          <li><a href="https://www.amrita.edu/admissions/">Admissions</a></li>
-          <li><a href="https://www.amrita.edu/admissions/btech/">B.Tech applications</a></li>
-          <li><a href="https://www.amrita.edu/contact/">Contact Amrita</a></li>
+          <li><a href="../../clubs/srishti/">Srishti</a></li>
+          <li><a href="../../clubs/intel-iot/">Intel IoT</a></li>
+          <li><a href="../../clubs/toastmasters/">Toastmasters</a></li>
+          <li><a href="../../clubs/nature/">Nature Club</a></li>
+          <li><a href="../../clubs/photography/">Photography</a></li>
+          <li><a href="../../clubs/gdsc/">GDSC</a></li>
         </ul>
       </div>
       <div>
-        <h4>Follow Amrita</h4>
-        <div class="footer-social">
-          <a href="https://www.facebook.com/AmritaUniversity" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://x.com/AMRITAedu" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://www.instagram.com/amrita_university/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.linkedin.com/school/amrita-vishwa-vidyapeetham-official/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-        </div>
+        <h4>Amrita</h4>
+        <ul>
+          <li><a href="../../register/">Register for clubs</a></li>
+          <li><a href="https://www.amrita.edu/admissions/">Admissions</a></li>
+          <li><a href="https://www.amrita.edu/events/">Events</a></li>
+          <li><a href="https://www.amrita.edu/campus/amritapuri/">Amritapuri</a></li>
+          <li><a href="https://www.amrita.edu/campus/amaravati/">Amaravati</a></li>
+          <li><a href="https://www.amrita.edu/campus/bengaluru/">Bengaluru</a></li>
+          <li><a href="https://www.amrita.edu/campus/chennai/">Chennai</a></li>
+          <li><a href="https://www.amrita.edu/campus/coimbatore/">Coimbatore</a></li>
+          <li><a href="https://www.amrita.edu/campus/faridabad/">Faridabad</a></li>
+        </ul>
       </div>
     </div>
-    <div class="footer-bottom">A student UI design project showcasing clubs at Amrita Vishwa Vidyapeetham. Not an official university website.</div>
+    <p class="footer-word" aria-hidden="true">Student Hub</p>
+    <div class="footer-bottom">
+      <span>A student project showcasing clubs at Amrita Vishwa Vidyapeetham. Not an official university website.</span>
+      <span>Club names, logos and photos belong to their clubs.</span>
+    </div>
   </div>
 </footer>
-<script src="../../assets/js/main.js?v=7681f5cc" defer></script>
+<script src="../../assets/js/main.js?v=e2f297b8" defer></script>
 </body>
 </html>
