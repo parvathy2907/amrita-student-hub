@@ -49,7 +49,7 @@ Information about student clubs at Amrita is scattered across Instagram pages, n
 |---|---|
 | ✨ **Immersive home page** | Full-screen hero over a moving wall of club photos, headline reveal, count-up stats, a scrolling ribbon of club names, and "Moments" photo ribbons |
 | 🔎 **Find clubs fast** | Category filters with a sliding highlight, live search, and cards that animate in as you filter |
-| 🖼️ **Rich club pages** | Parallax hero, sticky section tabs, an "at a glance" card, highlight stories, a masonry gallery with a full-screen viewer (keyboard and swipe), videos, social cards and related clubs |
+| 🖼️ **Rich club pages** | Each club has its own accent colour and a hero with a fanned stack of its photos, a stats strip, "What you'll do" cards, sticky section tabs, an "at a glance" card, highlight stories, a masonry gallery with a full-screen viewer (keyboard and swipe), click-to-play videos, social cards, related clubs, a "next club" banner and a Join bar on phones |
 | 📝 **Club registration** | A three-step animated sign-up: details, a visual club picker (up to three) and a review step, finishing with confetti and a personalised member pass |
 | 📱 **Mobile first** | Full-screen animated menu, touch-friendly layouts, swipeable gallery |
 | 🎞️ **Thoughtful motion** | Scroll-triggered reveals, a header that hides on scroll down and returns on scroll up, a reading-progress bar and a back-to-top button. Animations switch off for people who prefer reduced motion |
@@ -102,7 +102,6 @@ Information about student clubs at Amrita is scattered across Instagram pages, n
 - **HTML5 and CSS3** — semantic markup, CSS custom properties, Grid and Flexbox
 - **Vanilla JavaScript** — about 100 lines in [`assets/js/main.js`](assets/js/main.js), no frameworks
 - **Python 3** — a small, dependency-free [build script](scripts/build.py) that turns [`data/clubs.json`](data/clubs.json) into HTML pages
-- **[GSAP](https://gsap.com/)** — animations on the Raagasudha page
 - **[Inter](https://rsms.me/inter/), [Fraunces](https://fonts.google.com/specimen/Fraunces) and [Font Awesome](https://fontawesome.com/)** — self-hosted fonts and icons
 - **Vercel / GitHub Pages** — hosting
 
@@ -140,9 +139,14 @@ The pages are **generated**. Edit the data, not the HTML.
   "full_name": "Amrita Robotics Club",
   "category": "Technical",
   "tagline": "Build, code and race robots.",
+  "accent": "#0f766e",
   "card": "robotics.jpg",
   "hero": "hero.jpg",
-  "about": ["First paragraph…", "Second paragraph…"],
+  "about": ["First paragraph (shown large)…", "Second paragraph…"],
+  "activities": [
+    { "icon": "fa-solid fa-robot", "title": "Build", "text": "Design and build robots in a team." }
+  ],
+  "stack": ["photo2.jpg", "photo5.jpg", "photo1.jpg"],
   "highlights": [
     {
       "title": "RoboWars 2025",
@@ -163,8 +167,10 @@ The pages are **generated**. Edit the data, not the HTML.
 - `card` goes in `assets/img/cards/`; everything else goes in `clubs/<slug>/`.
 - For each video, add a `<name>-poster.jpg` preview image next to it.
 - `socials.type` can be `instagram`, `facebook`, `youtube`, `linkedin`, `x` or `globe`.
-- Optional fields: `full_name`, `highlights`, `pillars`, `videos`, `socials`.
-- Add `"custom_page": true` to keep a hand-written page (as Raagasudha does).
+- `accent` is the club's colour (keep it dark enough for white text). `activities` use [Font Awesome](https://fontawesome.com/search?o=r&m=free) icon names.
+- `stack` picks the three photos fanned out in the hero (the last one is on top); it defaults to the first three gallery photos.
+- Optional fields: `full_name`, `highlights`, `activities`, `stack`, `videos`, `socials`.
+- Add `"custom_page": true` to keep a hand-written page instead of a generated one.
 
 </details>
 
@@ -211,8 +217,7 @@ amrita-student-hub/
 ├── scripts/
 │   └── build.py             # Generates index.html and clubs/*/index.html
 ├── clubs/
-│   ├── <slug>/              # One folder per club: index.html + photos and videos
-│   └── raagasudha/          # Hand-built page with GSAP animations
+│   └── <slug>/              # One folder per club: index.html + photos and videos
 ├── assets/
 │   ├── css/style.css        # Shared styles
 │   ├── js/main.js           # Header, menu, scroll reveals, filters, gallery viewer, videos
