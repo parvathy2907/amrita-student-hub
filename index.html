@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMRITA Student Hub — Student Clubs</title>
+  <meta name="description" content="Discover every student club at Amrita Vishwa Vidyapeetham, Coimbatore: music, dance, tech, service, literature and more.">
+  <meta property="og:title" content="AMRITA Student Hub — Student Clubs">
+  <meta property="og:description" content="Discover every student club at Amrita Vishwa Vidyapeetham, Coimbatore: music, dance, tech, service, literature and more.">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="preload" href="assets/vendor/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/vendor/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/solid.min.css">
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/brands.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo-dark.png" alt="Amrita Vishwa Vidyapeetham" width="142" height="40">
+      <span>Student Hub</span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav"><i class="fa-solid fa-bars"></i></button>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html#clubs">Clubs</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="https://www.amrita.edu/events/">Events</a></li>
+        <li><a href="https://www.amrita.edu/admissions/">Admissions</a></li>
+        <li><a class="btn" href="https://sanjanav2102.github.io/AMRITA-student-clubs-website/Login/index.html" target="_blank" rel="noopener">Register</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="hero" style="background-image:url('assets/img/hero.jpg')">
+    <div class="wrap">
+      <span class="eyebrow">Amrita Vishwa Vidyapeetham &middot; Coimbatore</span>
+      <h1>Find your club.</h1>
+      <p>12 student clubs for music, dance, technology, service, literature and more — all in one place.</p>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap prose">
+      <h2>Student clubs at Amrita</h2>
+      <p>To further the overall development of students, participation in a wide range of extra-curricular, social and community development activities is encouraged. Associations like Toastmasters, GDSC and Srishti, along with clubs like Elite, Anantham, Intel IoT and the Photography Club, help bring out students' creative talents and promote team spirit.</p>
+      <p>Associations like NSS (National Service Scheme) and the Nature Club give students a platform to engage in humanitarian and environmental work.</p>
+    </div>
+  </section>
+
+  <section class="section" id="clubs">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Explore clubs</h2>
+      </div>
+      <div class="toolbar">
+        <div class="chips" role="group" aria-label="Filter by category">
+        <button class="chip" data-filter="All" aria-pressed="true">All</button>
+        <button class="chip" data-filter="Academic" aria-pressed="false">Academic</button>
+        <button class="chip" data-filter="Communication" aria-pressed="false">Communication</button>
+        <button class="chip" data-filter="Creative" aria-pressed="false">Creative</button>
+        <button class="chip" data-filter="Cultural" aria-pressed="false">Cultural</button>
+        <button class="chip" data-filter="Entrepreneurship" aria-pressed="false">Entrepreneurship</button>
+        <button class="chip" data-filter="Environment" aria-pressed="false">Environment</button>
+        <button class="chip" data-filter="Literary" aria-pressed="false">Literary</button>
+        <button class="chip" data-filter="Service" aria-pressed="false">Service</button>
+        <button class="chip" data-filter="Technical" aria-pressed="false">Technical</button>
+        </div>
+        <label class="search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input id="club-search" type="search" placeholder="Search clubs" aria-label="Search clubs">
+        </label>
+      </div>
+      <div class="grid" id="club-grid">
+      <a class="card" href="clubs/raagasudha/" data-category="Cultural">
+        <div class="card-media"><img src="assets/img/cards/raagasudha.jpg" alt="" loading="lazy" width="800" height="500"></div>
+        <div class="card-body">
+          <div class="tag">Cultural</div>
+          <h3>Raagasudha</h3>
+          <p>The music club, where melodies rise beyond classrooms.</p>
+          <span class="more">Explore club &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="clubs/natyasudha/" data-category="Cultural">
+        <div class="card-media"><img src="assets/img/cards/natyasudha.jpg" alt="" loading="lazy" width="800" height="500"></div>
+        <div class="card-body">
+          <div class="tag">Cultural</div>
+          <h3>Natyasudha</h3>
+          <p>The dance club celebrating classical and contemporary Indian dance.</p>
+          <span class="more">Explore club &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="clubs/nss/" data-category="Service">
+        <div class="card-media"><img src="assets/img/cards/nss.jpg" alt="" loading="lazy" width="800" height="500"></div>
+        <div class="card-body">
+          <div class="tag">Service</div>
+          <h3>NSS</h3>
+          <p>Volunteering that builds a link between campus and community.</p>
+          <span class="more">Explore club &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="clubs/team-media/" data-category="Creative">
+        <div class="card-media"><img src="assets/img/cards/team-media.jpg" alt="" loading="lazy" width="800" height="500"></div>
+        <div class="card-body">
+          <div class="tag">Creative</div>
+          <h3>Team Media</h3>
+          <p>Capturing the vibe and emotion of every event on campus.</p>
+          <span class="more">Explore club &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="clubs/elite/" data-category="Entrepreneurship">
+        <div class="card-media"><img src="assets/img/cards/elite.jpg" alt="" loading="lazy" width="800" height="500"></div>
+        <div class="card-body">
+          <div class="tag">Entrepreneurship</div>
+          <h3>Elite</h3>
+          <p>Entrepreneurship, leadership and start-up culture.</p>
+          <span class="more">Explore club &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="clubs/anantham/" data-category="Academic">
+        <div class="card-media"><img src="assets/img/cards/anantham.jpg" alt="" loading="lazy" width="800" height="500"></div>
+        <div class="card-body">
+          <div class="tag">Academic</div>
+          <h3>Anantham</h3>
+          <p>The Mathematics Club — infinite ways to see one idea.</p>
+          <span class="more">Explore club &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="clubs/srishti/" data-category="Literary">
+        <div class="card-media"><img src="assets/img/cards/srishti.jpg" alt="" loading="lazy" width="800" height="500"></div>
+        <div class="card-body">
+          <div class="tag">Literary</div>
+          <h3>Srishti</h3>
+          <p>The literary club — poetry, debates, quizzes and more.</p>
+          <span class="more">Explore club &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="clubs/intel-iot/" data-category="Technical">
+        <div class="card-media"><img src="assets/img/cards/intel-iot.jpg" alt="" loading="lazy" width="800" height="500"></div>
+        <div class="card-body">
+          <div class="tag">Technical</div>
+          <h3>Intel IoT</h3>
+          <p>Hands-on IoT and AI with Intel hardware and software.</p>
+          <span class="more">Explore club &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="clubs/toastmasters/" data-category="Communication">
+        <div class="card-media"><img src="assets/img/cards/toastmasters.jpg" alt="" loading="lazy" width="800" height="500"></div>
+        <div class="card-body">
+          <div class="tag">Communication</div>
+          <h3>Toastmasters</h3>
+          <p>Build confidence and public speaking skills.</p>
+          <span class="more">Explore club &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="clubs/nature/" data-category="Environment">
+        <div class="card-media"><img src="assets/img/cards/nature.jpg" alt="" loading="lazy" width="800" height="500"></div>
+        <div class="card-body">
+          <div class="tag">Environment</div>
+          <h3>Nature Club</h3>
+          <p>Love for plants and animals, and a greener campus.</p>
+          <span class="more">Explore club &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="clubs/photography/" data-category="Creative">
+        <div class="card-media"><img src="assets/img/cards/photography.jpg" alt="" loading="lazy" width="800" height="500"></div>
+        <div class="card-body">
+          <div class="tag">Creative</div>
+          <h3>Photography</h3>
+          <p>Short courses, exhibitions and creative photography.</p>
+          <span class="more">Explore club &rarr;</span>
+        </div>
+      </a>
+      <a class="card" href="clubs/gdsc/" data-category="Technical">
+        <div class="card-media"><img src="assets/img/cards/gdsc.jpg" alt="" loading="lazy" width="800" height="500"></div>
+        <div class="card-body">
+          <div class="tag">Technical</div>
+          <h3>GDSC</h3>
+          <p>Connect, learn and grow with developer technologies.</p>
+          <span class="more">Explore club &rarr;</span>
+        </div>
+      </a>
+      </div>
+      <p class="empty" id="no-results" hidden>No clubs match that search.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <h2>Ready to join?</h2>
+          <p>Register with your college email to sign up for clubs.</p>
+        </div>
+        <a class="button" href="https://sanjanav2102.github.io/AMRITA-student-clubs-website/Login/index.html" target="_blank" rel="noopener">Register now</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Campuses</h4>
+        <ul>
+          <li><a href="https://www.amrita.edu/campus/amritapuri/">Amritapuri</a></li>
+          <li><a href="https://www.amrita.edu/campus/amaravati/">Amaravati</a></li>
+          <li><a href="https://www.amrita.edu/campus/bengaluru/">Bengaluru</a></li>
+          <li><a href="https://www.amrita.edu/campus/chennai/">Chennai</a></li>
+          <li><a href="https://www.amrita.edu/campus/coimbatore/">Coimbatore</a></li>
+          <li><a href="https://www.amrita.edu/campus/faridabad/">Faridabad</a></li>
+          <li><a href="https://www.amrita.edu/campus/kochi/">Kochi</a></li>
+          <li><a href="https://www.amrita.edu/campus/mysuru/">Mysuru</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Clubs</h4>
+        <ul>
+          <li><a href="clubs/raagasudha/">Raagasudha</a></li>
+          <li><a href="clubs/natyasudha/">Natyasudha</a></li>
+          <li><a href="clubs/nss/">NSS</a></li>
+          <li><a href="clubs/team-media/">Team Media</a></li>
+          <li><a href="clubs/elite/">Elite</a></li>
+          <li><a href="clubs/anantham/">Anantham</a></li>
+          <li><a href="index.html#clubs">All clubs &rarr;</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Apply</h4>
+        <ul>
+          <li><a href="https://www.amrita.edu/admissions/">Admissions</a></li>
+          <li><a href="https://www.amrita.edu/admissions/btech/">B.Tech applications</a></li>
+          <li><a href="https://www.amrita.edu/contact/">Contact Amrita</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Amrita</h4>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/AmritaUniversity" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://x.com/AMRITAedu" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/amrita_university/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/school/amrita-vishwa-vidyapeetham-official/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">A student UI design project showcasing clubs at Amrita Vishwa Vidyapeetham. Not an official university website.</div>
+  </div>
+</footer>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
