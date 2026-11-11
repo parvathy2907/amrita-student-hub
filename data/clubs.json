@@ -4,8 +4,57 @@
     "name": "Raagasudha",
     "category": "Cultural",
     "tagline": "The music club, where melodies rise beyond classrooms.",
-    "custom_page": true,
-    "card": "raagasudha.jpg"
+    "card": "raagasudha.jpg",
+    "hero": "hero.jpg",
+    "about": [
+      "Raagasudha is a haven for music lovers at Amrita, where melodies rise beyond classrooms and rhythms echo through hearts. Founded to celebrate the power of sound and self-expression, the club welcomes students from all backgrounds — whether trained musicians or passionate beginners.",
+      "From soul-stirring ragas to upbeat fusion, Raagasudha encourages creativity, discipline, and cultural appreciation. Our events are not just showcases — they are experiences that connect performers and listeners alike. Every voice matters. Every note counts.",
+      "Join the Raagasudha music club and contribute to a vibrant community of artists, performers, and music lovers."
+    ],
+    "gallery": [
+      "gal1.jpeg",
+      "gal3.jpeg",
+      "gal4.jpeg",
+      "gal5.jpeg",
+      "gal6.jpeg",
+      "gal8.jpeg",
+      "gal9.jpeg",
+      "gal10.jpeg",
+      "gal11.jpeg",
+      "gal12.jpeg",
+      "gal13.jpeg",
+      "gal14.jpeg",
+      "gal15.jpeg",
+      "gal16.jpeg"
+    ],
+    "videos": [
+      "raga_1.mp4"
+    ],
+    "socials": [
+      {
+        "type": "instagram",
+        "label": "@__.raaga.__",
+        "url": "https://www.instagram.com/__.raaga.__/"
+      }
+    ],
+    "accent": "#6d28d9",
+    "activities": [
+      {
+        "icon": "fa-solid fa-guitar",
+        "title": "Perform",
+        "text": "Take the stage at campus events, from soul-stirring ragas to upbeat fusion."
+      },
+      {
+        "icon": "fa-solid fa-users",
+        "title": "Jam together",
+        "text": "Trained musician or passionate beginner, everyone is welcome to play and sing."
+      },
+      {
+        "icon": "fa-solid fa-headphones",
+        "title": "Listen and connect",
+        "text": "Events built as experiences that connect performers and listeners."
+      }
+    ]
   },
   {
     "slug": "natyasudha",
@@ -44,7 +93,30 @@
         "url": "https://www.instagram.com/team_natya_/"
       }
     ],
-    "card": "natyasudha.jpg"
+    "card": "natyasudha.jpg",
+    "accent": "#c2410c",
+    "activities": [
+      {
+        "icon": "fa-solid fa-person-dress",
+        "title": "Classical forms",
+        "text": "Learn and practise the timeless grace of classical Indian dance."
+      },
+      {
+        "icon": "fa-solid fa-bolt",
+        "title": "Contemporary styles",
+        "text": "Explore the dynamic energy of current dance forms."
+      },
+      {
+        "icon": "fa-solid fa-star",
+        "title": "Perform",
+        "text": "Share your passion for dance with the campus community."
+      }
+    ],
+    "stack": [
+      "natya1.jpg",
+      "natya10.jpg",
+      "natya8.jpg"
+    ]
   },
   {
     "slug": "nss",
@@ -83,7 +155,25 @@
         "url": "https://www.instagram.com/nss_amrita/"
       }
     ],
-    "card": "nss.jpg"
+    "card": "nss.jpg",
+    "accent": "#1e40af",
+    "activities": [
+      {
+        "icon": "fa-solid fa-hand-holding-heart",
+        "title": "Serve",
+        "text": "Build a link between campus and community through voluntary work."
+      },
+      {
+        "icon": "fa-solid fa-people-group",
+        "title": "Lead",
+        "text": "Grow confidence and leadership skills as an individual and in a group."
+      },
+      {
+        "icon": "fa-solid fa-earth-asia",
+        "title": "Learn",
+        "text": "Meet people from different walks of life and work towards real goals."
+      }
+    ]
   },
   {
     "slug": "team-media",
@@ -155,7 +245,30 @@
         "url": "https://www.facebook.com/TeamMediaAmrita/"
       }
     ],
-    "card": "team-media.jpg"
+    "card": "team-media.jpg",
+    "accent": "#0f766e",
+    "activities": [
+      {
+        "icon": "fa-solid fa-camera",
+        "title": "Photograph",
+        "text": "Capture the vibe and emotion of every event on campus."
+      },
+      {
+        "icon": "fa-solid fa-video",
+        "title": "Film",
+        "text": "Shoot as a cinematographer at college events."
+      },
+      {
+        "icon": "fa-solid fa-scissors",
+        "title": "Edit",
+        "text": "Turn footage into stories, learning and gaining experience along the way."
+      }
+    ],
+    "stack": [
+      "media_9.jpg",
+      "media_11.jpg",
+      "media_12.jpg"
+    ]
   },
   {
     "slug": "elite",
@@ -192,7 +305,25 @@
         "url": "https://www.instagram.com/the_elite_club_amrita/"
       }
     ],
-    "card": "elite.jpg"
+    "card": "elite.jpg",
+    "accent": "#a16207",
+    "activities": [
+      {
+        "icon": "fa-solid fa-chalkboard-user",
+        "title": "Workshops and seminars",
+        "text": "Interactive sessions on entrepreneurship and leadership."
+      },
+      {
+        "icon": "fa-solid fa-microphone",
+        "title": "Pitch and negotiate",
+        "text": "Hone your pitching skills and master the art of negotiation."
+      },
+      {
+        "icon": "fa-solid fa-lightbulb",
+        "title": "Build ventures",
+        "text": "Incubate and refine ideas into impactful ventures."
+      }
+    ]
   },
   {
     "slug": "anantham",
@@ -217,7 +348,30 @@
       "ana6.jpg"
     ],
     "videos": [],
-    "socials": []
+    "socials": [],
+    "accent": "#4338ca",
+    "activities": [
+      {
+        "icon": "fa-solid fa-shapes",
+        "title": "Concept demos",
+        "text": "See mathematical ideas come alive with models."
+      },
+      {
+        "icon": "fa-solid fa-laptop-code",
+        "title": "Solve with software",
+        "text": "Tackle problems using mathematical software."
+      },
+      {
+        "icon": "fa-solid fa-puzzle-piece",
+        "title": "Games, quizzes and talks",
+        "text": "Mathematical games, quizzes and lectures by experts."
+      }
+    ],
+    "stack": [
+      "ana1.jpg",
+      "ana3.jpg",
+      "ana2.jpg"
+    ]
   },
   {
     "slug": "srishti",
@@ -250,7 +404,25 @@
         "url": "https://www.instagram.com/srishti_amrita/"
       }
     ],
-    "card": "srishti.jpg"
+    "card": "srishti.jpg",
+    "accent": "#047857",
+    "activities": [
+      {
+        "icon": "fa-solid fa-feather-pointed",
+        "title": "Poetry and prose",
+        "text": "Poetry readings, book and film reviews, and play enactments."
+      },
+      {
+        "icon": "fa-solid fa-comments",
+        "title": "Debates and extempore",
+        "text": "Sharpen your voice in debates and extempore speeches."
+      },
+      {
+        "icon": "fa-solid fa-language",
+        "title": "Many languages",
+        "text": "Events in English, Tamil, Malayalam, Telugu and Hindi."
+      }
+    ]
   },
   {
     "slug": "intel-iot",
@@ -286,6 +458,24 @@
         "type": "instagram",
         "label": "@inteliotclub",
         "url": "https://www.instagram.com/inteliotclub/"
+      }
+    ],
+    "accent": "#0369a1",
+    "activities": [
+      {
+        "icon": "fa-solid fa-microchip",
+        "title": "IoT track",
+        "text": "Hands-on experience building impactful projects."
+      },
+      {
+        "icon": "fa-solid fa-screwdriver-wrench",
+        "title": "Workshops and training",
+        "text": "Events, workshops and industrial trainings."
+      },
+      {
+        "icon": "fa-solid fa-brain",
+        "title": "AI and Intel tools",
+        "text": "Stay up to date with the latest Intel hardware and software."
       }
     ]
   },
@@ -329,7 +519,30 @@
         "url": "https://www.facebook.com/TMamrita/"
       }
     ],
-    "card": "toastmasters.jpg"
+    "card": "toastmasters.jpg",
+    "accent": "#9f1239",
+    "activities": [
+      {
+        "icon": "fa-solid fa-microphone-lines",
+        "title": "Prepared speeches",
+        "text": "Prepare and deliver speeches in a supportive room."
+      },
+      {
+        "icon": "fa-solid fa-bolt",
+        "title": "Impromptu speaking",
+        "text": "Think on your feet answering impromptu questions."
+      },
+      {
+        "icon": "fa-solid fa-comment-dots",
+        "title": "Feedback",
+        "text": "Give and receive constructive feedback to keep improving."
+      }
+    ],
+    "stack": [
+      "toast_2.jpg",
+      "toast_9.jpg",
+      "toast_7.jpg"
+    ]
   },
   {
     "slug": "nature",
@@ -390,7 +603,30 @@
     ],
     "videos": [],
     "socials": [],
-    "card": "nature.jpg"
+    "card": "nature.jpg",
+    "accent": "#15803d",
+    "activities": [
+      {
+        "icon": "fa-solid fa-leaf",
+        "title": "Awareness camps",
+        "text": "Promote an eco-friendly way of life across campus."
+      },
+      {
+        "icon": "fa-solid fa-paw",
+        "title": "Animal welfare",
+        "text": "Feeding and vaccination drives, and caring for campus animals."
+      },
+      {
+        "icon": "fa-solid fa-seedling",
+        "title": "Talks and seminars",
+        "text": "Learn about environmental issues from experts."
+      }
+    ],
+    "stack": [
+      "nat1.jpg",
+      "nat3.jpg",
+      "nat2.jpg"
+    ]
   },
   {
     "slug": "photography",
@@ -426,7 +662,30 @@
     ],
     "videos": [],
     "socials": [],
-    "card": "photography.jpg"
+    "card": "photography.jpg",
+    "accent": "#b45309",
+    "activities": [
+      {
+        "icon": "fa-solid fa-camera-retro",
+        "title": "Short courses",
+        "text": "Learn photography through short-term courses."
+      },
+      {
+        "icon": "fa-solid fa-images",
+        "title": "Exhibitions",
+        "text": "Show your work at photo exhibitions."
+      },
+      {
+        "icon": "fa-solid fa-trophy",
+        "title": "Contests",
+        "text": "Spot photography events like \"Shapes and Shadows\"."
+      }
+    ],
+    "stack": [
+      "photo4.jpg",
+      "photo2.jpg",
+      "hero.jpg"
+    ]
   },
   {
     "slug": "gdsc",
@@ -478,6 +737,24 @@
         "type": "youtube",
         "label": "#developerstudentclubs",
         "url": "https://www.youtube.com/hashtag/developerstudentclubs"
+      }
+    ],
+    "accent": "#1a73e8",
+    "activities": [
+      {
+        "icon": "fa-solid fa-handshake",
+        "title": "Connect",
+        "text": "Meet students interested in developer technologies."
+      },
+      {
+        "icon": "fa-solid fa-code",
+        "title": "Learn",
+        "text": "Hands-on workshops, talks and project-building activities."
+      },
+      {
+        "icon": "fa-solid fa-seedling",
+        "title": "Grow",
+        "text": "Build solutions for local problems and help others learn."
       }
     ]
   }
