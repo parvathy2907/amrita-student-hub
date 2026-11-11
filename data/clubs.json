@@ -12,6 +12,8 @@
       "Join the Raagasudha music club and contribute to a vibrant community of artists, performers, and music lovers."
     ],
     "gallery": [
+      "gal17.jpg",
+      "gal18.jpg",
       "gal1.jpeg",
       "gal3.jpeg",
       "gal4.jpeg",
@@ -54,6 +56,11 @@
         "title": "Listen and connect",
         "text": "Events built as experiences that connect performers and listeners."
       }
+    ],
+    "stack": [
+      "gal1.jpeg",
+      "gal18.jpg",
+      "gal17.jpg"
     ]
   },
   {
