@@ -12,6 +12,7 @@
       "Join the Raagasudha music club and contribute to a vibrant community of artists, performers, and music lovers."
     ],
     "gallery": [
+      "gal19.jpg",
       "gal17.jpg",
       "gal18.jpg",
       "gal1.jpeg",
@@ -58,8 +59,8 @@
       }
     ],
     "stack": [
-      "gal1.jpeg",
       "gal18.jpg",
+      "gal19.jpg",
       "gal17.jpg"
     ]
   },
