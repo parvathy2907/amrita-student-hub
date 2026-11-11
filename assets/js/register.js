@@ -82,6 +82,11 @@
   const programme = form.elements.programme;
   const syncSelect = () => programme.classList.toggle('filled', programme.value !== '');
   programme.addEventListener('change', syncSelect);
+  programme.addEventListener('input', syncSelect);
+  syncSelect();
+  // Browser autofill and back/forward restores can fill fields without events.
+  window.addEventListener('pageshow', syncSelect);
+  setTimeout(syncSelect, 600);
 
   form.elements.roll.addEventListener('input', (e) => {
     const pos = e.target.selectionStart;
