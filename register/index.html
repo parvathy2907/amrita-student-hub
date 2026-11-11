@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register — AMRITA Student Hub</title>
-  <meta name="description" content="Sign up for student clubs at Amrita Vishwa Vidyapeetham, Coimbatore.">
+  <meta name="description" content="Sign up for student clubs at Amrita Vishwa Vidyapeetham, Coimbatore, in three quick steps.">
   <meta property="og:title" content="Register — AMRITA Student Hub">
-  <meta property="og:description" content="Sign up for student clubs at Amrita Vishwa Vidyapeetham, Coimbatore.">
+  <meta property="og:description" content="Sign up for student clubs at Amrita Vishwa Vidyapeetham, Coimbatore, in three quick steps.">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <link rel="preload" href="../assets/vendor/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../assets/vendor/fonts/fonts.css">
@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../assets/vendor/fontawesome/css/solid.min.css">
   <link rel="stylesheet" href="../assets/vendor/fontawesome/css/brands.min.css">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/register.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -35,47 +36,68 @@
     </nav>
   </div>
 </header>
-<main id="main" class="register">
-  <div class="wrap register-layout">
-    <aside class="register-aside" style="background-image:url('../assets/img/hero.jpg')">
-      <span class="eyebrow">Club registration</span>
-      <h1>Join a club.</h1>
-      <p>Music, dance, tech, service, writing — sign up for up to three clubs in one go.</p>
-      <ol class="steps">
-        <li><div><strong>Tell us about you</strong><span>Your name, college email and roll number.</span></div></li>
-        <li><div><strong>Pick your clubs</strong><span>Choose up to three. You can always join more later.</span></div></li>
-        <li><div><strong>Hear back from the clubs</strong><span>Club coordinators get in touch about inductions and the next meet-up.</span></div></li>
-      </ol>
-      <p class="aside-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Your details are only shared with the clubs you choose.</p>
-    </aside>
+<main id="main" class="reg">
+  <section class="reg-stage" aria-label="Introduction">
+    <div class="wall" aria-hidden="true">
+      <div class="wall-col"><img src="../assets/img/cards/raagasudha.jpg" alt=""><img src="../assets/img/cards/team-media.jpg" alt=""><img src="../assets/img/cards/srishti.jpg" alt=""><img src="../assets/img/cards/nature.jpg" alt=""><img src="../assets/img/cards/raagasudha.jpg" alt=""><img src="../assets/img/cards/team-media.jpg" alt=""><img src="../assets/img/cards/srishti.jpg" alt=""><img src="../assets/img/cards/nature.jpg" alt=""></div>
+      <div class="wall-col"><img src="../assets/img/cards/natyasudha.jpg" alt=""><img src="../assets/img/cards/elite.jpg" alt=""><img src="../assets/img/cards/intel-iot.jpg" alt=""><img src="../assets/img/cards/photography.jpg" alt=""><img src="../assets/img/cards/natyasudha.jpg" alt=""><img src="../assets/img/cards/elite.jpg" alt=""><img src="../assets/img/cards/intel-iot.jpg" alt=""><img src="../assets/img/cards/photography.jpg" alt=""></div>
+      <div class="wall-col"><img src="../assets/img/cards/nss.jpg" alt=""><img src="../assets/img/cards/anantham.jpg" alt=""><img src="../assets/img/cards/toastmasters.jpg" alt=""><img src="../assets/img/cards/gdsc.jpg" alt=""><img src="../assets/img/cards/nss.jpg" alt=""><img src="../assets/img/cards/anantham.jpg" alt=""><img src="../assets/img/cards/toastmasters.jpg" alt=""><img src="../assets/img/cards/gdsc.jpg" alt=""></div>
+    </div>
+    <div>
+      <p class="reg-kicker fade-up"><span class="dot"></span> Registrations open</p>
+      <h1 class="reg-title"><span class="line"><span>Find your</span></span><span class="line"><span><em>people.</em></span></span></h1>
+      <p class="reg-lead fade-up d1">Music, dance, code, service, words. Pick up to three clubs and the coordinators will take it from there.</p>
+      <dl class="reg-stats fade-up d2">
+        <div><dt>clubs</dt><dd data-count="12">12</dd></div>
+        <div><dt>categories</dt><dd data-count="9">9</dd></div>
+        <div><dt>steps to join</dt><dd data-count="3">3</dd></div>
+      </dl>
+    </div>
+  </section>
 
-    <div class="form-card">
+  <section class="reg-panel" aria-label="Registration form">
+    <div class="reg-panel-inner">
+      <div class="progress fade-up d1" id="progress">
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <ol>
+          <li class="active" data-step="1"><span class="bubble">1<i class="fa-solid fa-check"></i></span><span class="label">About you</span></li>
+          <li data-step="2"><span class="bubble">2<i class="fa-solid fa-check"></i></span><span class="label">Your clubs</span></li>
+          <li data-step="3"><span class="bubble">3<i class="fa-solid fa-check"></i></span><span class="label">Review</span></li>
+        </ol>
+      </div>
+
       <form id="register-form" novalidate>
-        <div class="form-summary" id="form-summary" role="alert"></div>
+        <div class="alert" id="form-alert" role="alert"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i><span></span></div>
 
-        <fieldset>
-          <legend><span class="num">1</span> About you</legend>
-          <div class="fields">
-            <div class="field full" data-field="name">
-              <label for="name">Full name</label>
-              <input type="text" id="name" name="name" autocomplete="name" placeholder="e.g. Ananya Menon" required aria-describedby="name-error">
-              <p class="error" id="name-error"></p>
+        <div class="steps-viewport">
+          <!-- Step 1 -->
+          <div class="step active" data-step="1">
+            <div class="step-head">
+              <span class="count">Step 1 of 3</span>
+              <h2>Let's get to know you</h2>
+              <p>Use your college email so the clubs can verify you're a student.</p>
             </div>
-            <div class="field" data-field="email">
-              <label for="email">College email</label>
-              <input type="email" id="email" name="email" autocomplete="email" placeholder="name@cb.students.amrita.edu" required aria-describedby="email-hint email-error">
-              <p class="hint" id="email-hint">Must be an amrita.edu address.</p>
-              <p class="error" id="email-error"></p>
-            </div>
-            <div class="field" data-field="roll">
-              <label for="roll">Roll number</label>
-              <input type="text" id="roll" name="roll" placeholder="CB.EN.U4CSE23001" autocapitalize="characters" spellcheck="false" required aria-describedby="roll-error">
-              <p class="error" id="roll-error"></p>
-            </div>
-            <div class="field" data-field="programme">
-              <label for="programme">Programme</label>
-              <select id="programme" name="programme" required aria-describedby="programme-error">
-              <option value="">Select your programme</option>
+            <div class="grid-2">
+              <div class="fl full" data-field="name">
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="e.g. Ananya Menon" aria-describedby="name-error">
+                <label for="name">Full name</label><i class="icon fa-solid fa-user" aria-hidden="true"></i>
+                <p class="error" id="name-error"></p>
+              </div>
+              <div class="fl" data-field="email">
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="name@cb.students.amrita.edu" aria-describedby="email-hint email-error">
+                <label for="email">College email</label><i class="icon fa-solid fa-envelope" aria-hidden="true"></i>
+                <p class="hint" id="email-hint">Must end in amrita.edu</p>
+                <p class="error" id="email-error"></p>
+              </div>
+              <div class="fl" data-field="roll">
+                <input type="text" id="roll" name="roll" placeholder="CB.EN.U4CSE23001" autocapitalize="characters" spellcheck="false" aria-describedby="roll-hint roll-error">
+                <label for="roll">Roll number</label><i class="icon fa-solid fa-id-card" aria-hidden="true"></i>
+                <p class="hint" id="roll-hint">e.g. CB.EN.U4CSE23001</p>
+                <p class="error" id="roll-error"></p>
+              </div>
+              <div class="fl" data-field="programme">
+                <select id="programme" name="programme" aria-describedby="programme-error">
+                  <option value=""></option>
               <option>B.Tech</option>
               <option>M.Tech</option>
               <option>Integrated M.Sc</option>
@@ -86,130 +108,165 @@
               <option>B.A. / M.A.</option>
               <option>Ph.D</option>
               <option>Other</option>
-              </select>
-              <p class="error" id="programme-error"></p>
-            </div>
-            <div class="field" data-field="phone">
-              <label for="phone">Mobile <span class="opt">(optional)</span></label>
-              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="98765 43210" aria-describedby="phone-hint phone-error">
-              <p class="hint" id="phone-hint">For WhatsApp group invites.</p>
-              <p class="error" id="phone-error"></p>
-            </div>
-            <div class="field full" data-field="year" role="radiogroup" aria-labelledby="year-label">
-              <span class="label" id="year-label">Year of study</span>
-              <div class="segmented">
-              <input type="radio" id="year-1" name="year" value="1"><label for="year-1">1st year</label>
-              <input type="radio" id="year-2" name="year" value="2"><label for="year-2">2nd year</label>
-              <input type="radio" id="year-3" name="year" value="3"><label for="year-3">3rd year</label>
-              <input type="radio" id="year-4" name="year" value="4"><label for="year-4">4th year</label>
-              <input type="radio" id="year-5" name="year" value="5"><label for="year-5">5th year / PG</label>
+                </select>
+                <label for="programme">Programme</label><i class="icon fa-solid fa-chevron-down" aria-hidden="true"></i>
+                <p class="error" id="programme-error"></p>
               </div>
+              <div class="fl" data-field="phone">
+                <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="98765 43210" aria-describedby="phone-hint phone-error">
+                <label for="phone">Mobile <span class="opt">(optional)</span></label><i class="icon fa-solid fa-phone" aria-hidden="true"></i>
+                <p class="hint" id="phone-hint">For WhatsApp group invites</p>
+                <p class="error" id="phone-error"></p>
+              </div>
+              <fieldset class="pill-group full" data-field="year">
+                <legend>Year of study</legend>
+                <div class="pills">
+            <input type="radio" id="year-1" name="year" value="1st year"><label for="year-1">1st year</label>
+            <input type="radio" id="year-2" name="year" value="2nd year"><label for="year-2">2nd year</label>
+            <input type="radio" id="year-3" name="year" value="3rd year"><label for="year-3">3rd year</label>
+            <input type="radio" id="year-4" name="year" value="4th year"><label for="year-4">4th year</label>
+            <input type="radio" id="year-5" name="year" value="5th year / PG"><label for="year-5">5th year / PG</label>
+                </div>
+                <p class="error"></p>
+              </fieldset>
+            </div>
+            <div class="step-nav">
+              <p class="kbd-hint">Press <kbd>Enter</kbd> to continue</p>
+              <button type="button" class="btn-next" data-next>Choose clubs <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step" data-step="2">
+            <div class="step-head">
+              <span class="count">Step 2 of 3</span>
+              <h2>Pick up to three clubs</h2>
+              <p>Not sure? Choose what sounds fun. You can always join more later.</p>
+            </div>
+            <div class="club-grid" role="group" aria-label="Clubs">
+          <label class="club-card" style="animation-delay:0ms">
+            <input type="checkbox" name="clubs" value="raagasudha" data-name="Raagasudha" data-img="../assets/img/cards/raagasudha.jpg">
+            <span class="face"><img src="../assets/img/cards/raagasudha.jpg" alt="" loading="lazy"><span class="meta"><strong>Raagasudha</strong><small>Cultural</small></span></span>
+            <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="club-card" style="animation-delay:35ms">
+            <input type="checkbox" name="clubs" value="natyasudha" data-name="Natyasudha" data-img="../assets/img/cards/natyasudha.jpg">
+            <span class="face"><img src="../assets/img/cards/natyasudha.jpg" alt="" loading="lazy"><span class="meta"><strong>Natyasudha</strong><small>Cultural</small></span></span>
+            <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="club-card" style="animation-delay:70ms">
+            <input type="checkbox" name="clubs" value="nss" data-name="NSS" data-img="../assets/img/cards/nss.jpg">
+            <span class="face"><img src="../assets/img/cards/nss.jpg" alt="" loading="lazy"><span class="meta"><strong>NSS</strong><small>Service</small></span></span>
+            <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="club-card" style="animation-delay:105ms">
+            <input type="checkbox" name="clubs" value="team-media" data-name="Team Media" data-img="../assets/img/cards/team-media.jpg">
+            <span class="face"><img src="../assets/img/cards/team-media.jpg" alt="" loading="lazy"><span class="meta"><strong>Team Media</strong><small>Creative</small></span></span>
+            <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="club-card" style="animation-delay:140ms">
+            <input type="checkbox" name="clubs" value="elite" data-name="Elite" data-img="../assets/img/cards/elite.jpg">
+            <span class="face"><img src="../assets/img/cards/elite.jpg" alt="" loading="lazy"><span class="meta"><strong>Elite</strong><small>Entrepreneurship</small></span></span>
+            <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="club-card" style="animation-delay:175ms">
+            <input type="checkbox" name="clubs" value="anantham" data-name="Anantham" data-img="../assets/img/cards/anantham.jpg">
+            <span class="face"><img src="../assets/img/cards/anantham.jpg" alt="" loading="lazy"><span class="meta"><strong>Anantham</strong><small>Academic</small></span></span>
+            <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="club-card" style="animation-delay:210ms">
+            <input type="checkbox" name="clubs" value="srishti" data-name="Srishti" data-img="../assets/img/cards/srishti.jpg">
+            <span class="face"><img src="../assets/img/cards/srishti.jpg" alt="" loading="lazy"><span class="meta"><strong>Srishti</strong><small>Literary</small></span></span>
+            <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="club-card" style="animation-delay:245ms">
+            <input type="checkbox" name="clubs" value="intel-iot" data-name="Intel IoT" data-img="../assets/img/cards/intel-iot.jpg">
+            <span class="face"><img src="../assets/img/cards/intel-iot.jpg" alt="" loading="lazy"><span class="meta"><strong>Intel IoT</strong><small>Technical</small></span></span>
+            <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="club-card" style="animation-delay:280ms">
+            <input type="checkbox" name="clubs" value="toastmasters" data-name="Toastmasters" data-img="../assets/img/cards/toastmasters.jpg">
+            <span class="face"><img src="../assets/img/cards/toastmasters.jpg" alt="" loading="lazy"><span class="meta"><strong>Toastmasters</strong><small>Communication</small></span></span>
+            <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="club-card" style="animation-delay:315ms">
+            <input type="checkbox" name="clubs" value="nature" data-name="Nature Club" data-img="../assets/img/cards/nature.jpg">
+            <span class="face"><img src="../assets/img/cards/nature.jpg" alt="" loading="lazy"><span class="meta"><strong>Nature Club</strong><small>Environment</small></span></span>
+            <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="club-card" style="animation-delay:350ms">
+            <input type="checkbox" name="clubs" value="photography" data-name="Photography" data-img="../assets/img/cards/photography.jpg">
+            <span class="face"><img src="../assets/img/cards/photography.jpg" alt="" loading="lazy"><span class="meta"><strong>Photography</strong><small>Creative</small></span></span>
+            <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+          </label>
+          <label class="club-card" style="animation-delay:385ms">
+            <input type="checkbox" name="clubs" value="gdsc" data-name="GDSC" data-img="../assets/img/cards/gdsc.jpg">
+            <span class="face"><img src="../assets/img/cards/gdsc.jpg" alt="" loading="lazy"><span class="meta"><strong>GDSC</strong><small>Technical</small></span></span>
+            <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+          </label>
+            </div>
+            <div class="tray" data-field="clubs" aria-live="polite">
+              <span class="tray-label">Your picks <b id="pick-count">0</b>/3</span>
+              <div class="slots" id="slots"></div>
               <p class="error"></p>
             </div>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend><span class="num">2</span> Pick your clubs</legend>
-          <div class="field" data-field="clubs">
-            <div class="club-picker">
-            <label class="club-option">
-              <input type="checkbox" name="clubs" value="raagasudha" data-name="Raagasudha" data-img="../assets/img/cards/raagasudha.jpg">
-              <span class="box"><img src="../assets/img/cards/raagasudha.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Raagasudha</strong><small>Cultural</small></span></span>
-              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            </label>
-            <label class="club-option">
-              <input type="checkbox" name="clubs" value="natyasudha" data-name="Natyasudha" data-img="../assets/img/cards/natyasudha.jpg">
-              <span class="box"><img src="../assets/img/cards/natyasudha.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Natyasudha</strong><small>Cultural</small></span></span>
-              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            </label>
-            <label class="club-option">
-              <input type="checkbox" name="clubs" value="nss" data-name="NSS" data-img="../assets/img/cards/nss.jpg">
-              <span class="box"><img src="../assets/img/cards/nss.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>NSS</strong><small>Service</small></span></span>
-              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            </label>
-            <label class="club-option">
-              <input type="checkbox" name="clubs" value="team-media" data-name="Team Media" data-img="../assets/img/cards/team-media.jpg">
-              <span class="box"><img src="../assets/img/cards/team-media.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Team Media</strong><small>Creative</small></span></span>
-              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            </label>
-            <label class="club-option">
-              <input type="checkbox" name="clubs" value="elite" data-name="Elite" data-img="../assets/img/cards/elite.jpg">
-              <span class="box"><img src="../assets/img/cards/elite.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Elite</strong><small>Entrepreneurship</small></span></span>
-              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            </label>
-            <label class="club-option">
-              <input type="checkbox" name="clubs" value="anantham" data-name="Anantham" data-img="../assets/img/cards/anantham.jpg">
-              <span class="box"><img src="../assets/img/cards/anantham.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Anantham</strong><small>Academic</small></span></span>
-              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            </label>
-            <label class="club-option">
-              <input type="checkbox" name="clubs" value="srishti" data-name="Srishti" data-img="../assets/img/cards/srishti.jpg">
-              <span class="box"><img src="../assets/img/cards/srishti.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Srishti</strong><small>Literary</small></span></span>
-              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            </label>
-            <label class="club-option">
-              <input type="checkbox" name="clubs" value="intel-iot" data-name="Intel IoT" data-img="../assets/img/cards/intel-iot.jpg">
-              <span class="box"><img src="../assets/img/cards/intel-iot.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Intel IoT</strong><small>Technical</small></span></span>
-              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            </label>
-            <label class="club-option">
-              <input type="checkbox" name="clubs" value="toastmasters" data-name="Toastmasters" data-img="../assets/img/cards/toastmasters.jpg">
-              <span class="box"><img src="../assets/img/cards/toastmasters.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Toastmasters</strong><small>Communication</small></span></span>
-              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            </label>
-            <label class="club-option">
-              <input type="checkbox" name="clubs" value="nature" data-name="Nature Club" data-img="../assets/img/cards/nature.jpg">
-              <span class="box"><img src="../assets/img/cards/nature.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Nature Club</strong><small>Environment</small></span></span>
-              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            </label>
-            <label class="club-option">
-              <input type="checkbox" name="clubs" value="photography" data-name="Photography" data-img="../assets/img/cards/photography.jpg">
-              <span class="box"><img src="../assets/img/cards/photography.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>Photography</strong><small>Creative</small></span></span>
-              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            </label>
-            <label class="club-option">
-              <input type="checkbox" name="clubs" value="gdsc" data-name="GDSC" data-img="../assets/img/cards/gdsc.jpg">
-              <span class="box"><img src="../assets/img/cards/gdsc.jpg" alt="" loading="lazy" width="46" height="46"><span><strong>GDSC</strong><small>Technical</small></span></span>
-              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            </label>
+            <div class="step-nav">
+              <button type="button" class="btn-back" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+              <button type="button" class="btn-next" data-next>Review <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
             </div>
-            <p class="picker-status" id="picker-status" aria-live="polite"></p>
-            <p class="error"></p>
           </div>
-        </fieldset>
 
-        <fieldset>
-          <legend><span class="num">3</span> Anything else?</legend>
-          <div class="field" data-field="why">
-            <label for="why">Why do you want to join? <span class="opt">(optional)</span> <span class="counter" id="why-count"></span></label>
-            <textarea id="why" name="why" maxlength="500" placeholder="Skills you'd like to learn, past experience, ideas for events…"></textarea>
+          <!-- Step 3 -->
+          <div class="step" data-step="3">
+            <div class="step-head">
+              <span class="count">Step 3 of 3</span>
+              <h2>Almost there</h2>
+              <p>Check your details, add a note for the clubs if you like, and send it off.</p>
+            </div>
+            <dl class="review" id="review"></dl>
+            <div class="fl" data-field="why">
+              <textarea id="why" name="why" maxlength="500" placeholder="Skills you'd like to learn, past experience, ideas for events…"></textarea>
+              <label for="why">Why do you want to join? <span class="opt">(optional)</span></label>
+              <span class="counter" id="why-count">0 / 500</span>
+            </div>
+            <div class="consent-wrap" data-field="consent">
+              <label class="consent"><input type="checkbox" id="consent" name="consent"><span class="box" aria-hidden="true"><i class="fa-solid fa-check"></i></span><span>I agree to share these details with the clubs I've picked so they can contact me.</span></label>
+              <p class="error"></p>
+            </div>
+            <div class="step-nav">
+              <button type="button" class="btn-back" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+              <button type="submit" class="btn-next" id="submit-btn"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Submit registration</button>
+            </div>
           </div>
-          <div class="field" data-field="consent" style="margin-top:1.1rem">
-            <label class="check"><input type="checkbox" id="consent" name="consent"> <span>I agree to share these details with the clubs I've selected so they can contact me.</span></label>
-            <p class="error"></p>
-          </div>
-        </fieldset>
-
-        <div class="form-actions">
-          <p>All fields are required unless marked optional.</p>
-          <button type="submit" class="btn-primary"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Submit registration</button>
         </div>
       </form>
 
       <div class="success" id="register-success" hidden>
-        <div class="success-icon"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
+        <svg class="check-anim" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="40"/><path d="M26 43 l11 11 l21 -23"/></svg>
         <h2 tabindex="-1">You're in, <span data-first-name></span>!</h2>
-        <p>Your registration has been received. Club coordinators will reach out at <strong data-email></strong> about inductions and upcoming events.</p>
-        <ul class="success-list"></ul>
-        <div class="success-actions">
-          <a class="btn-primary" href="../index.html#clubs">Explore more clubs</a>
-          <button type="button" class="btn-ghost" id="register-again">Register someone else</button>
+        <p>Your registration is on its way to the club coordinators. Keep an eye on <strong data-email></strong> for induction dates.</p>
+        <div class="pass-wrap">
+          <div class="pass" id="pass">
+            <div class="pass-top"><img src="../assets/img/logo.png" alt="Amrita"><span>Member pass</span></div>
+            <p class="pass-name" data-pass-name></p>
+            <p class="pass-sub" data-pass-sub></p>
+            <div class="pass-clubs" data-pass-clubs></div>
+            <div class="pass-foot">
+              <div><small>Roll number</small><b data-pass-roll></b></div>
+              <div class="barcode" data-barcode aria-hidden="true"></div>
+            </div>
+          </div>
         </div>
+        <div class="success-actions">
+          <a class="btn-next" href="../index.html#clubs">Explore your clubs <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <button type="button" class="btn-outline" id="register-again">Register someone else</button>
+        </div>
+        <p class="demo-note" id="demo-note" hidden>Demo mode: this form isn't connected to a database yet, so this registration wasn't stored.</p>
       </div>
     </div>
-  </div>
+  </section>
 </main>
+<canvas id="confetti" aria-hidden="true"></canvas>
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-grid">

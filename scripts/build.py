@@ -26,7 +26,7 @@ ICONS = {
 e = escape
 
 
-def head(title, description, root):
+def head(title, description, root, styles=()):
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +43,7 @@ def head(title, description, root):
   <link rel="stylesheet" href="{root}assets/vendor/fontawesome/css/solid.min.css">
   <link rel="stylesheet" href="{root}assets/vendor/fontawesome/css/brands.min.css">
   <link rel="stylesheet" href="{root}assets/css/style.css">
-</head>
+{"".join(f'  <link rel="stylesheet" href="{root}assets/css/{x}">\n' for x in styles)}</head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 """
@@ -349,131 +349,192 @@ PROGRAMMES = [
 
 def build_register():
     root = "../"
+    cards = [f"{root}assets/img/cards/{c['card']}" for c in CLUBS]
+    cols = [cards[i::3] for i in range(3)]
+    wall = "\n".join(
+        '      <div class="wall-col">' + "".join(f'<img src="{src}" alt="">' for src in col * 2) + "</div>"
+        for col in cols
+    )
+    n_cats = len({c["category"] for c in CLUBS})
     options = "\n".join(f'              <option>{e(p)}</option>' for p in PROGRAMMES)
     years = "\n".join(
-        f'              <input type="radio" id="year-{y}" name="year" value="{y}"><label for="year-{y}">{label}</label>'
+        f'            <input type="radio" id="year-{y}" name="year" value="{label}"><label for="year-{y}">{label}</label>'
         for y, label in [("1", "1st year"), ("2", "2nd year"), ("3", "3rd year"), ("4", "4th year"), ("5", "5th year / PG")]
     )
-    clubs = "\n".join(
-        f"""            <label class="club-option">
-              <input type="checkbox" name="clubs" value="{c['slug']}" data-name="{e(c['name'])}" data-img="{root}assets/img/cards/{c['card']}">
-              <span class="box"><img src="{root}assets/img/cards/{c['card']}" alt="" loading="lazy" width="46" height="46"><span><strong>{e(c['name'])}</strong><small>{e(c['category'])}</small></span></span>
-              <span class="tick" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
-            </label>"""
-        for c in CLUBS
+    club_cards = "\n".join(
+        f"""          <label class="club-card" style="animation-delay:{i * 35}ms">
+            <input type="checkbox" name="clubs" value="{c['slug']}" data-name="{e(c['name'])}" data-img="{root}assets/img/cards/{c['card']}">
+            <span class="face"><img src="{root}assets/img/cards/{c['card']}" alt="" loading="lazy"><span class="meta"><strong>{e(c['name'])}</strong><small>{e(c['category'])}</small></span></span>
+            <span class="check" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+          </label>"""
+        for i, c in enumerate(CLUBS)
     )
     html = head("Register — AMRITA Student Hub",
-                "Sign up for student clubs at Amrita Vishwa Vidyapeetham, Coimbatore.", root)
+                "Sign up for student clubs at Amrita Vishwa Vidyapeetham, Coimbatore, in three quick steps.",
+                root, styles=("register.css",))
     html += header(root)
-    html += f"""<main id="main" class="register">
-  <div class="wrap register-layout">
-    <aside class="register-aside" style="background-image:url('{root}assets/img/hero.jpg')">
-      <span class="eyebrow">Club registration</span>
-      <h1>Join a club.</h1>
-      <p>Music, dance, tech, service, writing — sign up for up to three clubs in one go.</p>
-      <ol class="steps">
-        <li><div><strong>Tell us about you</strong><span>Your name, college email and roll number.</span></div></li>
-        <li><div><strong>Pick your clubs</strong><span>Choose up to three. You can always join more later.</span></div></li>
-        <li><div><strong>Hear back from the clubs</strong><span>Club coordinators get in touch about inductions and the next meet-up.</span></div></li>
-      </ol>
-      <p class="aside-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Your details are only shared with the clubs you choose.</p>
-    </aside>
+    html += f"""<main id="main" class="reg">
+  <section class="reg-stage" aria-label="Introduction">
+    <div class="wall" aria-hidden="true">
+{wall}
+    </div>
+    <div>
+      <p class="reg-kicker fade-up"><span class="dot"></span> Registrations open</p>
+      <h1 class="reg-title"><span class="line"><span>Find your</span></span><span class="line"><span><em>people.</em></span></span></h1>
+      <p class="reg-lead fade-up d1">Music, dance, code, service, words. Pick up to three clubs and the coordinators will take it from there.</p>
+      <dl class="reg-stats fade-up d2">
+        <div><dt>clubs</dt><dd data-count="{len(CLUBS)}">{len(CLUBS)}</dd></div>
+        <div><dt>categories</dt><dd data-count="{n_cats}">{n_cats}</dd></div>
+        <div><dt>steps to join</dt><dd data-count="3">3</dd></div>
+      </dl>
+    </div>
+  </section>
 
-    <div class="form-card">
+  <section class="reg-panel" aria-label="Registration form">
+    <div class="reg-panel-inner">
+      <div class="progress fade-up d1" id="progress">
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <ol>
+          <li class="active" data-step="1"><span class="bubble">1<i class="fa-solid fa-check"></i></span><span class="label">About you</span></li>
+          <li data-step="2"><span class="bubble">2<i class="fa-solid fa-check"></i></span><span class="label">Your clubs</span></li>
+          <li data-step="3"><span class="bubble">3<i class="fa-solid fa-check"></i></span><span class="label">Review</span></li>
+        </ol>
+      </div>
+
       <form id="register-form" novalidate>
-        <div class="form-summary" id="form-summary" role="alert"></div>
+        <div class="alert" id="form-alert" role="alert"><i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i><span></span></div>
 
-        <fieldset>
-          <legend><span class="num">1</span> About you</legend>
-          <div class="fields">
-            <div class="field full" data-field="name">
-              <label for="name">Full name</label>
-              <input type="text" id="name" name="name" autocomplete="name" placeholder="e.g. Ananya Menon" required aria-describedby="name-error">
-              <p class="error" id="name-error"></p>
+        <div class="steps-viewport">
+          <!-- Step 1 -->
+          <div class="step active" data-step="1">
+            <div class="step-head">
+              <span class="count">Step 1 of 3</span>
+              <h2>Let's get to know you</h2>
+              <p>Use your college email so the clubs can verify you're a student.</p>
             </div>
-            <div class="field" data-field="email">
-              <label for="email">College email</label>
-              <input type="email" id="email" name="email" autocomplete="email" placeholder="name@cb.students.amrita.edu" required aria-describedby="email-hint email-error">
-              <p class="hint" id="email-hint">Must be an amrita.edu address.</p>
-              <p class="error" id="email-error"></p>
-            </div>
-            <div class="field" data-field="roll">
-              <label for="roll">Roll number</label>
-              <input type="text" id="roll" name="roll" placeholder="CB.EN.U4CSE23001" autocapitalize="characters" spellcheck="false" required aria-describedby="roll-error">
-              <p class="error" id="roll-error"></p>
-            </div>
-            <div class="field" data-field="programme">
-              <label for="programme">Programme</label>
-              <select id="programme" name="programme" required aria-describedby="programme-error">
-              <option value="">Select your programme</option>
-{options}
-              </select>
-              <p class="error" id="programme-error"></p>
-            </div>
-            <div class="field" data-field="phone">
-              <label for="phone">Mobile <span class="opt">(optional)</span></label>
-              <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="98765 43210" aria-describedby="phone-hint phone-error">
-              <p class="hint" id="phone-hint">For WhatsApp group invites.</p>
-              <p class="error" id="phone-error"></p>
-            </div>
-            <div class="field full" data-field="year" role="radiogroup" aria-labelledby="year-label">
-              <span class="label" id="year-label">Year of study</span>
-              <div class="segmented">
-{years}
+            <div class="grid-2">
+              <div class="fl full" data-field="name">
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="e.g. Ananya Menon" aria-describedby="name-error">
+                <label for="name">Full name</label><i class="icon fa-solid fa-user" aria-hidden="true"></i>
+                <p class="error" id="name-error"></p>
               </div>
+              <div class="fl" data-field="email">
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="name@cb.students.amrita.edu" aria-describedby="email-hint email-error">
+                <label for="email">College email</label><i class="icon fa-solid fa-envelope" aria-hidden="true"></i>
+                <p class="hint" id="email-hint">Must end in amrita.edu</p>
+                <p class="error" id="email-error"></p>
+              </div>
+              <div class="fl" data-field="roll">
+                <input type="text" id="roll" name="roll" placeholder="CB.EN.U4CSE23001" autocapitalize="characters" spellcheck="false" aria-describedby="roll-hint roll-error">
+                <label for="roll">Roll number</label><i class="icon fa-solid fa-id-card" aria-hidden="true"></i>
+                <p class="hint" id="roll-hint">e.g. CB.EN.U4CSE23001</p>
+                <p class="error" id="roll-error"></p>
+              </div>
+              <div class="fl" data-field="programme">
+                <select id="programme" name="programme" aria-describedby="programme-error">
+                  <option value=""></option>
+{options}
+                </select>
+                <label for="programme">Programme</label><i class="icon fa-solid fa-chevron-down" aria-hidden="true"></i>
+                <p class="error" id="programme-error"></p>
+              </div>
+              <div class="fl" data-field="phone">
+                <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="98765 43210" aria-describedby="phone-hint phone-error">
+                <label for="phone">Mobile <span class="opt">(optional)</span></label><i class="icon fa-solid fa-phone" aria-hidden="true"></i>
+                <p class="hint" id="phone-hint">For WhatsApp group invites</p>
+                <p class="error" id="phone-error"></p>
+              </div>
+              <fieldset class="pill-group full" data-field="year">
+                <legend>Year of study</legend>
+                <div class="pills">
+{years}
+                </div>
+                <p class="error"></p>
+              </fieldset>
+            </div>
+            <div class="step-nav">
+              <p class="kbd-hint">Press <kbd>Enter</kbd> to continue</p>
+              <button type="button" class="btn-next" data-next>Choose clubs <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step" data-step="2">
+            <div class="step-head">
+              <span class="count">Step 2 of 3</span>
+              <h2>Pick up to three clubs</h2>
+              <p>Not sure? Choose what sounds fun. You can always join more later.</p>
+            </div>
+            <div class="club-grid" role="group" aria-label="Clubs">
+{club_cards}
+            </div>
+            <div class="tray" data-field="clubs" aria-live="polite">
+              <span class="tray-label">Your picks <b id="pick-count">0</b>/3</span>
+              <div class="slots" id="slots"></div>
               <p class="error"></p>
             </div>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend><span class="num">2</span> Pick your clubs</legend>
-          <div class="field" data-field="clubs">
-            <div class="club-picker">
-{clubs}
+            <div class="step-nav">
+              <button type="button" class="btn-back" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+              <button type="button" class="btn-next" data-next>Review <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
             </div>
-            <p class="picker-status" id="picker-status" aria-live="polite"></p>
-            <p class="error"></p>
           </div>
-        </fieldset>
 
-        <fieldset>
-          <legend><span class="num">3</span> Anything else?</legend>
-          <div class="field" data-field="why">
-            <label for="why">Why do you want to join? <span class="opt">(optional)</span> <span class="counter" id="why-count"></span></label>
-            <textarea id="why" name="why" maxlength="500" placeholder="Skills you'd like to learn, past experience, ideas for events…"></textarea>
+          <!-- Step 3 -->
+          <div class="step" data-step="3">
+            <div class="step-head">
+              <span class="count">Step 3 of 3</span>
+              <h2>Almost there</h2>
+              <p>Check your details, add a note for the clubs if you like, and send it off.</p>
+            </div>
+            <dl class="review" id="review"></dl>
+            <div class="fl" data-field="why">
+              <textarea id="why" name="why" maxlength="500" placeholder="Skills you'd like to learn, past experience, ideas for events…"></textarea>
+              <label for="why">Why do you want to join? <span class="opt">(optional)</span></label>
+              <span class="counter" id="why-count">0 / 500</span>
+            </div>
+            <div class="consent-wrap" data-field="consent">
+              <label class="consent"><input type="checkbox" id="consent" name="consent"><span class="box" aria-hidden="true"><i class="fa-solid fa-check"></i></span><span>I agree to share these details with the clubs I've picked so they can contact me.</span></label>
+              <p class="error"></p>
+            </div>
+            <div class="step-nav">
+              <button type="button" class="btn-back" data-back><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back</button>
+              <button type="submit" class="btn-next" id="submit-btn"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Submit registration</button>
+            </div>
           </div>
-          <div class="field" data-field="consent" style="margin-top:1.1rem">
-            <label class="check"><input type="checkbox" id="consent" name="consent"> <span>I agree to share these details with the clubs I've selected so they can contact me.</span></label>
-            <p class="error"></p>
-          </div>
-        </fieldset>
-
-        <div class="form-actions">
-          <p>All fields are required unless marked optional.</p>
-          <button type="submit" class="btn-primary"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Submit registration</button>
         </div>
       </form>
 
       <div class="success" id="register-success" hidden>
-        <div class="success-icon"><i class="fa-solid fa-check" aria-hidden="true"></i></div>
+        <svg class="check-anim" viewBox="0 0 84 84" aria-hidden="true"><circle cx="42" cy="42" r="40"/><path d="M26 43 l11 11 l21 -23"/></svg>
         <h2 tabindex="-1">You're in, <span data-first-name></span>!</h2>
-        <p>Your registration has been received. Club coordinators will reach out at <strong data-email></strong> about inductions and upcoming events.</p>
-        <ul class="success-list"></ul>
-        <div class="success-actions">
-          <a class="btn-primary" href="{root}index.html#clubs">Explore more clubs</a>
-          <button type="button" class="btn-ghost" id="register-again">Register someone else</button>
+        <p>Your registration is on its way to the club coordinators. Keep an eye on <strong data-email></strong> for induction dates.</p>
+        <div class="pass-wrap">
+          <div class="pass" id="pass">
+            <div class="pass-top"><img src="{root}assets/img/logo.png" alt="Amrita"><span>Member pass</span></div>
+            <p class="pass-name" data-pass-name></p>
+            <p class="pass-sub" data-pass-sub></p>
+            <div class="pass-clubs" data-pass-clubs></div>
+            <div class="pass-foot">
+              <div><small>Roll number</small><b data-pass-roll></b></div>
+              <div class="barcode" data-barcode aria-hidden="true"></div>
+            </div>
+          </div>
         </div>
+        <div class="success-actions">
+          <a class="btn-next" href="{root}index.html#clubs">Explore your clubs <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <button type="button" class="btn-outline" id="register-again">Register someone else</button>
+        </div>
+        <p class="demo-note" id="demo-note" hidden>Demo mode: this form isn't connected to a database yet, so this registration wasn't stored.</p>
       </div>
     </div>
-  </div>
+  </section>
 </main>
+<canvas id="confetti" aria-hidden="true"></canvas>
 """
     html += footer(root, scripts=("register.js",))
     out = ROOT / "register" / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html, encoding="utf-8")
-
 
 if __name__ == "__main__":
     build_home()
