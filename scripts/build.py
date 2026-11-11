@@ -44,7 +44,7 @@ def photo_count(c):
     return len(c.get("gallery", [])) + sum(len(h.get("images", [])) for h in c.get("highlights", []))
 
 
-def head(title, description, root, styles=(), body_class=""):
+def head(title, description, root, styles=(), body_class="", body_style=""):
     extra = "".join(f'  <link rel="stylesheet" href="{root}{v("assets/css/" + x)}">\n' for x in styles)
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -67,7 +67,7 @@ def head(title, description, root, styles=(), body_class=""):
   <link rel="stylesheet" href="{root}assets/vendor/fontawesome/css/brands.min.css">
   <link rel="stylesheet" href="{root}{v('assets/css/style.css')}">
 {extra}</head>
-<body class="{body_class}">
+<body class="{body_class}"{f' style="{body_style}"' if body_style else ""}>
 <a class="skip-link" href="#main">Skip to content</a>
 """
 
@@ -198,8 +198,8 @@ def cta_band(root, title, text, slug=None):
 def build_home():
     root = ""
     cats = sorted({c["category"] for c in CLUBS})
-    total_photos = sum(photo_count(c) for c in CLUBS) + 16  # + Raagasudha's own gallery
-    total_videos = sum(len(c.get("videos", [])) for c in CLUBS) + 1
+    total_photos = sum(photo_count(c) for c in CLUBS)
+    total_videos = sum(len(c.get("videos", [])) for c in CLUBS)
 
     cards = [f"assets/img/cards/{c['card']}" for c in CLUBS]
     cols = [cards[i::5] + cards[(i + 2) % 5::5] for i in range(5)]
@@ -351,13 +351,16 @@ def build_club(i, c):
     name = c["name"]
     slug = c["slug"]
     photos, vids = photo_count(c), len(c.get("videos", []))
+    n_events = len(c.get("highlights", []))
     socials = c.get("socials", [])
     about = list(c.get("about", []))
     lead = about.pop(0) if about else c["tagline"]
+    cat_icon = CATEGORY_ICONS.get(c["category"], "fa-solid fa-star")
 
     tabs = [("about", "About")]
     parts = []
 
+    # --- About + at a glance
     pillars = ""
     if c.get("pillars"):
         pillars = '      <div class="pillars">\n' + "\n".join(
@@ -386,7 +389,6 @@ def build_club(i, c):
         <div class="prose">
 {prose}
         </div>
-{pillars}
       </div>
       <aside class="glance" data-reveal="right">
         <h3>At a glance</h3>
@@ -397,6 +399,28 @@ def build_club(i, c):
     </div>
   </section>""")
 
+    # --- What you'll do (GDSC keeps its Connect / Learn / Grow pillars as the activities)
+    if c.get("activities"):
+        acts = "\n".join(
+            f"""        <article class="activity" data-reveal style="--d:{k * 0.1:.1f}s">
+          <span class="ic"><i class="{a['icon']}" aria-hidden="true"></i></span>
+          <h3>{e(a['title'])}</h3>
+          <p>{e(a['text'])}</p>
+        </article>"""
+            for k, a in enumerate(c["activities"])
+        )
+        tabs.append(("do", "What you'll do"))
+        parts.append(f"""  <section class="section" id="do" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head"><div><span class="kicker" data-reveal>What you'll do</span><h2 data-reveal style="--d:.08s">Life as a member</h2></div><p data-reveal style="--d:.16s">A taste of what {e(name)} gets up to through the year.</p></div>
+      <div class="activities">
+{acts}
+      </div>
+{pillars if not c.get("activities") else ""}
+    </div>
+  </section>""")
+
+    # --- Highlights
     if c.get("highlights"):
         tabs.append(("highlights", "Highlights"))
         blocks = []
@@ -428,6 +452,7 @@ def build_club(i, c):
     </div>
   </section>""")
 
+    # --- Gallery
     if c.get("gallery"):
         tabs.append(("gallery", "Gallery"))
         items = "\n".join(
@@ -443,11 +468,15 @@ def build_club(i, c):
     </div>
   </section>""")
 
+    # --- Videos
     if c.get("videos"):
         tabs.append(("videos", "Videos"))
         vids_html = "\n".join(
-            f'        <div class="video-frame" data-reveal><video src="{vd}" poster="{vd[:-4]}-poster.jpg" muted loop playsinline controls preload="none" data-autoplay></video></div>'
-            for vd in c["videos"]
+            f"""        <div class="video-card" data-reveal style="--d:{k * 0.1:.1f}s">
+          <video src="{vd}" poster="{vd[:-4]}-poster.jpg" playsinline preload="none"></video>
+          <button class="play" type="button" aria-label="Play {e(name)} video {k + 1}"><span><i class="fa-solid fa-play" aria-hidden="true"></i></span><em>{e(name)} &middot; video {k + 1}</em></button>
+        </div>"""
+            for k, vd in enumerate(c["videos"])
         )
         parts.append(f"""  <section class="section" id="videos" style="padding-top:0">
     <div class="wrap">
@@ -458,6 +487,7 @@ def build_club(i, c):
     </div>
   </section>""")
 
+    # --- Follow
     if socials:
         tabs.append(("follow", "Follow"))
         cards = "\n".join(
@@ -477,6 +507,7 @@ def build_club(i, c):
     </div>
   </section>""")
 
+    # --- Related clubs
     tabs.append(("more", "More clubs"))
     rel = related_clubs(c)
     parts.append(f"""  <section class="section clubs-section" id="more">
@@ -487,13 +518,31 @@ def build_club(i, c):
       </div>
     </div>
   </section>""")
-    parts.append(cta_band(root, f"Want to join <em>{e(name)}?</em>", "Register in about two minutes. The coordinators will get in touch about inductions.", slug))
 
-    chips = [f'<span><i class="{CATEGORY_ICONS.get(c["category"], "fa-solid fa-star")}" aria-hidden="true"></i>{e(c["category"])}</span>']
-    if photos:
-        chips.append(f'<span><i class="fa-solid fa-image" aria-hidden="true"></i>{photos} photos</span>')
-    if vids:
-        chips.append(f'<span><i class="fa-solid fa-play" aria-hidden="true"></i>{vids} video{"s" if vids > 1 else ""}</span>')
+    # --- Finale: join + next club
+    nxt = CLUBS[(i + 1) % len(CLUBS)]
+    parts.append(f"""  <section class="section tight">
+    <div class="wrap finale">
+      <div class="join-card" data-reveal="left">
+        <span class="kicker light">Registrations open</span>
+        <h2>Want to join <em>{e(name)}?</em></h2>
+        <p>Register in about two minutes. The coordinators will get in touch about inductions and the next meet-up.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="{root}register/?club={slug}">Register now <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="btn btn-ghost" href="{root}index.html#clubs">Browse all clubs</a>
+        </div>
+      </div>
+      <a class="next-club" href="../{nxt['slug']}/" data-reveal="right">
+        <img src="{root}assets/img/cards/{nxt['card']}" alt="" loading="lazy">
+        <small>Next club</small>
+        <strong>{e(nxt['name'])} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></strong>
+        <span>{e(nxt['tagline'])}</span>
+      </a>
+    </div>
+  </section>""")
+
+    # --- Hero
+    chips = []
     insta = next((s for s in socials if s["type"] == "instagram"), None)
     if insta:
         chips.append(f'<span><i class="fa-brands fa-instagram" aria-hidden="true"></i>{e(insta["label"])}</span>')
@@ -501,25 +550,60 @@ def build_club(i, c):
     if socials:
         s0 = socials[0]
         follow_btn = f'<a class="btn btn-ghost" href="{e(s0["url"])}" target="_blank" rel="noopener"><i class="{ICONS[s0["type"]]}" aria-hidden="true"></i> Follow</a>'
+    stack_src = list(c.get("stack") or (c.get("gallery") or [])[:3])
+    while len(stack_src) < 3:
+        stack_src.append(c["hero"])
+    stack = "".join(
+        f'<figure class="p{k + 1}"><img src="{src}" alt="" {"" if k == 2 else "loading=\"lazy\" "}></figure>' for k, src in enumerate(stack_src)
+    )
+    badge_txt = f"{photos} photos" if photos else c["category"]
+    badge_sub = (f"{vids} video{'s' if vids != 1 else ''}" if vids else "Club gallery") if photos else "Student club"
+
+    # --- Stats strip
+    stats = [(cat_icon, None, c["category"], "Category")]
+    if photos:
+        stats.append(("fa-solid fa-image", photos, None, "Photos"))
+    if vids:
+        stats.append(("fa-solid fa-play", vids, None, "Videos" if vids != 1 else "Video"))
+    if n_events:
+        stats.append(("fa-solid fa-calendar-check", n_events, None, "Featured events" if n_events != 1 else "Featured event"))
+    if socials:
+        stats.append(("fa-solid fa-share-nodes", len(socials), None, "Social channels" if len(socials) != 1 else "Social channel"))
+    stat_html = "".join(
+        f'<div class="stat" data-reveal style="--d:{k * 0.07:.2f}s"><span class="ic"><i class="{ic}" aria-hidden="true"></i></span><div>'
+        + (f'<b data-count="{num}">{num}</b>' if num is not None else f"<b style=\"font-size:1.15rem\">{e(txt)}</b>")
+        + f"<span>{label}</span></div></div>"
+        for k, (ic, num, txt, label) in enumerate(stats)
+    )
     tab_links = "".join(f'<li><a href="#{tid}">{label}</a></li>' for tid, label in tabs)
+    sub = f"{e(c['full_name'])} — {e(c['tagline'])}" if c.get("full_name") else e(c["tagline"])
 
     title = f"{name} — AMRITA Student Hub"
-    html = head(title, c["tagline"], root, body_class="overlay")
+    html = head(title, c["tagline"], root, body_class="overlay club-page", body_style=f"--accent:{c['accent']}")
     html += header(root)
     html += f"""<main id="main">
-  <section class="club-hero" aria-label="{e(name)}">
-    <div class="bg" style="background-image:url('{c['hero']}')" data-parallax="0.25"></div>
-    <div class="wrap">
-      <nav class="crumbs fade-in" style="--d:.1s" aria-label="Breadcrumb"><a href="{root}index.html#clubs"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All clubs</a><i class="sep fa-solid fa-chevron-right" aria-hidden="true"></i><span>{e(c['category'])}</span></nav>
-      <h1 class="line-reveal"><span class="line"><span>{e(name)}</span></span></h1>
-      <p class="sub fade-in" style="--d:.45s">{e(c.get('full_name') or c['tagline'])}{(' — ' + e(c['tagline'])) if c.get('full_name') else ''}</p>
-      <div class="meta-chips fade-in" style="--d:.6s">{''.join(chips)}</div>
-      <div class="hero-actions-club fade-in" style="--d:.75s">
-        <a class="btn btn-gold" href="{root}register/?club={slug}">Join {e(name)} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-        {follow_btn}
+  <section class="club-hero2" aria-label="{e(name)}">
+    <div class="bg" style="background-image:url('{c['hero']}')" data-parallax="0.15"></div>
+    <div class="hero-word" aria-hidden="true">{e(name)}</div>
+    <div class="wrap hero-grid">
+      <div>
+        <nav class="crumbs fade-in" style="--d:.1s" aria-label="Breadcrumb"><a href="{root}index.html#clubs"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All clubs</a><i class="sep fa-solid fa-chevron-right" aria-hidden="true"></i><span>{e(name)}</span></nav>
+        <span class="cat-pill fade-in" style="--d:.2s"><i class="{cat_icon}" aria-hidden="true"></i>{e(c['category'])}</span>
+        <h1 class="line-reveal{' long' if len(name) > 10 else ''}"><span class="line"><span>{e(name)}</span></span></h1>
+        <p class="sub fade-in" style="--d:.45s">{sub}</p>
+        {('<div class="meta-chips fade-in" style="--d:.6s">' + ''.join(chips) + '</div>') if chips else ''}
+        <div class="hero-actions-club fade-in" style="--d:.7s">
+          <a class="btn btn-gold" href="{root}register/?club={slug}">Join {e(name)} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          {follow_btn}
+        </div>
+      </div>
+      <div class="photo-stack" aria-hidden="true">
+        <div class="float" style="position:absolute;inset:0">{stack}</div>
+        <div class="stack-badge"><span class="ic"><i class="{cat_icon}"></i></span><span>{e(badge_txt)}<small>{e(badge_sub)}</small></span></div>
       </div>
     </div>
   </section>
+  <section class="stat-strip" aria-label="{e(name)} in numbers"><div class="wrap">{stat_html}</div></section>
   <nav class="tabs" aria-label="On this page">
     <div class="wrap">
       <ul>{tab_links}</ul>
@@ -528,6 +612,7 @@ def build_club(i, c):
   </nav>
 {chr(10).join(parts)}
 </main>
+<div class="join-bar" aria-hidden="true"><strong><small>Interested?</small>{e(name)}</strong><a class="btn" href="{root}register/?club={slug}" tabindex="-1">Join <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
 """
     html += footer(root)
     out = ROOT / "clubs" / slug / "index.html"
