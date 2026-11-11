@@ -165,8 +165,13 @@
       entries.forEach((en) => {
         if (en.isIntersecting) {
           tabs.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === `#${en.target.id}`));
+          // Centre the active tab inside the tab bar only. (scrollIntoView would
+          // also scroll the page itself and fight the reader's scrolling.)
           const active = tabs.find((a) => a.classList.contains('active'));
-          active?.scrollIntoView({ block: 'nearest', inline: 'center' });
+          const bar = active?.closest('ul');
+          if (bar && bar.scrollWidth > bar.clientWidth) {
+            bar.scrollTo({ left: active.offsetLeft - (bar.clientWidth - active.offsetWidth) / 2, behavior: reduceMotion ? 'auto' : 'smooth' });
+          }
         }
       });
     }, { rootMargin: '-45% 0px -50% 0px' });
