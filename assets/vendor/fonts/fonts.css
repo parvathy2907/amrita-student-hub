@@ -1,0 +1,5 @@
+/* Self-hosted fonts (SIL Open Font License): Inter by Rasmus Andersson, Fraunces by Undercase Type */
+@font-face { font-family: "Inter"; font-style: normal; font-display: swap; font-weight: 100 900;
+  src: url("inter-latin-wght-normal.woff2") format("woff2-variations"), url("inter-latin-wght-normal.woff2") format("woff2"); }
+@font-face { font-family: "Fraunces"; font-style: normal; font-display: swap; font-weight: 600;
+  src: url("fraunces-latin-600-normal.woff2") format("woff2"); }
