@@ -48,7 +48,7 @@ Information about student clubs at Amrita is scattered across Instagram pages, n
 | | |
 |---|---|
 | 🔎 **Find clubs fast** | Filter by category (Cultural, Technical, Service…) and search as you type |
-| 📝 **Club registration** | One form to join up to three clubs, with friendly validation for Amrita emails and roll numbers, and a confirmation screen |
+| 📝 **Club registration** | A three-step animated sign-up: details, a visual club picker (up to three), and a review step. Checks Amrita emails and roll numbers, and finishes with confetti and a personalised member pass |
 | 🖼️ **Rich club pages** | About, event highlights, a photo gallery with a full-screen viewer, videos and social links |
 | 📱 **Responsive** | Designed for phones, tablets and desktops, with a mobile menu |
 | ♿ **Accessible** | Skip link, keyboard-friendly gallery (<kbd>Esc</kbd> <kbd>←</kbd> <kbd>→</kbd>), alt text, focus styles, respects *reduced motion* |
@@ -67,8 +67,11 @@ Information about student clubs at Amrita is scattered across Instagram pages, n
     <td><img src="docs/screenshots/club-page.jpg" alt="Natyasudha club page"></td>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/register.jpg" alt="Club registration form"></td>
-    <td><img src="docs/screenshots/register-success.jpg" alt="Registration confirmation"></td>
+    <td><img src="docs/screenshots/register.jpg" alt="Registration step 1: about you"></td>
+    <td><img src="docs/screenshots/register-success.jpg" alt="Member pass after registering"></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="docs/screenshots/register-clubs.jpg" alt="Registration step 2: picking clubs"></td>
   </tr>
   <tr>
     <td align="center"><sub>Club directory, a club page and the registration form</sub></td>
@@ -211,7 +214,8 @@ amrita-student-hub/
 ├── assets/
 │   ├── css/style.css        # Shared styles
 │   ├── js/main.js           # Menu, filters, gallery viewer, video autoplay
-│   ├── js/register.js       # Registration form validation and confirmation
+│   ├── css/register.css     # Registration page styles and animations
+│   ├── js/register.js       # Three-step registration, confetti, member pass
 │   ├── img/                 # Logo, favicon, hero and club cards
 │   └── vendor/              # Self-hosted fonts and icons
 ├── docs/screenshots/        # Images used in this README
@@ -238,7 +242,7 @@ Go to **Settings → Pages → Deploy from a branch**, then pick **`main`** and 
 - [x] Club filters and search
 - [x] Gallery viewer and on-screen video playback
 - [x] Data-driven pages from a single JSON file
-- [x] Club registration form
+- [x] Animated three-step club registration
 - [ ] Store registrations in a database and email coordinators
 - [ ] Login with college email IDs
 - [ ] Feedback forms
