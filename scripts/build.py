@@ -7,6 +7,7 @@ Writes index.html, register/index.html and clubs/<slug>/index.html for every clu
 "custom_page": true keep their hand-written clubs/<slug>/index.html.
 No dependencies beyond the Python 3 standard library.
 """
+import hashlib
 import json
 from html import escape
 from pathlib import Path
@@ -26,6 +27,12 @@ ICONS = {
 e = escape
 
 
+def v(rel):
+    """Cache-busting query string: changes whenever the file's contents change."""
+    digest = hashlib.sha1((ROOT / rel).read_bytes()).hexdigest()[:8]
+    return f"{rel}?v={digest}"
+
+
 def head(title, description, root, styles=()):
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -42,8 +49,8 @@ def head(title, description, root, styles=()):
   <link rel="stylesheet" href="{root}assets/vendor/fontawesome/css/fontawesome.min.css">
   <link rel="stylesheet" href="{root}assets/vendor/fontawesome/css/solid.min.css">
   <link rel="stylesheet" href="{root}assets/vendor/fontawesome/css/brands.min.css">
-  <link rel="stylesheet" href="{root}assets/css/style.css">
-{"".join(f'  <link rel="stylesheet" href="{root}assets/css/{x}">\n' for x in styles)}</head>
+  <link rel="stylesheet" href="{root}{v('assets/css/style.css')}">
+{"".join(f'  <link rel="stylesheet" href="{root}{v("assets/css/" + x)}">\n' for x in styles)}</head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 """
@@ -120,8 +127,8 @@ def footer(root, scripts=()):
     <div class="footer-bottom">A student UI design project showcasing clubs at Amrita Vishwa Vidyapeetham. Not an official university website.</div>
   </div>
 </footer>
-<script src="{root}assets/js/main.js" defer></script>
-{"".join(f'<script src="{root}assets/js/{x}" defer></script>\n' for x in scripts)}</body>
+<script src="{root}{v('assets/js/main.js')}" defer></script>
+{"".join(f'<script src="{root}{v("assets/js/" + x)}" defer></script>\n' for x in scripts)}</body>
 </html>
 """
 
